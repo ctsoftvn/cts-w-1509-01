@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTS.W.150901.Models", "CTS.W.150901.Models\CTS.W.150901.Models.csproj", "{9ABC1B44-4B5F-44C6-B7C1-A70642FE8E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTS.W.150901.Web", "CTS.W.150901.Web\CTS.W.150901.Web.csproj", "{B36EEA24-DF74-4687-9B53-24DE78197204}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9ABC1B44-4B5F-44C6-B7C1-A70642FE8E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ABC1B44-4B5F-44C6-B7C1-A70642FE8E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ABC1B44-4B5F-44C6-B7C1-A70642FE8E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ABC1B44-4B5F-44C6-B7C1-A70642FE8E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B36EEA24-DF74-4687-9B53-24DE78197204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B36EEA24-DF74-4687-9B53-24DE78197204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B36EEA24-DF74-4687-9B53-24DE78197204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B36EEA24-DF74-4687-9B53-24DE78197204}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

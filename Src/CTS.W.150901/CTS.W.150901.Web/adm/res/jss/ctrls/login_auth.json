@@ -1,0 +1,12 @@
+﻿{
+	"txtUser": {
+		"field": "UserName",
+		"rules": ["required"],
+		"messageParam": "ADM.LOGIN.Account"
+	},
+	"pwdPass": {
+		"field": "Password",
+		"rules": ["required"],
+		"messageParam": "ADM.LOGIN.Password"
+	}
+}
