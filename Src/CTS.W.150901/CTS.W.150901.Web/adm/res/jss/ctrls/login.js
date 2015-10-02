@@ -7,25 +7,25 @@ ctrls.controller('LoginCtrl', ['$scope', '$state', '$window', function ($scope, 
     // Xử lý init
     $scope.init = function () {
         $pc({
-            url: '/adm/hdl/users',
-            data: { Action: 'Login.AdminInitLayout' },
+            action: 'Login.AdminInitLayout',
+            url: '/cts/web/users',
             success: function (data) {
                 $scope.data = data;
                 $scope.data.Remember = $dataHelper.toBoolean(data.Remember);
                 if ($scope.data.Remember) {
                     $scope.auth();
                 }
-                // $ti('txtUser');
+                $ti('txtUser');
             }
         });
     };
     // Xử lý xác thực
     $scope.auth = function () {
         $pc({
-            url: '/adm/hdl/users',
+            action: 'Login.AdminAuth',
+            url: '/cts/web/users',
             validate: '/adm/res/jss/ctrls/login_auth.json',
             data: {
-                Action: 'Login.AdminAuth',
                 UserName: $scope.data.UserName,
                 Password: $scope.data.Password,
                 Remember: $scope.data.Remember

@@ -9,8 +9,6 @@
         /// Áp dụng resource
         /// </summary>
         public static void ApplyResources() {
-            // Load name resource
-            // AppHelper.LoadNameResources(Names.ResourceManager);
         }
     }
 }

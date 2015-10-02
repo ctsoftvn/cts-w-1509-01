@@ -12,8 +12,8 @@ ctrls.controller('MainCtrl', ['$scope', '$state', '$window', function ($scope, $
     // Xử lý init
     $scope.init = function () {
         $pc({
-            url: '/adm/hdl/main',
-            data: { Action: 'Main.AdminInitLayout' },
+            action: 'Main.AdminInitLayout',
+            url: '/cts/web/main',
             success: function (data) {
                 if (data.HasAuth === false) {
                     $window.open('/adm/login', '_self');
@@ -27,8 +27,8 @@ ctrls.controller('MainCtrl', ['$scope', '$state', '$window', function ($scope, $
     // Xử lý logout
     $scope.logout = function () {
         $pc({
-            url: '/adm/hdl/main',
-            data: { Action: 'Main.AdminLogout' },
+            action: 'Main.AdminLogout',
+            url: '/cts/web/main',
             success: function () {
                 $window.open('/adm/login', '_self');
             }

@@ -33,17 +33,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CTS.Core">
+    <Reference Include="CTS.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Lib\CTS.Core.dll</HintPath>
     </Reference>
-    <Reference Include="CTS.Data.Com">
+    <Reference Include="CTS.Data.Com, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Lib\CTS.Data.Com.dll</HintPath>
     </Reference>
-    <Reference Include="CTS.Data.Core">
+    <Reference Include="CTS.Data.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Lib\CTS.Data.Core.dll</HintPath>
     </Reference>
-    <Reference Include="CTS.Web.Core">
+    <Reference Include="CTS.Web.CompanyInfos">
+      <HintPath>..\..\..\Lib\CTS.Web.CompanyInfos.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.Web.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Lib\CTS.Web.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.Web.FileManager">
+      <HintPath>..\..\..\Lib\CTS.Web.FileManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.Web.Parameters">
+      <HintPath>..\..\..\Lib\CTS.Web.Parameters.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.Web.UploadFile">
+      <HintPath>..\..\..\Lib\CTS.Web.UploadFile.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.Web.Users">
+      <HintPath>..\..\..\Lib\CTS.Web.Users.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
@@ -80,6 +95,166 @@
     <Content Include="adm\res\jss\route-configs.js" />
     <Content Include="adm\login.html" />
     <Content Include="adm\main.html" />
+    <Content Include="cts\adm\html\ucs\view-company-infos.html" />
+    <Content Include="cts\adm\html\ucs\view-parameters.html" />
+    <Content Include="cts\com\html\ccs\area.html" />
+    <Content Include="cts\com\html\ccs\button.html" />
+    <Content Include="cts\com\html\ccs\check.html" />
+    <Content Include="cts\com\html\ccs\date.html" />
+    <Content Include="cts\com\html\ccs\editor.html" />
+    <Content Include="cts\com\html\ccs\file.html" />
+    <Content Include="cts\com\html\ccs\form-pane.html" />
+    <Content Include="cts\com\html\ccs\grid-header.html" />
+    <Content Include="cts\com\html\ccs\grid-pane.html" />
+    <Content Include="cts\com\html\ccs\image.html" />
+    <Content Include="cts\com\html\ccs\label.html" />
+    <Content Include="cts\com\html\ccs\number.html" />
+    <Content Include="cts\com\html\ccs\pager.html" />
+    <Content Include="cts\com\html\ccs\password.html" />
+    <Content Include="cts\com\html\ccs\select.html" />
+    <Content Include="cts\com\html\ccs\text.html" />
+    <Content Include="cts\com\html\ccs\title.html" />
+    <Content Include="cts\com\html\ccs\toolbar-item.html" />
+    <Content Include="cts\com\html\ccs\toolbar.html" />
+    <Content Include="cts\com\html\ccs\typeahead.html" />
+    <Content Include="cts\com\html\ucs\dialog-area.html" />
+    <Content Include="cts\com\html\ucs\dialog-confirm.html" />
+    <Content Include="cts\com\html\ucs\dialog-editor.html" />
+    <Content Include="cts\com\html\ucs\dialog-error.html" />
+    <Content Include="cts\com\html\ucs\dialog-meta.html" />
+    <Content Include="cts\com\html\ucs\dialog-success.html" />
+    <Content Include="cts\com\html\ucs\dialog-upload.html" />
+    <Content Include="cts\res\css\adm.min.css" />
+    <Content Include="cts\res\css\com.min.css" />
+    <Content Include="cts\res\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="cts\res\img\cts-pgr-icon.png" />
+    <Content Include="cts\res\img\cts-tb-bg.png" />
+    <Content Include="cts\res\img\cts-tbl-headerbg.png" />
+    <Content Include="cts\res\img\cts-tbl-sortasc.png" />
+    <Content Include="cts\res\img\cts-tbl-sortboth.png" />
+    <Content Include="cts\res\img\cts-tbl-sortdesc.png" />
+    <Content Include="cts\res\img\icons\add.png" />
+    <Content Include="cts\res\img\icons\area.png" />
+    <Content Include="cts\res\img\icons\back.png" />
+    <Content Include="cts\res\img\icons\close.png" />
+    <Content Include="cts\res\img\icons\copy.png" />
+    <Content Include="cts\res\img\icons\delete-batch.png" />
+    <Content Include="cts\res\img\icons\delete.png" />
+    <Content Include="cts\res\img\icons\edit.png" />
+    <Content Include="cts\res\img\icons\editor.png" />
+    <Content Include="cts\res\img\icons\folder.png" />
+    <Content Include="cts\res\img\icons\link.png" />
+    <Content Include="cts\res\img\icons\menu.png" />
+    <Content Include="cts\res\img\icons\refresh.png" />
+    <Content Include="cts\res\img\icons\save-batch.png" />
+    <Content Include="cts\res\img\icons\save.png" />
+    <Content Include="cts\res\img\icons\search.png" />
+    <Content Include="cts\res\img\icons\select.png" />
+    <Content Include="cts\res\img\icons\seo-info.png" />
+    <Content Include="cts\res\img\icons\show-hide.png" />
+    <Content Include="cts\res\img\icons\submit.png" />
+    <Content Include="cts\res\img\icons\upload-image.png" />
+    <Content Include="cts\res\img\ng-trv-file.png" />
+    <Content Include="cts\res\img\ng-trv-folder-closed.png" />
+    <Content Include="cts\res\img\ng-trv-folder.png" />
+    <Content Include="cts\res\jss\base-1228.min.js" />
+    <Content Include="cts\res\jss\base-ext.min.js" />
+    <Content Include="cts\res\jss\base.min.js" />
+    <Content Include="cts\res\jss\cts-com.js" />
+    <Content Include="cts\res\jss\cts-plugin.min.js" />
+    <Content Include="cts\res\jss\cts-res.min.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\main.html" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\css\base.min.css" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\css\style.css" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\img\file.png" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\img\folder.png" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\jss\angular-config.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\jss\ctrls\create-folder.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\jss\ctrls\main.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\jss\ctrls\remove-item.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\jss\ctrls\rename-item.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\jss\ctrls\upload-file.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\jss\i18n\messages.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\res\jss\i18n\names.js" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\vws\create-folder.html" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\vws\remove-item.html" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\vws\rename-item.html" />
+    <Content Include="cts\res\lib-ext\ctsfilemanager\vws\upload-file.html" />
+    <Content Include="cts\res\lib-ext\tinymce\license.txt" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\example\dialog.html" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="cts\res\lib-ext\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="cts\res\lib-ext\tinymce\themes\modern\theme.min.js" />
+    <Content Include="cts\res\lib-ext\tinymce\tinymce.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -98,11 +273,23 @@
   <ItemGroup>
     <Folder Include="adm\hdl\" />
     <Folder Include="adm\vws\ma\" />
+    <Folder Include="cts\cln\" />
     <Folder Include="res\" />
     <Folder Include="stg\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="adm\res\jss\ctrls\login_auth.json" />
+    <None Include="cts\res\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="cts\res\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="cts\res\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="cts\res\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="cts\res\lib-ext\tinymce\langs\readme.md" />
+    <None Include="cts\res\lib-ext\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <None Include="cts\res\lib-ext\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <None Include="cts\res\lib-ext\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <None Include="cts\res\lib-ext\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <None Include="cts\res\lib-ext\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <None Include="cts\res\lib-ext\tinymce\skins\lightgray\fonts\tinymce.woff" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CTS.W.150901.Models\CTS.W.150901.Models.csproj">
