@@ -51,6 +51,9 @@
     <Reference Include="CTS.Web.FileManager">
       <HintPath>..\..\..\Lib\CTS.Web.FileManager.dll</HintPath>
     </Reference>
+    <Reference Include="CTS.Web.Main">
+      <HintPath>..\..\..\Lib\CTS.Web.Main.dll</HintPath>
+    </Reference>
     <Reference Include="CTS.Web.Parameters">
       <HintPath>..\..\..\Lib\CTS.Web.Parameters.dll</HintPath>
     </Reference>
