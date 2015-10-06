@@ -1,0 +1,51 @@
+﻿<div class="modal-header cts-dialog-upload">
+    <cts-title text="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.Title')}}">
+        <cts-image class="close" onclick="close()" src="$res.Icons.Close" border="false" transparent="true"></cts-image>
+    </cts-title>
+</div>
+<div class="modal-body cts-dialog-upload" cts-loaded="modalLoaded">
+    <cts-toolbar>
+        <cts-toolbar-item onclick="saveBatch()" class="left-1" src="$res.Icons.SaveBatch" data-original-title="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.SaveBatch')}}" ui-jq="tooltip"></cts-toolbar-item>
+        <cts-toolbar-item onclick="deleteBatch()" class="left-2" src="$res.Icons.DeleteBatch" data-original-title="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.DeleteBatch')}}" ui-jq="tooltip"></cts-toolbar-item>
+    </cts-toolbar>
+    <cts-form-pane class="p-height-4" style="margin-top: 2px" cts-tabgroup="true">
+        <cts-label class="top-1 left-1 width-8" text="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.File')}}"></cts-label>
+        <cts-file class="top-1 left-4 width-20" tabindex="10" model="data.FileInfo" id="filInfo"></cts-file>
+        <cts-label class="top-2 left-1 width-8" text="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.FileAlias')}}"></cts-label>
+        <cts-text class="top-2 left-4 width-15" id="txtFileAlias" tabindex="20" model="data.FileAlias"></cts-text>
+        <cts-label class="top-3 left-1 width-8" text="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.SortKey')}}"></cts-label>
+        <cts-number class="top-3 left-4 width-7" scale="0" min="1" max="999" tabindex="30" model="data.SortKey"></cts-number>
+        <cts-button class="top-4 left-4 width-8" onclick="uploadFileConfirm()" id="btnUpload" tabindex="40" text="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.Upload')}}"></cts-button>
+    </cts-form-pane>
+    <cts-grid-Pane class="dialog-upload-tblResult" style="margin-top: 2px">
+        <table dt-options="tblResult.Options" datatable="ng">
+        <thead>
+        <tr>
+            <td width="30px"></td>
+            <td width="150px" text="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.ColFileAlias')}}" cts-grid-header="true"></td>
+            <td width="80" text="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.ColSortKey')}}" cts-grid-header="true"></td>
+            <td width="326" text="{{$nm('CTS.COM.UCS.DIALOGUPLOAD.ColFile')}}" cts-grid-header="true"></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="obj in tblResult.ListData">
+            <td><input type="checkbox" ng-model="obj.HasChanged"/></td>
+            <td class="editable">
+                <cts-text onchange="tblResultChange(data, obj)" tabindex="50" model="obj.FileAlias"></cts-text>
+            </td>
+            <td class="editable">
+                <cts-number onchange="tblResultChange(data, obj)" scale="0" min="1" max="999" tabindex="60" model="obj.SortKey"></cts-number>
+            </td>
+            <td>
+                <span ng-if="data.FileType == 'Image'">
+                    <cts-image src="'/cts/web/file-manager.ashx?fcd=' + obj.FileCd + '&fno=' + obj.FileNo + '&lang=' + obj.LocaleCd + '&s=min'" border="false" transparent="true" style="margin: 2px;"></cts-image>
+                </span>
+                <span ng-if="data.FileType == 'General'">
+                    {{obj.FileName}}
+                </span>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </cts-grid-Pane>
+</div>

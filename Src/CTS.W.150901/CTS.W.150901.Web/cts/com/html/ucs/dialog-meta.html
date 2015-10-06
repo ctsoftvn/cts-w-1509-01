@@ -1,0 +1,15 @@
+﻿<div class="modal-header cts-dialog-meta">
+    <cts-title text="{{$nm('CTS.COM.UCS.DIALOGMETA.Title')}}">
+        <cts-image class="close" onclick="close()" src="$res.Icons.Close" border="false" transparent="true"></cts-image>
+    </cts-title>
+</div>
+<div class="modal-body cts-dialog-meta" cts-loaded="modalLoaded">
+    <cts-form-pane class="p-height-7" style="margin-top: 2px" cts-tabgroup="true">
+        <cts-label class="top-1 left-1 width-10" text="{{$nm('CTS.COM.UCS.DIALOGMETA.MetaTitle')}}"></cts-label>
+        <cts-text class="top-1 left-5 width-25" tabindex="10" id="txtMetaTitle" model="data.MetaTitle"></cts-text>
+        <cts-label class="top-2 left-1 width-10" text="{{$nm('CTS.COM.UCS.DIALOGMETA.MetaDesc')}}"></cts-label>
+        <cts-area class="top-2 left-5 width-40 height-3" tabindex="20" model="data.MetaDesc"></cts-area>
+        <cts-label class="top-5 left-1 width-10" text="{{$nm('CTS.COM.UCS.DIALOGMETA.MetaKeys')}}"></cts-label>
+        <cts-area class="top-5 left-5 width-40 height-3" tabindex="30" model="data.MetaKeys"></cts-area>
+    </cts-form-pane>
+</div>

@@ -1,0 +1,14 @@
+<div class="modal-header cts-dialog-error">
+    <cts-title text="{{$nm('CTS.COM.UCS.DIALOGERROR.Title')}}">
+        <cts-image class="close" onclick="close()" src="$res.Icons.Close" border="false" transparent="true"></cts-image>
+    </cts-title>
+</div>
+<div class="modal-body cts-dialog-error" cts-loaded="modalLoaded">
+    <ul>
+        <li ng-repeat="msg in data.Messages">
+            <span class="glyphicon glyphicon-flash"></span>
+            <span class="text" ng-show="msg.MessageDetail">{{msg.MessageDetail}}</span>
+            <span class="text" ng-show="!msg.MessageDetail">{{msg}}</span>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,15 @@
+<div class="{{class}} cts-select">
+    <button 
+        bs-select="true"
+        class="btn btn-default"
+        data-html="true"
+        id="{{id}}"
+        ng-change="onchange({ data: option })"
+        ng-disabled="disabled"
+        ng-model="model"
+        ng-options="option.Code as option.Name for option in options"
+        placeholder="{{placeholder}}"
+        tabindex="{{tabindex}}"
+        type="button">
+    </button>
+</div>

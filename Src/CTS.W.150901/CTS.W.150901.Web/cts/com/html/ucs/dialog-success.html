@@ -1,0 +1,13 @@
+﻿<div class="modal-header cts-dialog-success">
+    <cts-title text="{{$nm('CTS.COM.UCS.DIALOGSUCCESS.Title')}}">
+        <cts-image class="close" onclick="close()" src="$res.Icons.Close" border="false" transparent="true"></cts-image>
+    </cts-title>
+</div>
+<div class="modal-body cts-dialog-success" cts-loaded="modalLoaded">
+    <ul>
+        <li ng-repeat="msg in data.Messages">
+            <span class="glyphicon glyphicon-ok"></span>
+            <span class="text">{{msg.MessageDetail}}</span>
+        </li>
+    </ul>
+</div>

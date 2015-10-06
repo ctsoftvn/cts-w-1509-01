@@ -1,0 +1,77 @@
+div.aw-widget-current-inner div.aw-widget-content.bg-s
+                                {
+                                    border: none !important;
+                                }
+                                
+                                div.aw-widget-current-inner div.aw-widget-content a.aw-current-weather p time
+                                {
+                                    display: none !important;
+                                }
+                                
+                                div.aw-widget-current-inner div.aw-widget-content
+                                {
+                                    background: none;
+                                    border: none !important;
+                                }
+                                
+                                div.aw-widget-current-inner div.aw-widget-content a.aw-current-weather
+                                {
+                                    color: #fff !important;
+                                }
+                                
+                                .lt-479 div.aw-widget-current-inner div.aw-widget-content a.aw-current-weather h3
+                                {
+                                    display: none;
+                                }
+                                
+                                .lt-216 div.aw-widget-current-inner div.aw-widget-content a.aw-current-weather span.aw-icon
+                                {
+                                    margin-top: 0px !important;
+                                    background-size: 60px auto !important;
+                                    width: 35px !important;
+                                    height: 35px !important;
+                                    margin-left: 0 !important;
+                                }
+                                
+                                div.aw-widget-current-inner div.aw-widget-content a.aw-current-weather p span.aw-weather-description
+                                {
+                                    display: none !important;
+                                }
+                                
+                                div.aw-widget-current-inner a.aw-toggle i
+                                {
+                                    display: none !important;
+                                }
+                                
+                                .lt-216 div.aw-widget-current-inner div.aw-widget-content a.aw-current-weather p
+                                {
+                                    width: 0 !important;
+                                    position: absolute !important;
+                                    left: 26px;
+                                    top: 0px;
+                                }
+                                
+                                div.aw-widget-current-inner a.aw-toggle
+                                {
+                                    display: none !important;
+                                }
+                                
+                                .lt-216 div.aw-widget-current-inner div.aw-widget-content a.aw-current-weather p span.aw-temperature-today
+                                {
+                                    padding-top: 6px !important;
+                                }
+                                
+                                div.aw-widget-current-inner div.aw-widget-content a.aw-current-weather p span.aw-temperature-today
+                                {
+                                    font-size: 1.4em !important;
+                                    color: #073079;
+                                }
+                                
+                                @media (min-width: 768px)
+                                {
+                                    div.aw-widget-current-inner div.aw-widget-content a.aw-current-weather p span.aw-temperature-today
+                                    {
+                                        font-size: 24px !important;
+                                        color: #fff;
+                                    }
+                                }

@@ -1,0 +1,8 @@
+﻿<div class="modal-header cts-dialog-editor">
+    <cts-title text="{{$nm('CTS.COM.UCS.DIALOGEDITOR.Title')}}">
+        <cts-image class="close" onclick="close()" src="$res.Icons.Close" border="false" transparent="true"></cts-image>
+    </cts-title>
+</div>
+<div class="modal-body cts-dialog-editor" cts-loaded="modalLoaded">
+    <cts-editor id="edtElement" model="data.Content" options="edtOptions"></cts-editor>
+</div>

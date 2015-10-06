@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app" data-ng-controller="MainCtrl">
+<head>
+    <!-------------------------- JSS (COM) ------------------------------->
+    <script type="text/javascript" src="/cts/res/jss/base.min.js"></script>
+    <script type="text/javascript" src="/cts/res/jss/base-ext.min.js"></script>
+    <script type="text/javascript" src="/cts/res/lib-ext/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="/cts/res/jss/cts-res.min.js"></script>
+    <script type="text/javascript" src="/cts/res/jss/cts-plugin.min.js"></script>
+    <script type="text/javascript" src="/cts/res/jss/cts-com.js"></script>
+    <!-------------------------- CSS (COM) ------------------------------->
+    <link rel="stylesheet" type="text/css" href="/cts/res/css/com.min.css" />
+    <!-------------------------- JSS (Adm) ------------------------------->
+    <!-- Adm Resources -->
+    <script type="text/javascript" src="res/jss/i18n/messages.js"></script>
+    <script type="text/javascript" src="res/jss/i18n/names.js"></script>
+    <!-- Config -->
+    <script type="text/javascript" src="res/jss/angular-config.js"></script>
+    <!-------------------------- JSS (Ctrls) ----------------------------->
+    <script type="text/javascript" src="res/jss/ctrls/main.js"></script>
+    <script type="text/javascript" src="res/jss/ctrls/upload-file.js"></script>
+    <script type="text/javascript" src="res/jss/ctrls/create-folder.js"></script>
+    <script type="text/javascript" src="res/jss/ctrls/rename-item.js"></script>
+    <script type="text/javascript" src="res/jss/ctrls/remove-item.js"></script>
+    <!-------------------------- CSS (Adm) ------------------------------->
+    <link rel="stylesheet" type="text/css" href="res/css/base.min.css" />
+    <link rel="stylesheet" type="text/css" href="res/css/style.css" />
+    <!---------------------------Title ----------------------------------->
+    <title>{{$nm('CTS.PLUGIN.FILEMANAGER.MAIN.Title')}}</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row cts-panel">
+            <div class="col-xs-12">
+                <button ng-click="uploadFile()" type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-upload"></span>
+                    <span>{{$nm('CTS.PLUGIN.FILEMANAGER.MAIN.UploadFile')}}</span>
+                </button>
+                <button ng-click="createFolder()" type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-folder-close"></span>
+                    <span>{{$nm('CTS.PLUGIN.FILEMANAGER.MAIN.CreateFolder')}}</span>
+                </button>
+            </div>
+        </div>
+        <div class="row cts-panel">
+            <div class="col-xs-12">
+                <span ng-repeat="obj in data.ListPaths">
+                    <a ng-click="selectItem(obj)">
+                        <span class="{{obj.Icon}}"></span> {{obj.Name}}
+                    </a>
+                    <span>/</span>
+                </span>
+            </div>
+        </div>
+        <div id="listFiles" class="row cts-panel">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div ng-repeat="obj in data.ListFiles" context-menu="cmnItems.Options" class="col-xs-6 col-sm-3 col-md-2">
+                        <a ng-click="selectItem(obj)" class="thumbnail text-center">
+                            <img ng-if="obj.Type == 'folder'" src="res/img/folder.png" class="img-responsive" alt="{{obj.Name}}">
+                            <img ng-if="obj.Type == 'file'" src="res/img/file.png" class="img-responsive" alt="{{obj.Name}}">
+                            <img ng-if="obj.Type == 'image'" ng-src="{{'/cts/web/file-manager.ashx?path=' + obj.Path + '&w=162&h=100&bgcolor=fff'}}" class="img-responsive" alt="{{obj.Name}}">
+                            <div class="caption">
+                                {{obj.Name}}
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cts-loading"></div>
+</body>
+</html>

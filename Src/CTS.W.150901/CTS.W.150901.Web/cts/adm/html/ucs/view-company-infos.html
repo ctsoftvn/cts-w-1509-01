@@ -1,0 +1,45 @@
+﻿<cts-title text="{{$nm('CTS.ADM.UCS.VIEWCOMPANYINFOS.Title')}}"></cts-title>
+<cts-toolbar>
+    <cts-toolbar-item onclick="saveBatch()" class="left-1" src="$res.Icons.SaveBatch" data-original-title="{{$nm('CTS.ADM.UCS.VIEWCOMPANYINFOS.SaveBatch')}}" ui-jq="tooltip"></cts-toolbar-item>
+</cts-toolbar>
+<cts-grid-Pane class="companyInfos-tblResult">
+    <table dt-options="tblResult.Options" datatable="ng">
+        <thead>
+        <tr>
+            <td width="30px"></td>
+            <td width="100" text="{{$nm('CTS.ADM.UCS.VIEWCOMPANYINFOS.ColLocale')}}"  cts-grid-header="true"></td>
+            <td width="200" text="{{$nm('CTS.ADM.UCS.VIEWCOMPANYINFOS.ColInfoName')}}" cts-grid-header="true"></td>
+            <td width="350" text="{{$nm('CTS.ADM.UCS.VIEWCOMPANYINFOS.ColInfoValue')}}" cts-grid-header="true"></td>
+            <td width="250" text="{{$nm('CTS.ADM.UCS.VIEWCOMPANYINFOS.ColNotes')}}" cts-grid-header="true"></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="obj in tblResult.ListData">
+            <td><input type="checkbox" ng-model="obj.HasChanged"/></td>
+            <td>{{obj.LocaleName}}</td>
+            <td>{{obj.InfoName}}</td>
+            <td class="editable">
+                <span ng-if="obj.InfoType=='String'">
+                    <cts-text tabindex="10" model="obj.InfoValue" onchange="tblResultChange(data, obj)"></cts-text>
+                </span>
+                <span ng-if="obj.InfoType=='Password'">
+                    <cts-password tabindex="10" model="obj.InfoValue" onchange="tblResultChange(data, obj)"></cts-password>
+                </span>
+                <span ng-if="obj.InfoType=='Number'">
+                    <cts-number tabindex="10" model="obj.InfoValue" onchange="tblResultChange(data, obj)"></cts-number>
+                </span>
+                <span ng-if="obj.InfoType=='Image'">
+                    <cts-image tabindex="10" src="$res.Icons.UploadImage" onclick="uploadImage(obj)" data-original-title="{{$nm('CTS.ADM.UCS.VIEWCOMPANYINFOS.UploadImage')}}" ui-jq="tooltip" style="width: 16px;"></cts-image>
+                </span>
+                <span ng-if="obj.InfoType=='Area'">
+                    <cts-image tabindex="10"  src="$res.Icons.Area" onclick="editArea(obj)" data-original-title="{{$nm('CTS.ADM.UCS.VIEWCOMPANYINFOS.EditArea')}}" ui-jq="tooltip" style="width: 16px;"></cts-image>
+                </span>
+                <span ng-if="obj.InfoType=='Content'">
+                    <cts-image tabindex="10"  src="$res.Icons.Editor" onclick="editContent(obj)" data-original-title="{{$nm('CTS.ADM.UCS.VIEWCOMPANYINFOS.EditContent')}}" ui-jq="tooltip" style="width: 16px;"></cts-image>
+                </span>
+            </td>
+            <td>{{obj.Notes}}</td>
+        </tr>
+        </tbody>
+    </table>
+</cts-grid-Pane>
