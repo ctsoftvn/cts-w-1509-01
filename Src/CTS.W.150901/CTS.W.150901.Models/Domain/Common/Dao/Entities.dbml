@@ -21,6 +21,7 @@
       <Column Name="LocaleCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TypeCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TypeName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SearchName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Slug" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="FileCd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
@@ -218,6 +219,7 @@
       <Column Name="LocaleCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="BannerCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="BannerName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SearchName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="FileCd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="SortKey" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
@@ -289,6 +291,7 @@
       <Column Name="LocaleCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="PageCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="PageName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SearchName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Slug" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="SortKey" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
@@ -323,6 +326,7 @@
       <Column Name="LocaleCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TypeCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TypeName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SearchName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Slug" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="FileCd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -341,6 +345,7 @@
       <Column Name="LocaleCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ServiceCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ServiceName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SearchName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Slug" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="FileCd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
@@ -358,6 +363,7 @@
       <Column Name="LocaleCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TourCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TourName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SearchName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Slug" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="TourTypeCd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />

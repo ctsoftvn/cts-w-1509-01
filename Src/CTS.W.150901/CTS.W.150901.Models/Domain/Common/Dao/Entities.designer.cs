@@ -672,6 +672,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		
 		private string _TypeName;
 		
+		private string _SearchName;
+		
 		private string _Slug;
 		
 		private string _FileCd;
@@ -702,6 +704,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnTypeCdChanged();
     partial void OnTypeNameChanging(string value);
     partial void OnTypeNameChanged();
+    partial void OnSearchNameChanging(string value);
+    partial void OnSearchNameChanged();
     partial void OnSlugChanging(string value);
     partial void OnSlugChanged();
     partial void OnFileCdChanging(string value);
@@ -785,6 +789,26 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._TypeName = value;
 					this.SendPropertyChanged("TypeName");
 					this.OnTypeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchName", DbType="VarChar(255)")]
+		public string SearchName
+		{
+			get
+			{
+				return this._SearchName;
+			}
+			set
+			{
+				if ((this._SearchName != value))
+				{
+					this.OnSearchNameChanging(value);
+					this.SendPropertyChanging();
+					this._SearchName = value;
+					this.SendPropertyChanged("SearchName");
+					this.OnSearchNameChanged();
 				}
 			}
 		}
@@ -4646,6 +4670,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		
 		private string _BannerName;
 		
+		private string _SearchName;
+		
 		private string _FileCd;
 		
 		private string _Notes;
@@ -4674,6 +4700,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnBannerCdChanged();
     partial void OnBannerNameChanging(string value);
     partial void OnBannerNameChanged();
+    partial void OnSearchNameChanging(string value);
+    partial void OnSearchNameChanged();
     partial void OnFileCdChanging(string value);
     partial void OnFileCdChanged();
     partial void OnNotesChanging(string value);
@@ -4755,6 +4783,26 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._BannerName = value;
 					this.SendPropertyChanged("BannerName");
 					this.OnBannerNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchName", DbType="VarChar(255)")]
+		public string SearchName
+		{
+			get
+			{
+				return this._SearchName;
+			}
+			set
+			{
+				if ((this._SearchName != value))
+				{
+					this.OnSearchNameChanging(value);
+					this.SendPropertyChanging();
+					this._SearchName = value;
+					this.SendPropertyChanged("SearchName");
+					this.OnSearchNameChanged();
 				}
 			}
 		}
@@ -6118,6 +6166,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		
 		private string _PageName;
 		
+		private string _SearchName;
+		
 		private string _Slug;
 		
 		private string _Content;
@@ -6146,6 +6196,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnPageCdChanged();
     partial void OnPageNameChanging(string value);
     partial void OnPageNameChanged();
+    partial void OnSearchNameChanging(string value);
+    partial void OnSearchNameChanged();
     partial void OnSlugChanging(string value);
     partial void OnSlugChanged();
     partial void OnContentChanging(string value);
@@ -6227,6 +6279,26 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._PageName = value;
 					this.SendPropertyChanged("PageName");
 					this.OnPageNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchName", DbType="VarChar(255)")]
+		public string SearchName
+		{
+			get
+			{
+				return this._SearchName;
+			}
+			set
+			{
+				if ((this._SearchName != value))
+				{
+					this.OnSearchNameChanging(value);
+					this.SendPropertyChanging();
+					this._SearchName = value;
+					this.SendPropertyChanged("SearchName");
+					this.OnSearchNameChanged();
 				}
 			}
 		}
@@ -6818,6 +6890,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		
 		private string _TypeName;
 		
+		private string _SearchName;
+		
 		private string _Slug;
 		
 		private System.Nullable<decimal> _Price;
@@ -6850,6 +6924,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnTypeCdChanged();
     partial void OnTypeNameChanging(string value);
     partial void OnTypeNameChanged();
+    partial void OnSearchNameChanging(string value);
+    partial void OnSearchNameChanged();
     partial void OnSlugChanging(string value);
     partial void OnSlugChanged();
     partial void OnPriceChanging(System.Nullable<decimal> value);
@@ -6935,6 +7011,26 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._TypeName = value;
 					this.SendPropertyChanged("TypeName");
 					this.OnTypeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchName", DbType="VarChar(255)")]
+		public string SearchName
+		{
+			get
+			{
+				return this._SearchName;
+			}
+			set
+			{
+				if ((this._SearchName != value))
+				{
+					this.OnSearchNameChanging(value);
+					this.SendPropertyChanging();
+					this._SearchName = value;
+					this.SendPropertyChanged("SearchName");
+					this.OnSearchNameChanged();
 				}
 			}
 		}
@@ -7192,6 +7288,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		
 		private string _ServiceName;
 		
+		private string _SearchName;
+		
 		private string _Slug;
 		
 		private string _FileCd;
@@ -7222,6 +7320,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnServiceCdChanged();
     partial void OnServiceNameChanging(string value);
     partial void OnServiceNameChanged();
+    partial void OnSearchNameChanging(string value);
+    partial void OnSearchNameChanged();
     partial void OnSlugChanging(string value);
     partial void OnSlugChanged();
     partial void OnFileCdChanging(string value);
@@ -7305,6 +7405,26 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._ServiceName = value;
 					this.SendPropertyChanged("ServiceName");
 					this.OnServiceNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchName", DbType="VarChar(255)")]
+		public string SearchName
+		{
+			get
+			{
+				return this._SearchName;
+			}
+			set
+			{
+				if ((this._SearchName != value))
+				{
+					this.OnSearchNameChanging(value);
+					this.SendPropertyChanging();
+					this._SearchName = value;
+					this.SendPropertyChanged("SearchName");
+					this.OnSearchNameChanged();
 				}
 			}
 		}
@@ -7542,6 +7662,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		
 		private string _TourName;
 		
+		private string _SearchName;
+		
 		private string _Slug;
 		
 		private string _TourTypeCd;
@@ -7572,6 +7694,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnTourCdChanged();
     partial void OnTourNameChanging(string value);
     partial void OnTourNameChanged();
+    partial void OnSearchNameChanging(string value);
+    partial void OnSearchNameChanged();
     partial void OnSlugChanging(string value);
     partial void OnSlugChanged();
     partial void OnTourTypeCdChanging(string value);
@@ -7655,6 +7779,26 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._TourName = value;
 					this.SendPropertyChanged("TourName");
 					this.OnTourNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchName", DbType="VarChar(255)")]
+		public string SearchName
+		{
+			get
+			{
+				return this._SearchName;
+			}
+			set
+			{
+				if ((this._SearchName != value))
+				{
+					this.OnSearchNameChanging(value);
+					this.SendPropertyChanging();
+					this._SearchName = value;
+					this.SendPropertyChanged("SearchName");
+					this.OnSearchNameChanged();
 				}
 			}
 		}

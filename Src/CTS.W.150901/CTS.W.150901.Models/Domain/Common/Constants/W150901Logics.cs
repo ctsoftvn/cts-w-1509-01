@@ -5,15 +5,26 @@
     /// </summary>
     public class W150901Logics
     {
+        // -- Delete [#1] start -- //
         // Định nghĩa mã seo
         public const string CD_SEO_CD_PAGE_INDEX = "seo.cln.pages.index";
         public const string CD_SEO_CD_PAGE_TOUR = "seo.cln.pages.tour";
         public const string CD_SEO_CD_PAGE_ROOM = "seo.cln.pages.room";
         public const string CD_SEO_CD_PAGE_SERVICE = "seo.cln.pages.service";
-        
         // Định nghĩa nhóm seo
         public const string GRPSEO_CLN_PAGES = "seo.cln.pages";
         public const string GRPSEO_MA_TOURS = "seo.ma.tours";
+        // -- Delete [#1] end -- //
+
+        // Định nghĩa mã meta
+        public const string CD_META_CD_PAGE_INDEX = "ma.metas.ma.pages.index";
+        public const string CD_META_CD_PAGE_TOUR = "ma.metas.ma.pages.tour";
+        public const string CD_META_CD_PAGE_ROOM = "ma.metas.ma.pages.room";
+        public const string CD_META_CD_PAGE_SERVICE = "ma.metas.ma.pages.service";
+        // Định nghĩa nhóm meta
+        public const string GRPMETA_MA_PAGES = "ma.metas.ma.pages";
+        public const string GRPMETA_MA_ROOMTYPES = "ma.metas.ma.room-types";
+        public const string GRPMETA_MA_TOURS = "ma.metas.ma.tours";
         // Định nghĩa mã thông tin công ty
         public const string CD_INFO_CD_COMPANY_NAME = "ma.company-infos.company-name";
         public const string CD_INFO_CD_SLOGAN = "ma.company-infos.slogan";
@@ -27,5 +38,11 @@
         public const string CD_INFO_CD_HOTEL_URL_2 = "ma.company-infos.hotel-url-2";
         public const string CD_INFO_CD_HOTEL_URL_3 = "ma.company-infos.hotel-url-3";
         public const string CD_INFO_CD_HOTEL_URL_4 = "ma.company-infos.hotel-url-4";
+        // Định nghĩa mã quyền hạn
+        public const string CD_ROLE_CD_ADM_MA_RMT_LI_VIEW = "im.roles.adm.ma_rmt_li.view";
+        public const string CD_ROLE_CD_ADM_MA_RMT_LI_FILTER = "im.roles.adm.ma_rmt_li.filter";
+        public const string CD_ROLE_CD_ADM_MA_RMT_LI_UPDATE = "im.roles.adm.ma_rmt_li.update";
+        public const string CD_ROLE_CD_ADM_MA_RMT_EN_VIEW = "im.roles.adm.ma_rmt_en.view";
+        public const string CD_ROLE_CD_ADM_MA_RMT_EN_UPDATE = "im.roles.adm.ma_rmt_en.update";
     }
 }
