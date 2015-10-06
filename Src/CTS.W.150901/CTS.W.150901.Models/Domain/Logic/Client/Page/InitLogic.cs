@@ -61,7 +61,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Page
             var page = processDao.GetPage(WebContextHelper.LocaleCd, inputObject.Slug);
 
             // Lấy thông tin seo
-            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPSEO_CLN_PAGES, page.PageCd, false);
+            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPMETA_MA_PAGES, page.PageCd, false);
             metaInfo.MetaTitle = infoSeo.MetaTitle;
             metaInfo.MetaKeys = infoSeo.MetaKeys;
             metaInfo.MetaDesc = infoSeo.MetaDesc;

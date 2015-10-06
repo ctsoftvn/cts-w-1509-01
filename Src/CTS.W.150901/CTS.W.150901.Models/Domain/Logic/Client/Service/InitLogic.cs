@@ -68,7 +68,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Service
             }
 
             // Lấy thông tin seo
-            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPSEO_CLN_PAGES, W150901Logics.CD_SEO_CD_PAGE_SERVICE, false);
+            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPMETA_MA_PAGES, W150901Logics.CD_META_CD_PAGE_SERVICE, false);
             metaInfo.MetaTitle = infoSeo.MetaTitle;
             metaInfo.MetaKeys = infoSeo.MetaKeys;
             metaInfo.MetaDesc = infoSeo.MetaDesc;

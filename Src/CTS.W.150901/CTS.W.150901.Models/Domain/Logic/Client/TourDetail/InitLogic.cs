@@ -62,7 +62,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.TourDetail
             var tour = processDao.GetTourDetail(WebContextHelper.LocaleCd, inputObject.Slug);
 
             // Lấy thông tin seo
-            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPSEO_MA_TOURS, tour.TourCd, false);
+            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPMETA_MA_TOURS, tour.TourCd, false);
             metaInfo.MetaTitle = infoSeo.MetaTitle;
             metaInfo.MetaKeys = infoSeo.MetaKeys;
             metaInfo.MetaDesc = infoSeo.MetaDesc;

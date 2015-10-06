@@ -95,7 +95,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             var hotelurl4 = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_HOTEL_URL_4, false);
 
             // Lấy thông tin seo
-            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPSEO_CLN_PAGES, W150901Logics.CD_SEO_CD_PAGE_INDEX, false);
+            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPMETA_MA_PAGES, W150901Logics.CD_META_CD_PAGE_INDEX, false);
             metaInfo.MetaTitle = infoSeo.MetaTitle;
             metaInfo.MetaKeys = infoSeo.MetaKeys;
             metaInfo.MetaDesc = infoSeo.MetaDesc;
