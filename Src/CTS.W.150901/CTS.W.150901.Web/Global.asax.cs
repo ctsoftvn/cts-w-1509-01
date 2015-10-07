@@ -1,4 +1,5 @@
 ﻿using System;
+using CTS.W._150901.Models;
 using CTS.Web.CompanyInfos;
 using CTS.Web.FileManager;
 using CTS.Web.Parameters;
@@ -16,6 +17,7 @@ namespace CTS.W._150901.Web
             WebUploadFile.ApplyResources();
             WebCompanyInfos.ApplyResources();
             WebParameters.ApplyResources();
+            W150901.ApplyResources();
         }
 
         void Application_End(object sender, EventArgs e) {
