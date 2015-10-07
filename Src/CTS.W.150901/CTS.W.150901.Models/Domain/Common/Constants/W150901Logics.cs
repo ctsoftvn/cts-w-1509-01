@@ -5,7 +5,6 @@
     /// </summary>
     public class W150901Logics
     {
-
         // Định nghĩa mã meta
         public const string CD_META_CD_PAGE_INDEX = "ma.metas.ma.pages.index";
         public const string CD_META_CD_PAGE_TOUR = "ma.metas.ma.pages.tour";
@@ -14,6 +13,7 @@
         // Định nghĩa nhóm meta
         public const string GRPMETA_MA_PAGES = "ma.metas.ma.pages";
         public const string GRPMETA_MA_ROOMTYPES = "ma.metas.ma.room-types";
+        public const string GRPMETA_MA_TOURTYPES = "ma.metas.ma.tour-types";
         public const string GRPMETA_MA_TOURS = "ma.metas.ma.tours";
         // Định nghĩa mã thông tin công ty
         public const string CD_INFO_CD_COMPANY_NAME = "ma.company-infos.company-name";
