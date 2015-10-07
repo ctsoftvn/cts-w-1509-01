@@ -52,6 +52,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
         /// <returns>DataModel</returns>
         private InitDataModel GetInfo(InitDataModel inputObject)
         {
+            
             // Khởi tạo biến cục bộ
             var getResult = new InitDataModel();
             var companyCom = new CompanyCom();
@@ -59,13 +60,14 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             var metaCom = new MetaCom();
             var metaInfo = new BaseMeta();
             var processDao = new MainDao();
+            var localeCom = new LocaleCom();
             var storageFileCom = new StorageFileCom();
             // Map dữ liệu
             DataHelper.CopyObject(inputObject, getResult);
             // Lấy ngôn ngữ chuẩn
-            var basicLocale = Logics.LOCALE_DEFAULT;
+            var basicLocale = localeCom.GetDefault(DataComLogics.CD_APP_CD_CLN);
             // Lấy danh sách ngôn ngữ
-            var listLocales = codeCom.GetDiv(WebContextHelper.LocaleCd, DataComLogics.GRPCD_ADM_LOCALES, null, false, false);
+            var listLocales = codeCom.GetDiv(WebContextHelper.LocaleCd, DataComLogics.GRPCD_CLN_LOCALES, null, false, false);
             // Lấy giá trị combo
             var cbLocales = DataHelper.ToComboItems(listLocales, basicLocale);
             // Lấy danh sách banner
@@ -79,6 +81,11 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             }
 
             // Lấy field
+            var logoFileCd = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_LOGO, false);
+            var logoImage = storageFileCom.GetFileName(
+                    WebContextHelper.LocaleCd,
+                    logoFileCd,
+                    false);
             var companyName = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_COMPANY_NAME, false);
             var slogan = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_SLOGAN, false);
             var address = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_ADDRESS, false);
@@ -96,11 +103,14 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
 
             // Lấy thông tin seo
             var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPMETA_MA_PAGES, W150901Logics.CD_META_CD_PAGE_INDEX, false);
-            metaInfo.MetaTitle = infoSeo.MetaTitle;
-            metaInfo.MetaKeys = infoSeo.MetaKeys;
-            metaInfo.MetaDesc = infoSeo.MetaDesc;
+            if (infoSeo != null) {
+                metaInfo.MetaTitle = infoSeo.MetaTitle;
+                metaInfo.MetaKeys = infoSeo.MetaKeys;
+                metaInfo.MetaDesc = infoSeo.MetaDesc;
+            }
 
             // Gán giá trị trả về
+            getResult.Logo = logoImage;
             getResult.CompanyName = companyName;
             getResult.Slogan = slogan;
             getResult.Address = address;
@@ -117,6 +127,8 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             getResult.MetaKey = metaInfo.MetaKeys;
             getResult.MetaDescription = metaInfo.MetaDesc;
             getResult.ListBanner = listBanner;
+            getResult.CboLocales = cbLocales.ListItems;
+            getResult.CboLocalesSeleted = cbLocales.SeletedValue;
 
             // Kết quả trả về
             return getResult;
