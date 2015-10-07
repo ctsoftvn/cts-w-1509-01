@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="CTS.W._150901.Web.Template" %>
 
+<%@ Import Namespace="CTS.Core.Domain.Model" %>
+<%@ Import Namespace="Resources" %>
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
@@ -20,9 +22,7 @@
     <link rel='stylesheet' href='/res/css/bootstrap.min.css' type='text/css' media='' />
     <link rel='stylesheet' href='/res/css/style-02.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/ll-edit.css' type='text/css' media='all' />
-    
     <link rel='stylesheet' href='/res/css/my-style.css' type='text/css' media='all' />
-    
     <!--javascript-->
     <script type='text/javascript' src='/res/jss/jquery.js'></script>
     <script type='text/javascript' src='/res/jss/jquery-migrate.min.js'></script>
@@ -35,7 +35,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    
     <div class="se-pre-con">
     </div>
     <div id="page" class="hfeed site">
@@ -47,16 +46,23 @@
                             <i class="fa fa-bars"></i></a>
                     </div>
                     <div class="languages">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class="flag flag-en"></i><span class="lang-name">English</span> <span class="caret">
-                                </span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" target="_blank"><i class="flag flag-vn"></i>Vietnamese</a></li>
-                            </ul>
-                        </div>
+                        <asp:Repeater ID="rptLanguages" runat="server">
+                            <HeaderTemplate>
+                                <ul class="flags">
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <li>
+                                    <asp:LinkButton CausesValidation="false" ID="lbtnLanguage" OnCommand="lbtnLanguage_Command"
+                                        CommandArgument='<%# ((HashMap)Container.DataItem)["Code"] %>' runat="server"
+                                        ToolTip='<%# ((HashMap)Container.DataItem)["Name"] %>'>
+                                <img src='<%# "/res/img/" + ((HashMap)Container.DataItem)["Code"] + ".png" %>' />
+                                    </asp:LinkButton>
+                                </li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </ul>
+                            </FooterTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </header>
@@ -65,71 +71,49 @@
                     <div class="container menu-bar">
                         <nav id="ubermenu-main-23" class="ubermenu ubermenu-nojs ubermenu-main ubermenu-menu-23 ubermenu-responsive ubermenu-responsive-1190 ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-shift ubermenu-trigger-hover_intent ubermenu-skin-none  ubermenu-bar-align-right ubermenu-items-align-left ubermenu-bound ubermenu-disable-submenu-scroll ubermenu-sub-indicators ubermenu-retractors-responsive">
                             <ul id="ubermenu-nav-main-23" class="ubermenu-nav">
-                                <li class="ubermenu-item">
-                                    <a class="ubermenu-target ubermenu-item-layout-icon_left"
-                                        href="" tabindex="0"><i class="ubermenu-icon fa fa-home"></i></a></li>
-                                <li class="ubermenu-item">
-                                    <a class="ubermenu-target"
-                                        href="#" tabindex="0">FIND
-                                            A HOTEL </a>
+                                <li class="ubermenu-item"><a class="ubermenu-target ubermenu-item-layout-icon_left"
+                                    href="" tabindex="0"><i class="ubermenu-icon fa fa-home"></i></a></li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">FIND A HOTEL
+                                </a>
                                     <ul class="ubermenu-submenu ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-padded">
                                         <!-- begin Dynamic Posts: [Dynamic Posts] ID[811] count[5] -->
-                                        <li class="ubermenu-item ubermenu-column">
-                                            <a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
-                                                href="#"><span class="ubermenu-target-title ubermenu-target-text">Asian Ruby Luxury
-                                                </span>
-                                                <img class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu4-300x130.jpg"
-                                                    width="300" height="130" alt="menu4" />
-                                            </a></li>
-                                        <li class="ubermenu-item ubermenu-column">
-                                            <a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
-                                                href="#"><span class="ubermenu-target-title ubermenu-target-text">Asian Ruby Park View
-                                                </span>
-                                                <img class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu1-300x130.jpg"
-                                                    width="300" height="130" alt="menu1" /></a></li>
-                                        <li class="ubermenu-item ubermenu-column">
-                                            <a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
-                                                href="#"><span class="ubermenu-target-title ubermenu-target-text">Asian Ruby Central
-                                                </span>
-                                                <img class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu3-300x130.jpg"
-                                                    width="300" height="130" alt="menu3" /></a></li>
-                                        <li class="ubermenu-item ubermenu-column">
-                                            <a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
-                                                href="#"><span class="ubermenu-target-title ubermenu-target-text">Mayflower</span><img
-                                                    class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu2-300x130.jpg"
-                                                    width="300" height="130" alt="menu2" /></a></li>
+                                        <li class="ubermenu-item ubermenu-column"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
+                                            href="#"><span class="ubermenu-target-title ubermenu-target-text">Asian Ruby Luxury
+                                            </span>
+                                            <img class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu4-300x130.jpg"
+                                                width="300" height="130" alt="menu4" />
+                                        </a></li>
+                                        <li class="ubermenu-item ubermenu-column"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
+                                            href="#"><span class="ubermenu-target-title ubermenu-target-text">Asian Ruby Park View
+                                            </span>
+                                            <img class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu1-300x130.jpg"
+                                                width="300" height="130" alt="menu1" /></a></li>
+                                        <li class="ubermenu-item ubermenu-column"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
+                                            href="#"><span class="ubermenu-target-title ubermenu-target-text">Asian Ruby Central
+                                            </span>
+                                            <img class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu3-300x130.jpg"
+                                                width="300" height="130" alt="menu3" /></a></li>
+                                        <li class="ubermenu-item ubermenu-column"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
+                                            href="#"><span class="ubermenu-target-title ubermenu-target-text">Mayflower</span><img
+                                                class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu2-300x130.jpg"
+                                                width="300" height="130" alt="menu2" /></a></li>
                                         <!-- end Dynamic Posts: [Dynamic Posts] ID[811] -->
                                         <li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i>
                                             Close</li>
                                     </ul>
                                 </li>
-                                <li class="ubermenu-item">
-                                    <a class="ubermenu-target"
-                                        href="#" tabindex="0">ABOUT
-                                            US</a> </li>
-                                <li class="ubermenu-item">
-                                    <a class="ubermenu-target"
-                                        href="#" tabindex="0">ACCOMODATION</a>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">ABOUT US</a>
                                 </li>
-                                <li class="ubermenu-item">
-                                    <a class="ubermenu-target"
-                                        href="#" tabindex="0">SERVICES</a>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">ACCOMODATION</a>
                                 </li>
-                                <li class="ubermenu-item">
-                                    <a class="ubermenu-target"
-                                        href="#" tabindex="0">PROMOTION</a></li>
-                                <li class="ubermenu-item">
-                                    <a class="ubermenu-target"
-                                        href="#" tabindex="0">GALLERY</a>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">SERVICES</a>
                                 </li>
-                                <li class="ubermenu-item">
-                                    <a class="ubermenu-target"
-                                        href="#" tabindex="0">TOURS</a>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">PROMOTION</a></li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">GALLERY</a>
                                 </li>
-                                <li class="ubermenu-item">
-                                    <a class="ubermenu-target"
-                                        href="#" tabindex="0">CONTACT
-                                            US</a></li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">TOURS</a>
+                                </li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">CONTACT US</a></li>
                             </ul>
                         </nav>
                         <!-- End UberMenu -->
@@ -359,25 +343,25 @@
                 <div class="row hotel-chain">
                     <div class="col-xs-12 col-sm-4 col-md-4 col-md-4">
                         <div class="main-chain">
-                            <a href="about-us">
-                                <img width="189" height="47" src="/res/img/logo.png" /></a>
+                            <asp:HyperLink runat="server" ID="lkHome" CssClass="logo">
+                                <img width="189" height="47" src="/res/img/logo.png" /></asp:HyperLink>
                             <div class="diamond">
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-8 col-md-8 col-md-8 mini-chain">
                         <div class="chain-item">
-                            <a href="#">
-                                <img width="189" height="47" src="/res/img/ruby1.png" class="img-responsive" /></a></div>
+                            <asp:HyperLink ID="lkHotel1" runat="server" class="hotel1" ToolTip="Asian Ruby Luxury" Target="_blank">
+                                <img width="189" height="47" src="/res/img/ruby1.png" class="img-responsive" /></asp:HyperLink></div>
                         <div class="chain-item">
-                            <a href="#">
-                                <img width="189" height="47" src="/res/img/ruby3.png" class="img-responsive" /></a></div>
+                            <asp:HyperLink ID="lkHotel2" runat="server" class="hotel2" ToolTip="Asian Ruby Park View" Target="_blank">
+                                <img width="189" height="47" src="/res/img/ruby3.png" class="img-responsive" /></asp:HyperLink></div>
                         <div class="chain-item">
-                            <a href="#">
-                                <img width="189" height="47" src="/res/img/ruby4.jpg" class="img-responsive" /></a></div>
+                            <asp:HyperLink ID="lkHotel3" runat="server" class="hotel3" ToolTip="Asian Ruby Central" Target="_blank">
+                                <img width="189" height="47" src="/res/img/ruby4.jpg" class="img-responsive" /></asp:HyperLink></div>
                         <div class="chain-item">
-                            <a href="#">
-                                <img width="189" height="47" src="/res/img/mayhotel.png" class="img-responsive" /></a></div>
+                            <asp:HyperLink ID="lkHotel4" runat="server" class="hotel4" ToolTip="Mayfower" Target="_blank">
+                                <img width="189" height="47" src="/res/img/mayhotel.png" class="img-responsive" /></asp:HyperLink></div>
                     </div>
                 </div>
             </div>
@@ -394,10 +378,10 @@
                             </div>
                             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                                 <ul class="footer-social">
-                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><asp:HyperLink ID="lkFacebook" runat="server" class="facebook" ToolTip="Facebook" Target="_blank"><i class="fa fa-facebook"></i></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="lkYoutube" runat="server" class="youtube" ToolTip="Youtube" Target="_blank"><i class="fa fa-youtube"></i></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="lkGoogle" runat="server" class="google" ToolTip="Google plus" Target="_blank"><i class="fa fa-google-plus"></i></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="lkTwitter" runat="server" class="twitter" ToolTip="Twitter" Target="_blank"><i class="fa fa-twitter"></i></asp:HyperLink></li>
                                 </ul>
                             </div>
                             <div style="clear: both;">
@@ -406,8 +390,9 @@
                         <div class="footer-lv2">
                             <div class="col-xs-12">
                                 <p>
-                                    <span>Copyright © Asianrubyselecthotel.com</span> 122f - 122f1 Bui Thi Xuan Street,
-                                    Ward Pham Ngu Lao,District 1, HCM City.</p>
+                                    <span>
+                                        <asp:Literal ID="ltCopyright" runat="server" /></span>
+                                    <asp:Literal ID="ltAdderess" runat="server" /></p>
                             </div>
                         </div>
                     </div>
@@ -459,7 +444,6 @@
         </div>
         <!-- /.shiftnav-inner -->
     </div>
-    
     <script type='text/javascript' src='/res/jss/main.js'></script>
     <script type='text/javascript' src='/res/jss/jquery-ui.min.js'></script>
     <script type='text/javascript' src='/res/jss/bootstrap.min.js'></script>
@@ -472,6 +456,7 @@
     <script type='text/javascript' src='/res/jss/shiftnav.min.js'></script>
     <script type='text/javascript' src='/res/jss/jquery.easing.min.js'></script>
     <script type='text/javascript' src='/res/jss/masterslider.min.js'></script>
+    <script type='text/javascript' src='/res/jss/custom.js'></script>
     </form>
 </body>
 </html>
