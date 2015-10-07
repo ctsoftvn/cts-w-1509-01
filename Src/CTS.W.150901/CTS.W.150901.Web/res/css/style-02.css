@@ -8887,8 +8887,15 @@ header {
     }
 
     header .menu-bar-top ul {
-        margin-left: 220px;
-        text-align: right
+        margin: 0;
+        padding: 0;
+        list-style:none;
+    }
+     header .menu-bar-top ul li{
+        float:left;
+    }
+    header .menu-bar-top ul li:last-child{
+        margin-left:10px;
     }
 
     header .menu-bar-top ul.dropdown-menu {
