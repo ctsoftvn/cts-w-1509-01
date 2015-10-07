@@ -26,6 +26,8 @@ namespace CTS.W._150901.Models.Domain.Model.Client.Main
         [OutputText]
         public string CompanyName { get; set; }
         [OutputText]
+        public string Logo { get; set; }
+        [OutputText]
         public string Slogan { get; set; }
         [OutputText]
         public string Copyright { get; set; }
