@@ -40,6 +40,60 @@ namespace CTS.W._150901.Web {
         protected global::System.Web.UI.WebControls.Repeater rptLanguages;
         
         /// <summary>
+        /// lkMenuHotel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lkMenuHotel1;
+        
+        /// <summary>
+        /// lkMenuHotel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lkMenuHotel2;
+        
+        /// <summary>
+        /// lkMenuHotel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lkMenuHotel3;
+        
+        /// <summary>
+        /// lkMenuHotel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lkMenuHotel4;
+        
+        /// <summary>
+        /// ltSlogan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltSlogan;
+        
+        /// <summary>
+        /// rptBanners control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptBanners;
+        
+        /// <summary>
         /// ContentMain control.
         /// </summary>
         /// <remarks>
@@ -47,15 +101,6 @@ namespace CTS.W._150901.Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentMain;
-        
-        /// <summary>
-        /// lkHome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lkHome;
         
         /// <summary>
         /// lkHotel1 control.

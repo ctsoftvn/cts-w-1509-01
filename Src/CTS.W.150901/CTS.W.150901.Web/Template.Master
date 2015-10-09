@@ -1,6 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="CTS.W._150901.Web.Template" %>
 
 <%@ Import Namespace="CTS.Core.Domain.Model" %>
+<%@ Import Namespace="CTS.Web.Core.Domain.Helper" %>
 <%@ Import Namespace="Resources" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,9 +54,10 @@
                             <ItemTemplate>
                                 <li>
                                     <asp:LinkButton CausesValidation="false" ID="lbtnLanguage" OnCommand="lbtnLanguage_Command"
+                                        CssClass='<%# ((HashMap)Container.DataItem)["Code"].ToString() == WebContextHelper.LocaleCd ? "active":"" %>'
                                         CommandArgument='<%# ((HashMap)Container.DataItem)["Code"] %>' runat="server"
                                         ToolTip='<%# ((HashMap)Container.DataItem)["Name"] %>'>
-                                <img src='<%# "/res/img/" + ((HashMap)Container.DataItem)["Code"] + ".png" %>' />
+                                <img src='<%# "/res/img/" + ((HashMap)Container.DataItem)["Code"] + ".png" %>' alt=""/>
                                     </asp:LinkButton>
                                 </li>
                             </ItemTemplate>
@@ -72,48 +74,70 @@
                         <nav id="ubermenu-main-23" class="ubermenu ubermenu-nojs ubermenu-main ubermenu-menu-23 ubermenu-responsive ubermenu-responsive-1190 ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-shift ubermenu-trigger-hover_intent ubermenu-skin-none  ubermenu-bar-align-right ubermenu-items-align-left ubermenu-bound ubermenu-disable-submenu-scroll ubermenu-sub-indicators ubermenu-retractors-responsive">
                             <ul id="ubermenu-nav-main-23" class="ubermenu-nav">
                                 <li class="ubermenu-item"><a class="ubermenu-target ubermenu-item-layout-icon_left"
-                                    href="" tabindex="0"><i class="ubermenu-icon fa fa-home"></i></a></li>
-                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">FIND A HOTEL
+                                    href="<%= Strings.CLN_MASTER_HOMEPAGE_LINK %>" tabindex="0"><i class="ubermenu-icon fa fa-home">
+                                    </i></a></li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">
+                                    <%= Strings.CLN_MASTER_FIND_A_HOTEL_TEXT %>
                                 </a>
                                     <ul class="ubermenu-submenu ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-padded">
                                         <!-- begin Dynamic Posts: [Dynamic Posts] ID[811] count[5] -->
-                                        <li class="ubermenu-item ubermenu-column"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
-                                            href="#"><span class="ubermenu-target-title ubermenu-target-text">Asian Ruby Luxury
+                                        <li class="ubermenu-item ubermenu-column">
+                                            <asp:HyperLink ID="lkMenuHotel1" runat="server" CssClass="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-lef"
+                                                Target="_blank">
+                                            <span class="ubermenu-target-title ubermenu-target-text">
+                                                <%= Strings.CLN_MASTER_HOTEL_1_TEXT %>
                                             </span>
                                             <img class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu4-300x130.jpg"
                                                 width="300" height="130" alt="menu4" />
-                                        </a></li>
-                                        <li class="ubermenu-item ubermenu-column"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
-                                            href="#"><span class="ubermenu-target-title ubermenu-target-text">Asian Ruby Park View
+                                            </asp:HyperLink></li>
+                                        <li class="ubermenu-item ubermenu-column">
+                                            <asp:HyperLink ID="lkMenuHotel2" runat="server" CssClass="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-lef"
+                                                Target="_blank">
+                                            <span class="ubermenu-target-title ubermenu-target-text">
+                                                <%= Strings.CLN_MASTER_HOTEL_2_TEXT %>
                                             </span>
                                             <img class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu1-300x130.jpg"
-                                                width="300" height="130" alt="menu1" /></a></li>
-                                        <li class="ubermenu-item ubermenu-column"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
-                                            href="#"><span class="ubermenu-target-title ubermenu-target-text">Asian Ruby Central
+                                                width="300" height="130" alt="menu1" /></asp:HyperLink></li>
+                                        <li class="ubermenu-item ubermenu-column">
+                                            <asp:HyperLink ID="lkMenuHotel3" runat="server" CssClass="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-lef"
+                                                Target="_blank">
+                                            <span class="ubermenu-target-title ubermenu-target-text">
+                                                <%= Strings.CLN_MASTER_HOTEL_3_TEXT %>
                                             </span>
                                             <img class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu3-300x130.jpg"
-                                                width="300" height="130" alt="menu3" /></a></li>
-                                        <li class="ubermenu-item ubermenu-column"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-left"
-                                            href="#"><span class="ubermenu-target-title ubermenu-target-text">Mayflower</span><img
-                                                class="ubermenu-image ubermenu-image-size-medium" src="/res/img/menu2-300x130.jpg"
-                                                width="300" height="130" alt="menu2" /></a></li>
+                                                width="300" height="130" alt="menu3" /></asp:HyperLink></li>
+                                        <li class="ubermenu-item ubermenu-column">
+                                            <asp:HyperLink ID="lkMenuHotel4" runat="server" CssClass="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-image_below ubermenu-content-align-lef"
+                                                Target="_blank">
+                                            <span class="ubermenu-target-title ubermenu-target-text">
+                                                <%= Strings.CLN_MASTER_HOTEL_4_TEXT %></span><img class="ubermenu-image ubermenu-image-size-medium"
+                                                    src="/res/img/menu2-300x130.jpg" width="300" height="130" alt="menu2" /></asp:HyperLink></li>
                                         <!-- end Dynamic Posts: [Dynamic Posts] ID[811] -->
                                         <li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i>
                                             Close</li>
                                     </ul>
                                 </li>
-                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">ABOUT US</a>
-                                </li>
-                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">ACCOMODATION</a>
-                                </li>
-                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">SERVICES</a>
-                                </li>
-                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">PROMOTION</a></li>
-                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">GALLERY</a>
-                                </li>
-                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">TOURS</a>
-                                </li>
-                                <li class="ubermenu-item"><a class="ubermenu-target" href="#" tabindex="0">CONTACT US</a></li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="<%= Strings.CLN_MASTER_ABOUT_US_LINK %>"
+                                    tabindex="0">
+                                    <%= Strings.CLN_MASTER_ABOUT_US_TEXT %></a> </li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="<%= Strings.CLN_MASTER_ACCOMMODATION_LINK %>"
+                                    tabindex="0">
+                                    <%= Strings.CLN_MASTER_ACCOMMODATION_TEXT %></a> </li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="<%= Strings.CLN_MASTER_SERVICES_LINK %>"
+                                    tabindex="0">
+                                    <%= Strings.CLN_MASTER_SERVICES_TEXT %></a> </li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="<%= Strings.CLN_MASTER_PROMOTION_LINK %>"
+                                    tabindex="0">
+                                    <%= Strings.CLN_MASTER_PROMOTION_TEXT %></a></li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="<%= Strings.CLN_MASTER_GALLERY_LINK %>"
+                                    tabindex="0">
+                                    <%= Strings.CLN_MASTER_GALLERY_TEXT %></a> </li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="<%= Strings.CLN_MASTER_TOURS_LINK %>"
+                                    tabindex="0">
+                                    <%= Strings.CLN_MASTER_TOURS_TEXT %></a> </li>
+                                <li class="ubermenu-item"><a class="ubermenu-target" href="<%= Strings.CLN_MASTER_CONTACT_US_LINK %>"
+                                    tabindex="0">
+                                    <%= Strings.CLN_MASTER_CONTACT_US_TEXT %></a></li>
                             </ul>
                         </nav>
                         <!-- End UberMenu -->
@@ -123,7 +147,7 @@
                     <div class="forcast">
                         <div class="forcast-item ">
                             <p class="forcast-key">
-                                LOCAL TIME</p>
+                                <%= Strings.CLN_MASTER_TIME %></p>
                             <p class="forcast-value" id="f-time">
                             </p>
                         </div>
@@ -132,7 +156,7 @@
                         <div class="forcast-item">
                             <link rel='stylesheet' href='/res/css/forcast-time.css' type='text/css' media='all' />
                             <p class="forcast-key">
-                                LOCAL TEMP.</p>
+                                <%= Strings.CLN_MASTER_WEATHER %></p>
                             <div class="forcast-value">
                                 <a href="#" class="aw-widget-legal"></a>
                                 <p id="awcc1414261858896" class="aw-widget-current" data-locationkey="" data-unit="c"
@@ -143,16 +167,17 @@
                         </div>
                     </div>
                     <div class="logo">
-                        <a href="index.html">
-                            <img width="189" height="59" src="/res/img/logo.png"></a>
+                        <a href="<%= Strings.CLN_MASTER_HOMEPAGE_LINK %>">
+                            <img width="189" height="59" src="/res/img/logo.png" alt="" /></a>
                         <div class="logo-line">
                             <div class="diamond">
                             </div>
                         </div>
                         <p class="slocan">
-                            Always a good time.</p>
+                            <asp:Literal ID="ltSlogan" runat="server" /></p>
                         <div class='button'>
-                            <a href='javascript:;' class="button-mobile-book-other">Book Your Stay</a>
+                            <a href='<%= Strings.CLN_MASTER_RESERVATION_LINK %>' class="button-mobile-book-other">
+                                <%= Strings.CLN_MASTER_RESERVATION_MOBI_BUTTON%></a>
                         </div>
                         <div class="book-mobile">
                             <i class="fa fa-times-circle fa-2x closed-form-mobile"></i>
@@ -163,104 +188,29 @@
                 <div id="P_MS56048ff1baebe" class="master-slider-parent ms-parent-id-6">
                     <!-- MasterSlider Main -->
                     <div id="MS56048ff1baebe" class="master-slider ms-skin-default">
-                        <div class="ms-slide" data-delay="1" data-fill-mode="fill">
-                            <img src="/res/img/blank.gif" alt="" title="" data-src="/res/img/banner1.jpg" />
-                            <div class="ms-layer" style="" data-ease="easeOutQuint" data-action="next" data-offset-x="-6"
-                                data-offset-y="80" data-origin="mc" data-position="normal">
-                                <div class="txt-sample">
-                                    <p class="v1">
-                                        <span style="color: red;">Book Direct with US<br />
-                                        </span><span style="color: #fff;">Special Offer | Lowest Price</span><br />
-                                        <span style="color: #fff;">FREE ! unlimited Wi-Fi</span>
-                                    </p>
+                        <asp:Repeater ID="rptBanners" runat="server">
+                            <HeaderTemplate>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <div class="ms-slide" data-delay="1" data-fill-mode="fill">
+                                    <img  alt='<%# ((HashMap)Container.DataItem)["BannerName"] %>'
+                                        title='<%# ((HashMap)Container.DataItem)["BannerName"] %>' src='<%# "/file-manager?fcd=" + ((HashMap)Container.DataItem)["FileCd"] + "&lang=en&s=normal" %>' />
+                                    <div class="ms-layer" style="" data-ease="easeOutQuint" data-action="next" data-offset-x="-6"
+                                        data-offset-y="80" data-origin="mc" data-position="normal">
+                                        <div class="txt-sample">
+                                            <p class="v1">
+                                                <span style="color: red;">
+                                                    <%# ((HashMap)Container.DataItem)["BannerName"] %></span><br />
+                                                <span style="color: #fff;">
+                                                    <%# ((HashMap)Container.DataItem)["Notes"]%></span>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="ms-slide" data-delay="3" data-fill-mode="fill">
-                            <img src="/res/img/blank.gif" alt="Always Rewards | Join Now" title="" data-src="/res/img/banner2.jpg" />
-                            <div class="ms-layer" style="" data-ease="easeOutQuint" data-action="next" data-offset-x="-6"
-                                data-offset-y="80" data-origin="mc" data-position="normal">
-                                <div class="txt-sample">
-                                    <p class="v1">
-                                        <span style="color: red;">Join Now !</span></p>
-                                    <p class="v2">
-                                        <span style="color: #ffffff;">Always Rewards Program</span><br />
-                                        <span style="color: #ffffff;">Get up to 10% TOP-UP Discount*</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ms-slide" data-delay="3" data-fill-mode="fill">
-                            <img src="/res/img/blank.gif" alt="" title="" data-src="/res/img/banner3.jpg" />
-                            <div class="ms-layer" style="" data-ease="easeOutQuint" data-action="next" data-offset-x="-6"
-                                data-offset-y="80" data-origin="mc" data-position="normal">
-                                <div class="txt-sample">
-                                    <p class="v1">
-                                        <span style="color: red;">Book Now..!<br />
-                                        </span><span style="color: #fff;">Enjoy Your Stay</span><br />
-                                        <span style="color: #fff;">in Best location of Vietnam</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ms-slide" data-delay="5" data-fill-mode="fill">
-                            <img src="/res/img/blank.gif" alt="" title="" data-src="/res/img/banner4.jpg" />
-                            <div class="ms-layer" style="" data-ease="easeOutQuint" data-action="next" data-offset-x="-6"
-                                data-offset-y="80" data-origin="mc" data-position="normal">
-                                <div class="txt-sample">
-                                    <p class="v1">
-                                        <span style="color: red;">Book Direct with US</span></p>
-                                    <p class="v2">
-                                        <span style="color: #fff;">Special Offer | Lowest Price</span><span> | </span><span
-                                            style="color: #fff;">FREE ! unlimited Wi-Fi</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ms-slide" data-delay="3" data-fill-mode="fill">
-                            <img src="/res/img/blank.gif" alt="" title="" data-src="/res/img/banner5.jpg" />
-                            <div class="ms-layer" style="" data-ease="easeOutQuint" data-action="next" data-offset-x="-6"
-                                data-offset-y="80" data-origin="mc" data-position="normal">
-                                <div class="txt-sample">
-                                    <p class="v1">
-                                        <span style="color: red;">Book Now..!</span></p>
-                                    <p class="v2">
-                                        <span style="color: #fff;">Enjoy Your Stay</span><br />
-                                        <span style="color: #fff;">in Best location of Vietnam</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ms-slide" data-delay="3" data-fill-mode="fill">
-                            <img src="/res/img/blank.gif" alt="" title="" data-src="/res/img/banner6.jpg" />
-                            <div class="ms-layer" style="" data-ease="easeOutQuint" data-action="next" data-offset-x="-6"
-                                data-offset-y="80" data-origin="mc" data-position="normal">
-                                <div class="txt-sample">
-                                    <p class="v1">
-                                        <span style="color: red;">Join Now !</span></p>
-                                    <p class="v2">
-                                        <span style="color: #ffffff;">Always Rewards Program</span><br />
-                                        <span style="color: #ffffff;">Get up to 10% TOP-UP Discount*</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ms-slide" data-delay="3" data-fill-mode="fill">
-                            <img src="/res/img/blank.gif" alt="" title="" data-src="/res/img/banner7.jpg" />
-                            <div class="ms-layer" style="" data-ease="easeOutQuint" data-action="pause" data-offset-x="-6"
-                                data-offset-y="80" data-origin="mc" data-position="normal">
-                                <div class="txt-sample">
-                                    <p class="v1" style="text-align: right;">
-                                        <span style="color: red;">Grow Care<br />
-                                            Grow Coral </span>
-                                    </p>
-                                    <p class="v2" style="text-align: right;">
-                                        <span style="color: #ffffff;">Join us protecting coral reef</span><br />
-                                        <span style="color: #fff;"><span style="color: #fff;"><span style="color: #ffffff;">
-                                            Check it out at</span> <span style="color: #fff;"><a style="color: #fff;" href="#">asianrubyselecthotel.com</a></span></span></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                            </FooterTemplate>
+                        </asp:Repeater>
                     </div>
                     <!-- END MasterSlider Main -->
                 </div>
@@ -319,12 +269,13 @@
                         <div class="form-inline">
                             <div class="form-group res">
                                 <p class="txt-res">
-                                    Reservation</p>
+                                    <%= Strings.CLN_MASTER_RESERVATION_TEXT %></p>
                                 <p class="txt-res-v2">
-                                    The best rooms and suites avaliable</p>
+                                    <%= Strings.CLN_MASTER_RESERVATION_DES %></p>
                             </div>
                             <div class='button form-group'>
-                                <a id="btnBook" href="javascript:void(0)">Book Now</a>
+                                <a id="btnBook" href="<%= Strings.CLN_MASTER_RESERVATION_LINK %>">
+                                    <%= Strings.CLN_MASTER_RESERVATION_BUTTON %></a>
                             </div>
                         </div>
                     </div>
@@ -343,25 +294,25 @@
                 <div class="row hotel-chain">
                     <div class="col-xs-12 col-sm-4 col-md-4 col-md-4">
                         <div class="main-chain">
-                            <asp:HyperLink runat="server" ID="lkHome" CssClass="logo">
-                                <img width="189" height="47" src="/res/img/logo.png" /></asp:HyperLink>
+                            <a href="<%= Strings.CLN_MASTER_HOMEPAGE_LINK %>">
+                                <img width="189" height="47" src="/res/img/logo.png" alt="" /></a>
                             <div class="diamond">
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-8 col-md-8 col-md-8 mini-chain">
                         <div class="chain-item">
-                            <asp:HyperLink ID="lkHotel1" runat="server" class="hotel1" ToolTip="Asian Ruby Luxury" Target="_blank">
-                                <img width="189" height="47" src="/res/img/ruby1.png" class="img-responsive" /></asp:HyperLink></div>
+                            <asp:HyperLink ID="lkHotel1" runat="server" class="hotel1" Target="_blank">
+                                <img width="189" height="47" src="/res/img/ruby1.png" class="img-responsive" alt=""/></asp:HyperLink></div>
                         <div class="chain-item">
-                            <asp:HyperLink ID="lkHotel2" runat="server" class="hotel2" ToolTip="Asian Ruby Park View" Target="_blank">
-                                <img width="189" height="47" src="/res/img/ruby3.png" class="img-responsive" /></asp:HyperLink></div>
+                            <asp:HyperLink ID="lkHotel2" runat="server" class="hotel2" Target="_blank">
+                                <img width="189" height="47" src="/res/img/ruby3.png" class="img-responsive" alt=""/></asp:HyperLink></div>
                         <div class="chain-item">
-                            <asp:HyperLink ID="lkHotel3" runat="server" class="hotel3" ToolTip="Asian Ruby Central" Target="_blank">
-                                <img width="189" height="47" src="/res/img/ruby4.jpg" class="img-responsive" /></asp:HyperLink></div>
+                            <asp:HyperLink ID="lkHotel3" runat="server" class="hotel3" Target="_blank">
+                                <img width="189" height="47" src="/res/img/ruby4.jpg" class="img-responsive" alt=""/></asp:HyperLink></div>
                         <div class="chain-item">
-                            <asp:HyperLink ID="lkHotel4" runat="server" class="hotel4" ToolTip="Mayfower" Target="_blank">
-                                <img width="189" height="47" src="/res/img/mayhotel.png" class="img-responsive" /></asp:HyperLink></div>
+                            <asp:HyperLink ID="lkHotel4" runat="server" class="hotel4" Target="_blank">
+                                <img width="189" height="47" src="/res/img/mayhotel.png" class="img-responsive" alt=""/></asp:HyperLink></div>
                     </div>
                 </div>
             </div>
@@ -371,17 +322,26 @@
                         <div class="footer-lv1">
                             <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                                 <ul class="footer_links">
-                                    <li><a href="#">Faq</a><span>/</span></li>
-                                    <li><a href="#">Privacy Policy</a><span>/</span></li>
-                                    <li><a href="#">Term and condition</a></li>
+                                    <li><a href="<%= Strings.CLN_MASTER_FAQ_LINK %>">
+                                        <%= Strings.CLN_MASTER_FAQ_TEXT %></a><span>/</span></li>
+                                    <li><a href="<%= Strings.CLN_MASTER_POLICY_LINK %>">
+                                        <%= Strings.CLN_MASTER_POLICY_TEXT %></a><span>/</span></li>
+                                    <li><a href="<%= Strings.CLN_MASTER_TERM_LINK %>">
+                                        <%= Strings.CLN_MASTER_TERM_TEXT %></a></li>
                                 </ul>
                             </div>
                             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                                 <ul class="footer-social">
-                                    <li><asp:HyperLink ID="lkFacebook" runat="server" class="facebook" ToolTip="Facebook" Target="_blank"><i class="fa fa-facebook"></i></asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="lkYoutube" runat="server" class="youtube" ToolTip="Youtube" Target="_blank"><i class="fa fa-youtube"></i></asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="lkGoogle" runat="server" class="google" ToolTip="Google plus" Target="_blank"><i class="fa fa-google-plus"></i></asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="lkTwitter" runat="server" class="twitter" ToolTip="Twitter" Target="_blank"><i class="fa fa-twitter"></i></asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="lkFacebook" runat="server" class="facebook" ToolTip="Facebook"
+                                            Target="_blank"><i class="fa fa-facebook"></i></asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="lkYoutube" runat="server" class="youtube" ToolTip="Youtube" Target="_blank"><i class="fa fa-youtube"></i></asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="lkGoogle" runat="server" class="google" ToolTip="Google plus"
+                                            Target="_blank"><i class="fa fa-google-plus"></i></asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="lkTwitter" runat="server" class="twitter" ToolTip="Twitter" Target="_blank"><i class="fa fa-twitter"></i></asp:HyperLink></li>
                                 </ul>
                             </div>
                             <div style="clear: both;">

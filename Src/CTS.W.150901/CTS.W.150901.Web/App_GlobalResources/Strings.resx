@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
 		Microsoft ResX Schema
 
 		Version 1.3
@@ -58,117 +58,117 @@
 			: using a System.ComponentModel.TypeConverter
 			: and then encoded with base64 encoding.
 	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
 
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>1.3</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
   <!-- cln/index.master -->
   <data name="CLN_MASTER_HOMEPAGE_LINK" xml:space="preserve">
-		<value>/vi/index</value>
+		<value>/en/index</value>
 	</data>
-
   <data name="CLN_MASTER_FAQ_LINK" xml:space="preserve">
-		<value>/vi/faq</value>
+		<value>/en/faq</value>
 	</data>
   <data name="CLN_MASTER_POLICY_LINK" xml:space="preserve">
-		<value>/vi/privacy-policy</value>
+		<value>/en/privacy-policy</value>
 	</data>
   <data name="CLN_MASTER_TERM_LINK" xml:space="preserve">
-		<value>/vi/term-and-condition</value>
+		<value>/en/term-and-condition</value>
 	</data>
   <data name="CLN_MASTER_ABOUT_US_LINK" xml:space="preserve">
-		<value>/vi/about-us</value>
+		<value>/en/about-us</value>
 	</data>
   <data name="CLN_MASTER_ACCOMMODATION_LINK" xml:space="preserve">
-		<value>/vi/accommodation</value>
+		<value>/en/accommodation</value>
 	</data>
   <data name="CLN_MASTER_SERVICES_LINK" xml:space="preserve">
-		<value>/vi/services</value>
+		<value>/en/services</value>
 	</data>
   <data name="CLN_MASTER_PROMOTION_LINK" xml:space="preserve">
-		<value>/vi/promotion</value>
+		<value>/en/promotion</value>
 	</data>
   <data name="CLN_MASTER_GALLERY_LINK" xml:space="preserve">
-		<value>/vi/gallery</value>
+		<value>/en/gallery</value>
 	</data>
   <data name="CLN_MASTER_TOURS_LINK" xml:space="preserve">
-		<value>/vi/tours</value>
+		<value>/en/tours</value>
 	</data>
   <data name="CLN_MASTER_CONTACT_US_LINK" xml:space="preserve">
-		<value>/vi/contact-us</value>
+		<value>/en/contact-us</value>
 	</data>
   <data name="CLN_MASTER_RESERVATION_LINK" xml:space="preserve">
-		<value>/vi/reservation</value>
+		<value>/en/reservation</value>
 	</data>
 
   <data name="CLN_MASTER_FIND_A_HOTEL_TEXT" xml:space="preserve">
-		<value>Hệ thống</value>
+		<value>Find a hotel</value>
 	</data>
   <data name="CLN_MASTER_ABOUT_US_TEXT" xml:space="preserve">
-		<value>Giới thiệu</value>
+		<value>About us</value>
 	</data>
   <data name="CLN_MASTER_ACCOMMODATION_TEXT" xml:space="preserve">
-		<value>Tổng quan</value>
+		<value>Accommodation</value>
 	</data>
   <data name="CLN_MASTER_SERVICES_TEXT" xml:space="preserve">
-		<value>Dịch vụ</value>
+		<value>Services</value>
 	</data>
   <data name="CLN_MASTER_PROMOTION_TEXT" xml:space="preserve">
-		<value>Khuyến mãi</value>
+		<value>Promotion</value>
 	</data>
   <data name="CLN_MASTER_GALLERY_TEXT" xml:space="preserve">
-		<value>Thư viện ảnh</value>
+		<value>Gallery</value>
 	</data>
   <data name="CLN_MASTER_TOURS_TEXT" xml:space="preserve">
-		<value>Du lịch</value>
+		<value>Tours</value>
 	</data>
   <data name="CLN_MASTER_CONTACT_US_TEXT" xml:space="preserve">
-		<value>Liên hệ</value>
+		<value>Contact us</value>
 	</data>
   <data name="CLN_MASTER_FAQ_TEXT" xml:space="preserve">
 		<value>FAQ</value>
 	</data>
   <data name="CLN_MASTER_POLICY_TEXT" xml:space="preserve">
-		<value>Chính sách riêng</value>
+		<value>Privacy Policy</value>
 	</data>
   <data name="CLN_MASTER_TERM_TEXT" xml:space="preserve">
-		<value>Điều khoản và điều kiện</value>
+		<value>Term and Condition</value>
 	</data>
   <data name="CLN_MASTER_HOTEL_1_TEXT" xml:space="preserve">
 		<value>Asian Ruby Luxury</value>
@@ -183,34 +183,36 @@
 		<value>Mayflower</value>
 	</data>
   <data name="CLN_MASTER_TIME" xml:space="preserve">
-		<value>Giờ địa phương</value>
+		<value>Local time</value>
 	</data>
   <data name="CLN_MASTER_WEATHER" xml:space="preserve">
-		<value>Thời tiết</value>
+		<value>Local temp</value>
 	</data>
   <data name="CLN_MASTER_RESERVATION_TEXT" xml:space="preserve">
-		<value>Đặt phòng</value>
+		<value>Reservation</value>
 	</data>
   <data name="CLN_MASTER_RESERVATION_DES" xml:space="preserve">
-		<value>Loại phòng tốt</value>
+		<value>The best rooms and suites avaliable</value>
 	</data>
   <data name="CLN_MASTER_RESERVATION_BUTTON" xml:space="preserve">
-		<value>Chọn phòng</value>
+		<value>Book Now</value>
 	</data>
   <data name="CLN_MASTER_RESERVATION_MOBI_BUTTON" xml:space="preserve">
-		<value>Chọn phòng</value>
+		<value>Book Your Stay</value>
 	</data>
+  
   <!-- common -->
   <data name="CLN_BTN_SUBMIT" xml:space="preserve">
-		<value>Gởi thông tin</value>
+		<value>Send</value>
 	</data>
   <data name="CLN_BTN_RESER" xml:space="preserve">
-		<value>Nhập lại thông tin</value>
+		<value>Reset</value>
 	</data>
   <data name="CLN_ALERT_SUCCESS" xml:space="preserve">
-		<value>Thông tin đã được gởi đi.Chúng tôi sẽ liên hệ với quý khách trong thời gian sớm nhất</value>
+		<value>Your infomation is sent</value>
 	</data>
   <data name="CLN_ALERT_ERROR" xml:space="preserve">
-		<value>Kết nối đến máy chủ thất bại.</value>
+		<value>Connecting to the server failed.</value>
 	</data>
+	
 </root>

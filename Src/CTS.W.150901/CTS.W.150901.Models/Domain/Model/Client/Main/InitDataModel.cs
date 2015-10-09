@@ -18,12 +18,6 @@ namespace CTS.W._150901.Models.Domain.Model.Client.Main
         public string CboLocalesSeleted { get; set; }
 
         [OutputText]
-        public string MetaKey { get; set; }
-        [OutputText]
-        public string MetaTitle { get; set; }
-        [OutputText]
-        public string MetaDescription { get; set; }
-        [OutputText]
         public string CompanyName { get; set; }
         [OutputText]
         public string Logo { get; set; }

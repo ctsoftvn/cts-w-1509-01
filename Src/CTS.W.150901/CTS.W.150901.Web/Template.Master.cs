@@ -28,16 +28,28 @@ namespace CTS.W._150901.Web
             rptLanguages.DataSource = listLocales;
             rptLanguages.DataBind();
 
-            lkHome.NavigateUrl = Convert.ToString(Strings.CLN_MASTER_HOMEPAGE_LINK);
-            lkHome.ToolTip = PageCom.GetValue<string>(response, "CompanyName");
+            var listBanners = PageCom.GetValue<IList<object>>(response, "ListBanner");
+            rptBanners.DataSource = listBanners;
+            rptBanners.DataBind();
 
+
+            ltSlogan.Text = PageCom.GetValue<string>(response, "Slogan");
             ltCopyright.Text = PageCom.GetValue<string>(response, "Copyright");
             ltAdderess.Text = PageCom.GetValue<string>(response, "Address");
 
+            lkMenuHotel1.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl1");
+            lkMenuHotel2.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl2");
+            lkMenuHotel3.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl3");
+            lkMenuHotel4.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl4");
+
             lkHotel1.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl1");
+            lkHotel1.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_1_TEXT);
             lkHotel2.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl2");
+            lkHotel2.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_2_TEXT);
             lkHotel3.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl3");
+            lkHotel3.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_3_TEXT);
             lkHotel4.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl4");
+            lkHotel4.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_4_TEXT);
 
             lkTwitter.NavigateUrl = PageCom.GetValue<string>(response, "TwitterUrl");
             lkGoogle.NavigateUrl = PageCom.GetValue<string>(response, "GoogleUrl");

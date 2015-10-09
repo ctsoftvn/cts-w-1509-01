@@ -57,7 +57,6 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             var getResult = new InitDataModel();
             var companyCom = new CompanyCom();
             var codeCom = new CodeCom();
-            var metaCom = new MetaCom();
             var metaInfo = new BaseMeta();
             var processDao = new MainDao();
             var localeCom = new LocaleCom();
@@ -72,13 +71,6 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             var cbLocales = DataHelper.ToComboItems(listLocales, basicLocale);
             // Lấy danh sách banner
             var listBanner = processDao.GetListBanners(WebContextHelper.LocaleCd);
-            foreach (var banner in listBanner)
-            {
-                banner.BannerImage = storageFileCom.GetFileName(
-                    WebContextHelper.LocaleCd,
-                    banner.FileCd,
-                    false);
-            }
 
             // Lấy field
             var logoFileCd = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_LOGO, false);
@@ -101,14 +93,6 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             var hotelurl3 = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_HOTEL_URL_3, false);
             var hotelurl4 = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_HOTEL_URL_4, false);
 
-            // Lấy thông tin seo
-            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPMETA_MA_PAGES, W150901Logics.CD_META_CD_PAGE_INDEX, false);
-            if (infoSeo != null) {
-                metaInfo.MetaTitle = infoSeo.MetaTitle;
-                metaInfo.MetaKeys = infoSeo.MetaKeys;
-                metaInfo.MetaDesc = infoSeo.MetaDesc;
-            }
-
             // Gán giá trị trả về
             getResult.Logo = logoImage;
             getResult.CompanyName = companyName;
@@ -123,9 +107,6 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             getResult.HotelUrl2 = hotelurl2;
             getResult.HotelUrl3 = hotelurl3;
             getResult.HotelUrl4 = hotelurl4;
-            getResult.MetaTitle = metaInfo.MetaTitle;
-            getResult.MetaKey = metaInfo.MetaKeys;
-            getResult.MetaDescription = metaInfo.MetaDesc;
             getResult.ListBanner = listBanner;
             getResult.CboLocales = cbLocales.ListItems;
             getResult.CboLocalesSeleted = cbLocales.SeletedValue;

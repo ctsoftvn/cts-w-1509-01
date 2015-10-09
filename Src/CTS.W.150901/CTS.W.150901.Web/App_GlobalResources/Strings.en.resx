@@ -100,10 +100,107 @@
 	</resheader>
 
 	<!-- cln/index.master -->
-
 	<data name="CLN_MASTER_HOMEPAGE_LINK" xml:space="preserve">
 		<value>/en/index</value>
 	</data>
+  <data name="CLN_MASTER_FAQ_LINK" xml:space="preserve">
+		<value>/en/faq</value>
+	</data>
+  <data name="CLN_MASTER_POLICY_LINK" xml:space="preserve">
+		<value>/en/privacy-policy</value>
+	</data>
+  <data name="CLN_MASTER_TERM_LINK" xml:space="preserve">
+		<value>/en/term-and-condition</value>
+	</data>
+  <data name="CLN_MASTER_ABOUT_US_LINK" xml:space="preserve">
+		<value>/en/about-us</value>
+	</data>
+  <data name="CLN_MASTER_ACCOMMODATION_LINK" xml:space="preserve">
+		<value>/en/accommodation</value>
+	</data>
+  <data name="CLN_MASTER_SERVICES_LINK" xml:space="preserve">
+		<value>/en/services</value>
+	</data>
+  <data name="CLN_MASTER_PROMOTION_LINK" xml:space="preserve">
+		<value>/en/promotion</value>
+	</data>
+  <data name="CLN_MASTER_GALLERY_LINK" xml:space="preserve">
+		<value>/en/gallery</value>
+	</data>
+  <data name="CLN_MASTER_TOURS_LINK" xml:space="preserve">
+		<value>/en/tours</value>
+	</data>
+  <data name="CLN_MASTER_CONTACT_US_LINK" xml:space="preserve">
+		<value>/en/contact-us</value>
+	</data>
+  <data name="CLN_MASTER_RESERVATION_LINK" xml:space="preserve">
+		<value>/en/reservation</value>
+	</data>
+
+  <data name="CLN_MASTER_FIND_A_HOTEL_TEXT" xml:space="preserve">
+		<value>Find a hotel</value>
+	</data>
+  <data name="CLN_MASTER_ABOUT_US_TEXT" xml:space="preserve">
+		<value>About us</value>
+	</data>
+  <data name="CLN_MASTER_ACCOMMODATION_TEXT" xml:space="preserve">
+		<value>Accommodation</value>
+	</data>
+  <data name="CLN_MASTER_SERVICES_TEXT" xml:space="preserve">
+		<value>Services</value>
+	</data>
+  <data name="CLN_MASTER_PROMOTION_TEXT" xml:space="preserve">
+		<value>Promotion</value>
+	</data>
+  <data name="CLN_MASTER_GALLERY_TEXT" xml:space="preserve">
+		<value>Gallery</value>
+	</data>
+  <data name="CLN_MASTER_TOURS_TEXT" xml:space="preserve">
+		<value>Tours</value>
+	</data>
+  <data name="CLN_MASTER_CONTACT_US_TEXT" xml:space="preserve">
+		<value>Contact us</value>
+	</data>
+  <data name="CLN_MASTER_FAQ_TEXT" xml:space="preserve">
+		<value>FAQ</value>
+	</data>
+  <data name="CLN_MASTER_POLICY_TEXT" xml:space="preserve">
+		<value>Privacy Policy</value>
+	</data>
+  <data name="CLN_MASTER_TERM_TEXT" xml:space="preserve">
+		<value>Term and Condition</value>
+	</data>
+  <data name="CLN_MASTER_HOTEL_1_TEXT" xml:space="preserve">
+		<value>Asian Ruby Luxury</value>
+	</data>
+  <data name="CLN_MASTER_HOTEL_2_TEXT" xml:space="preserve">
+		<value>Asian Ruby Park View</value>
+	</data>
+  <data name="CLN_MASTER_HOTEL_3_TEXT" xml:space="preserve">
+		<value>Asian Ruby Central</value>
+	</data>
+  <data name="CLN_MASTER_HOTEL_4_TEXT" xml:space="preserve">
+		<value>Mayflower</value>
+	</data>
+  <data name="CLN_MASTER_TIME" xml:space="preserve">
+		<value>Local time</value>
+	</data>
+  <data name="CLN_MASTER_WEATHER" xml:space="preserve">
+		<value>Local temp</value>
+	</data>
+  <data name="CLN_MASTER_RESERVATION_TEXT" xml:space="preserve">
+		<value>Reservation</value>
+	</data>
+  <data name="CLN_MASTER_RESERVATION_DES" xml:space="preserve">
+		<value>The best rooms and suites avaliable</value>
+	</data>
+  <data name="CLN_MASTER_RESERVATION_BUTTON" xml:space="preserve">
+		<value>Book Now</value>
+	</data>
+  <data name="CLN_MASTER_RESERVATION_MOBI_BUTTON" xml:space="preserve">
+		<value>Book Your Stay</value>
+	</data>
+  
 	<!-- common -->
 	<data name="CLN_BTN_SUBMIT" xml:space="preserve">
 		<value>Send</value>
