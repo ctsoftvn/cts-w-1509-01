@@ -10,6 +10,8 @@
         public const string CD_META_CD_PAGE_TOUR = "ma.metas.ma.pages.tour";
         public const string CD_META_CD_PAGE_ROOM = "ma.metas.ma.pages.room";
         public const string CD_META_CD_PAGE_SERVICE = "ma.metas.ma.pages.service";
+        public const string CD_META_CD_PAGE_FAQ = "ma.metas.ma.pages.faq";
+        public const string CD_META_CD_PAGE_PLICY = "ma.metas.ma.pages.policy";
         // Định nghĩa nhóm meta
         public const string GRPMETA_MA_PAGES = "ma.metas.ma.pages";
         public const string GRPMETA_MA_ROOMTYPES = "ma.metas.ma.room-types";
