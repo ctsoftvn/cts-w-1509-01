@@ -11,7 +11,15 @@
         public const string CD_META_CD_PAGE_ROOM = "ma.metas.ma.pages.room";
         public const string CD_META_CD_PAGE_SERVICE = "ma.metas.ma.pages.service";
         public const string CD_META_CD_PAGE_FAQ = "ma.metas.ma.pages.faq";
-        public const string CD_META_CD_PAGE_PLICY = "ma.metas.ma.pages.policy";
+        public const string CD_META_CD_PAGE_POLICY = "ma.metas.ma.pages.policy";
+        public const string CD_META_CD_PAGE_TERM = "ma.metas.ma.pages.term";
+        public const string CD_META_CD_PAGE_ABOUT_US = "ma.metas.ma.pages.about-us";
+        public const string CD_META_CD_PAGE_ACCOMMODATION = "ma.metas.ma.pages.accommodation";
+        public const string CD_META_CD_PAGE_PROMOTION = "ma.metas.ma.pages.promotion";
+        public const string CD_META_CD_PAGE_GALLERY = "ma.metas.ma.pages.gallery";
+        public const string CD_META_CD_PAGE_CONTACT_US = "ma.metas.ma.pages.contact-us";
+        public const string CD_META_CD_PAGE_RESERVATION = "ma.metas.ma.pages.reservation";
+        public const string CD_META_CD_PAGE_DESTINATION = "ma.metas.ma.pages.destination";
         // Định nghĩa nhóm meta
         public const string GRPMETA_MA_PAGES = "ma.metas.ma.pages";
         public const string GRPMETA_MA_ROOMTYPES = "ma.metas.ma.room-types";
