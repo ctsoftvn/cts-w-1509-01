@@ -8,7 +8,7 @@
         // Định nghĩa mã meta
         public const string CD_META_CD_PAGE_INDEX = "ma.metas.ma.pages.index";
         public const string CD_META_CD_PAGE_TOUR = "ma.metas.ma.pages.tour";
-        public const string CD_META_CD_PAGE_ROOM = "ma.metas.ma.pages.room";
+        public const string CD_META_CD_PAGE_BOOKING = "ma.metas.ma.pages.booking";
         public const string CD_META_CD_PAGE_SERVICE = "ma.metas.ma.pages.service";
         public const string CD_META_CD_PAGE_FAQ = "ma.metas.ma.pages.faq";
         public const string CD_META_CD_PAGE_POLICY = "ma.metas.ma.pages.policy";
@@ -26,7 +26,7 @@
         public const string GRPMETA_MA_TOURS = "ma.metas.ma.tours";
         // Định nghĩa mã thông tin công ty
         public const string CD_INFO_CD_COMPANY_NAME = "ma.company-infos.company-name";
-        public const string CD_INFO_CD_LOGO = "ma.company-infos.logo";
+        public const string CD_INFO_CD_LOGO_FILE_CD = "ma.company-infos.logo-file-cd";
         public const string CD_INFO_CD_SLOGAN = "ma.company-infos.slogan";
         public const string CD_INFO_CD_ADDRESS = "ma.company-infos.address";
         public const string CD_INFO_CD_COPYRIGHT = "ma.company-infos.copyright";

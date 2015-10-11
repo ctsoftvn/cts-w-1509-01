@@ -17,7 +17,7 @@ namespace CTS.W._150901.Models.Domain.Object.Client.Room
         [OutputText]
         public string Slug { get; set; }
         [OutputText]
-        public string Price { get; set; }
+        public decimal? Price { get; set; }
         [OutputText]
         public string FileCd { get; set; }
         [OutputText]

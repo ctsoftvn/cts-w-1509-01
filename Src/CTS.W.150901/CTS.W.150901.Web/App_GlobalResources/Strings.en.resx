@@ -136,7 +136,16 @@
   <data name="CLN_MASTER_RESERVATION_LINK" xml:space="preserve">
 		<value>/en/reservation</value>
 	</data>
+  <data name="CLN_MASTER_ROOMS_LINK" xml:space="preserve">
+		<value>/en/rooms</value>
+	</data>
+  <data name="CLN_MASTER_DESTINATIONS_LINK" xml:space="preserve">
+		<value>/en/destinations</value>
+	</data>
 
+  <data name="CLN_MASTER_HOME" xml:space="preserve">
+		<value>Home</value>
+	</data>
   <data name="CLN_MASTER_FIND_A_HOTEL_TEXT" xml:space="preserve">
 		<value>Find a hotel</value>
 	</data>

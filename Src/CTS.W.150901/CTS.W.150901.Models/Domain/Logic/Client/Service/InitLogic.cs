@@ -59,27 +59,9 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Service
             DataHelper.CopyObject(inputObject, getResult);
             // Lấy danh sách room
             var listSerives = processDao.GetListServices(WebContextHelper.LocaleCd);
-            foreach (var room in listSerives)
-            {
-                room.ServiceImage = storageFileCom.GetFileName(
-                    WebContextHelper.LocaleCd,
-                    room.FileCd,
-                    false);
-            }
 
-            // Lấy thông tin seo
-            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPMETA_MA_PAGES, W150901Logics.CD_META_CD_PAGE_SERVICE, false);
-            if (infoSeo != null)
-            {
-                metaInfo.MetaTitle = infoSeo.MetaTitle;
-                metaInfo.MetaKeys = infoSeo.MetaKeys;
-                metaInfo.MetaDesc = infoSeo.MetaDesc;
-            }
             // Kết quả trả về
             getResult.ListServices = listSerives;
-            getResult.MetaTitle = metaInfo.MetaTitle;
-            getResult.MetaKey = metaInfo.MetaKeys;
-            getResult.MetaDescription = metaInfo.MetaDesc;
             return getResult;
         }
         #endregion

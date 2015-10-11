@@ -73,11 +73,8 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             var listBanner = processDao.GetListBanners(WebContextHelper.LocaleCd);
 
             // Lấy field
-            var logoFileCd = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_LOGO, false);
-            var logoImage = storageFileCom.GetFileName(
-                    WebContextHelper.LocaleCd,
-                    logoFileCd,
-                    false);
+            var logoFileCd = companyCom.GetString("en", W150901Logics.CD_INFO_CD_LOGO_FILE_CD, false);
+
             var companyName = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_COMPANY_NAME, false);
             var slogan = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_SLOGAN, false);
             var address = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_ADDRESS, false);
@@ -94,7 +91,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Main
             var hotelurl4 = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_HOTEL_URL_4, false);
 
             // Gán giá trị trả về
-            getResult.Logo = logoImage;
+            getResult.Logo = logoFileCd;
             getResult.CompanyName = companyName;
             getResult.Slogan = slogan;
             getResult.Address = address;

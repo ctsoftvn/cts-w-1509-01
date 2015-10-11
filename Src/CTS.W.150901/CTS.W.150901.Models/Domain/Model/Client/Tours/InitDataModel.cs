@@ -12,11 +12,6 @@ namespace CTS.W._150901.Models.Domain.Model.Client.Tours
     {
         [OutputList(IgnoreAttribute = false)]
         public IList<TourObject> ListTourType { get; set; }
-        [OutputText]
-        public string MetaKey { get; set; }
-        [OutputText]
-        public string MetaTitle { get; set; }
-        [OutputText]
-        public string MetaDescription { get; set; }
+
     }
 }

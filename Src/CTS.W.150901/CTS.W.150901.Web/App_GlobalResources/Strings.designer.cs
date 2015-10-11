@@ -151,6 +151,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /en/destinations.
+        /// </summary>
+        internal static string CLN_MASTER_DESTINATIONS_LINK {
+            get {
+                return ResourceManager.GetString("CLN_MASTER_DESTINATIONS_LINK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /en/faq.
         /// </summary>
         internal static string CLN_MASTER_FAQ_LINK {
@@ -192,6 +201,15 @@ namespace Resources {
         internal static string CLN_MASTER_GALLERY_TEXT {
             get {
                 return ResourceManager.GetString("CLN_MASTER_GALLERY_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        internal static string CLN_MASTER_HOME {
+            get {
+                return ResourceManager.GetString("CLN_MASTER_HOME", resourceCulture);
             }
         }
         
@@ -318,6 +336,15 @@ namespace Resources {
         internal static string CLN_MASTER_RESERVATION_TEXT {
             get {
                 return ResourceManager.GetString("CLN_MASTER_RESERVATION_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /en/rooms.
+        /// </summary>
+        internal static string CLN_MASTER_ROOMS_LINK {
+            get {
+                return ResourceManager.GetString("CLN_MASTER_ROOMS_LINK", resourceCulture);
             }
         }
         

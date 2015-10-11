@@ -13,6 +13,7 @@ using CTS.Core.Domain.Model;
 using CTS.Data.Com.Domain.Constants;
 using CTS.Core.Domain.Constants;
 using Resources;
+using System.ComponentModel;
 
 namespace CTS.W._150901.Web
 {
@@ -32,7 +33,8 @@ namespace CTS.W._150901.Web
             rptBanners.DataSource = listBanners;
             rptBanners.DataBind();
 
-
+            //var logoUrl = "/file-manager?fcd=" + PageCom.GetValue<string>(response, "Logo") + "&lang=en&s=normal";
+            //imgLogo.ImageUrl = logoUrl;
             ltSlogan.Text = PageCom.GetValue<string>(response, "Slogan");
             ltCopyright.Text = PageCom.GetValue<string>(response, "Copyright");
             ltAdderess.Text = PageCom.GetValue<string>(response, "Address");
@@ -43,13 +45,18 @@ namespace CTS.W._150901.Web
             lkMenuHotel4.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl4");
 
             lkHotel1.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl1");
-            lkHotel1.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_1_TEXT);
             lkHotel2.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl2");
-            lkHotel2.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_2_TEXT);
             lkHotel3.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl3");
-            lkHotel3.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_3_TEXT);
             lkHotel4.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl4");
+            lkHotel1.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_1_TEXT);
+            lkHotel2.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_2_TEXT);
+            lkHotel3.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_3_TEXT);
             lkHotel4.ToolTip = Convert.ToString(Strings.CLN_MASTER_HOTEL_4_TEXT);
+
+            lkMobiHotel1.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl1");
+            lkMobiHotel2.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl2");
+            lkMobiHotel3.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl3");
+            lkMobiHotel4.NavigateUrl = PageCom.GetValue<string>(response, "HotelUrl4");
 
             lkTwitter.NavigateUrl = PageCom.GetValue<string>(response, "TwitterUrl");
             lkGoogle.NavigateUrl = PageCom.GetValue<string>(response, "GoogleUrl");
@@ -63,8 +70,19 @@ namespace CTS.W._150901.Web
             var oldLang = string.Format("/{0}/", WebContextHelper.LocaleCd);
             var strRawURL = Request.RawUrl;
             strRawURL = strRawURL.Replace("/index.aspx", homePage);
-            //strRawURL = strRawURL.Replace("/about-us.aspx", "/gioi-thieu");
-            //strRawURL = strRawURL.Replace("/contact-us.aspx", "/lien-he");
+            strRawURL = strRawURL.Replace("/accommodation.aspx", "/accommodation");
+            strRawURL = strRawURL.Replace("/destinations.aspx", "/destinations");
+            strRawURL = strRawURL.Replace("/faq.aspx", "/faq");
+            strRawURL = strRawURL.Replace("/gallery.aspx", "/gallery");
+            strRawURL = strRawURL.Replace("/privacy-policy.aspx", "/privacy-policy");
+            strRawURL = strRawURL.Replace("/promotion.aspx", "/promotion");
+            strRawURL = strRawURL.Replace("/reservation.aspx", "/reservation");
+            strRawURL = strRawURL.Replace("/booking.aspx", "/booking");
+            strRawURL = strRawURL.Replace("/services.aspx", "/services");
+            strRawURL = strRawURL.Replace("/term-and-condition.aspx", "/term-and-condition");
+            strRawURL = strRawURL.Replace("/tours.aspx", "/tours");
+            strRawURL = strRawURL.Replace("/about-us.aspx", "/about-us");
+            strRawURL = strRawURL.Replace("/contact-us.aspx", "/contact-us");
             if (strRawURL.TrimEnd('/').Length == 0)
             {
                 strRawURL = oldLang.TrimEnd('/') + homePage;

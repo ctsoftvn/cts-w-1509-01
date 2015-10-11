@@ -7648,6 +7648,7 @@ body {
     font-size: 1.4em;
     color: #404040
 }
+body.vi{font-family: Times New Roman,Arial,Tahoma;font-size:16px;}
 
 body .main {
     width: 100%;
@@ -7669,7 +7670,7 @@ body h2 {
     font-family: db_helvethaica_x45_li;
     color: #404040
 }
-
+body.vi h2{font-family: Times New Roman,Arial,Tahoma;}
 .logo .button a,body .img-title {
     font-family: Flaticon
 }
@@ -7939,7 +7940,7 @@ header {
     margin: 0;
     padding: 0
 }
-
+body.vi .slide-sm .forcast .forcast-item .forcast-key{font-family: Times New Roman,Arial,Tahoma;font-size:14px}
 .slide-sm .forcast .forcast-item .forcast-value {
     font-size: 1.4em;
     margin: 0;
@@ -7959,7 +7960,7 @@ header {
     font-size: 1.4rem;
     position: absolute
 }
-
+body.vi .slide-sm .boxsearch-block{font-family: Times New Roman,Arial,Tahoma;font-size:12px;}
 .slide-sm .boxsearch-block:after {
     position: absolute;
     display: block;
@@ -7991,7 +7992,7 @@ header {
     font-size: 14px;
     font-family: Flaticon
 }
-
+body.vi .slide-sm .boxsearch-block .boxsearch .button a,body.vi .contactus-panel #btnSend{font-family: Times New Roman,Arial,Tahoma;font-size:14px;text-transform:uppercase }
 .slide .boxsearch-block .boxsearch .form-inline .button a,.slide-sm .boxsearch-block .boxsearch .form-inline .button a {
     behavior: url(pie.htc);
     -webkit-box-shadow: rgba(255,255,255,.4)0 0 0,inset rgba(255,255,255,.4)0 1px 0;
@@ -8543,12 +8544,12 @@ header {
         padding: 0;
         line-height: 30px
     }
-
+    body.vi .slide-sm .forcast .forcast-item .forcast-value{font-family: Times New Roman,Arial,Tahoma;font-size:26px}
     .slide-sm .forcast .item-sperate {
         border-left: 1px solid #fff;
         height: 60px
     }
-
+    body.vi .slide-sm .forcast .item-sperate {height: 50px;}
     .slide .txt-sample {
         font-family: Flaticon;
         /*position: absolute;*/
@@ -8604,12 +8605,12 @@ header {
         padding: 0;
         line-height: 30px
     }
-
+    body.vi .slide .forcast .forcast-item .forcast-value{font-family: Times New Roman,Arial,Tahoma;font-size:26px}
     .slide .forcast .item-sperate {
         border-left: 1px solid #fff;
         height: 60px
     }
-
+    body.vi .slide .forcast .item-sperate {height:50px;}
     .des h1 {
         font-size: 2.5em;
         text-align: center
@@ -8810,7 +8811,7 @@ header {
         line-height: 20px;
         color: #939598
     }
-
+    body.vi .footer .footer-lv2 p{font-family: Times New Roman,Arial,Tahoma;font-size:14px;}
     .footer .footer-lv2 p span {
         font-size: 1.1em;
         font-weight: 700;
@@ -8818,7 +8819,7 @@ header {
         margin: 0;
         padding: 0
     }
-
+    body.vi .footer .footer-lv2 p span{font-family: Times New Roman,Arial,Tahoma;font-size:14px;}
     .footer ul.footer_links {
         text-align: left;
         margin-bottom: 0;
@@ -8838,7 +8839,7 @@ header {
         font-size: 1.2em;
         color: #939598
     }
-
+    body.vi .footer ul.footer_links li a{font-family: Times New Roman,Arial,Tahoma;font-size:14px;}
     .footer ul.footer_links li span {
         display: inline-block;
         color: #939598;
@@ -8870,6 +8871,7 @@ header {
         font-size: 14px;
         font-size: 1.4rem
     }
+    body.vi header .menu-bar-top{font-family: Times New Roman,Arial,Tahoma;font-size:14px}
 
     .responsive-menu {
         display: none;
@@ -8887,12 +8889,12 @@ header {
         position: relative;
     }
 
-    header .menu-bar-top ul {
+    header .menu-bar-top ul.flags {
         margin: 0;
         padding: 0;
         list-style:none;
     }
-     header .menu-bar-top ul li{
+     header .menu-bar-top ul.flags li{
         float:left;
     }
      header .menu-bar-top ul.flags li a.active{
@@ -8931,7 +8933,7 @@ header {
         font-family: db_helvethaica_x45_li,Arial;
         line-height: 45px
     }
-
+    body.vi header .menu-bar-top ul li #alrw-container-bar a{font-family: Times New Roman,Arial,Tahoma;font-size:14px}
     header .menu-bar-top ul li #alrw-container-bar i,header .menu-bar-top ul li #alrw-container-bar span {
         color: #fff
     }
@@ -8958,7 +8960,7 @@ header {
         font-size: 14px;
         font-size: 1.4rem
     }
-
+    body.vi .main_menu .menu-bar{font-family: Times New Roman,Arial,Tahoma;font-size:14px}
     .main_menu .menu-bar a.nav-click {
         display: none
     }
@@ -9101,7 +9103,7 @@ header {
     }
 
     .slide-sm .boxsearch-block .boxsearch .form-inline .res {
-
+        display:inline-block;
     }
 
     .slide-sm .boxsearch-block .boxsearch .form-inline .res p {
@@ -9120,7 +9122,7 @@ header {
         font-family: Flaticon;
         font-size: 1.3em
     }
-
+body.vi .slide-sm .boxsearch-block .boxsearch .form-inline .res p.txt-res{font-family: Times New Roman,Arial,Tahoma;font-size:20px;text-transform:uppercase }
     .slide-sm .boxsearch-block .boxsearch .form-inline .res p.txt-res-v2 {
         margin: 0;
         padding: 0
@@ -9889,7 +9891,7 @@ background-color: transparent;
     color: #fff;
     font-size: 1.2em;
 }
-
+body.vi .ubermenu .ubermenu-item{font-family: Times New Roman,Arial,Tahoma;font-size:14px;}
 .ubermenu-target.button span{
     background: #032560;
     background: -webkit-gradient(linear,left top,left bottom,from(#3f629e),to(#032560));
@@ -10427,7 +10429,7 @@ div#alrw-container {
     font-weight: bolder !important;
     letter-spacing: 1px;
 }
-
+body.vi .shiftnav.shiftnav-skin-light ul.shiftnav-menu li.menu-item > .shiftnav-target{font-family: Times New Roman,Arial,Tahoma;font-size:16px!important; }
 .shiftnav ul.shiftnav-menu li.menu-item {
     border-bottom: 1px solid #F7F7F7;
     border-top: 1px solid #EDEDED;

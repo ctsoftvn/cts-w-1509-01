@@ -61,27 +61,13 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Tours
             var listTourType = processDao.GetListToursType(WebContextHelper.LocaleCd);
             foreach (var tour in listTourType)
             {
-                tour.TourImage = storageFileCom.GetFileName(
-                    WebContextHelper.LocaleCd,
-                    tour.FileCd,
-                    false);
-                // lay danh sach tour theo loai
-                tour.ListTourByType = processDao.GetListToursByType(WebContextHelper.LocaleCd,tour.TypeCd);
-            }
 
-            // Lấy thông tin seo
-            var infoSeo = metaCom.GetInfo(WebContextHelper.LocaleCd, W150901Logics.GRPMETA_MA_PAGES, W150901Logics.CD_META_CD_PAGE_TOUR, false);
-            if (infoSeo != null)
-            {
-                metaInfo.MetaTitle = infoSeo.MetaTitle;
-                metaInfo.MetaKeys = infoSeo.MetaKeys;
-                metaInfo.MetaDesc = infoSeo.MetaDesc;
+                // lay danh sach tour theo loai
+                tour.ListTourByType = processDao.GetListToursByType(WebContextHelper.LocaleCd, tour.TypeCd);
             }
             // Kết quả trả về
             getResult.ListTourType = listTourType;
-            getResult.MetaTitle = metaInfo.MetaTitle;
-            getResult.MetaKey = metaInfo.MetaKeys;
-            getResult.MetaDescription = metaInfo.MetaDesc;
+
             return getResult;
         }
         #endregion
