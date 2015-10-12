@@ -74,8 +74,8 @@
         public const string CD_ROLE_CD_ADM_MA_PHT_LI_UPDATE = "im.roles.adm.ma_pht_li.update";
         public const string CD_ROLE_CD_ADM_MA_PHT_EN_VIEW = "im.roles.adm.ma_pht_en.view";
         public const string CD_ROLE_CD_ADM_MA_PHT_EN_UPDATE = "im.roles.adm.ma_pht_en.update";
-        public const string CD_ROLE_CD_ADM_MA_PAG_LI_VIEW = "im.roles.adm.se_pag.view";
-        public const string CD_ROLE_CD_ADM_MA_PAG_LI_FILTER = "im.roles.adm.se_pag.filter";
-        public const string CD_ROLE_CD_ADM_MA_PAG_LI_UPDATE = "im.roles.adm.se_pag.update";
+        public const string CD_ROLE_CD_ADM_SE_PAG_VIEW = "im.roles.adm.se_pag.view";
+        public const string CD_ROLE_CD_ADM_SE_PAG_FILTER = "im.roles.adm.se_pag.filter";
+        public const string CD_ROLE_CD_ADM_SE_PAG_UPDATE = "im.roles.adm.se_pag.update";
     }
 }
