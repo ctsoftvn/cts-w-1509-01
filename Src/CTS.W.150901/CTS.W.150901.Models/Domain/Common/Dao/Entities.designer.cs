@@ -90,6 +90,9 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void InsertMAParameter(MAParameter instance);
     partial void UpdateMAParameter(MAParameter instance);
     partial void DeleteMAParameter(MAParameter instance);
+    partial void InsertMAPhoto(MAPhoto instance);
+    partial void UpdateMAPhoto(MAPhoto instance);
+    partial void DeleteMAPhoto(MAPhoto instance);
     partial void InsertMARoomType(MARoomType instance);
     partial void UpdateMARoomType(MARoomType instance);
     partial void DeleteMARoomType(MARoomType instance);
@@ -282,6 +285,14 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 			get
 			{
 				return this.GetTable<MAParameter>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MAPhoto> MAPhotos
+		{
+			get
+			{
+				return this.GetTable<MAPhoto>();
 			}
 		}
 		
@@ -6172,6 +6183,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		
 		private string _Content;
 		
+		private string _Notes;
+		
 		private System.Nullable<decimal> _SortKey;
 		
 		private System.Nullable<decimal> _VersionNo;
@@ -6202,6 +6215,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnSlugChanged();
     partial void OnContentChanging(string value);
     partial void OnContentChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
     partial void OnSortKeyChanging(System.Nullable<decimal> value);
     partial void OnSortKeyChanged();
     partial void OnVersionNoChanging(System.Nullable<decimal> value);
@@ -6339,6 +6354,26 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._Content = value;
 					this.SendPropertyChanged("Content");
 					this.OnContentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(MAX)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
 				}
 			}
 		}
@@ -6693,6 +6728,308 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._PermitModify = value;
 					this.SendPropertyChanged("PermitModify");
 					this.OnPermitModifyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(MAX)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SortKey", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> SortKey
+		{
+			get
+			{
+				return this._SortKey;
+			}
+			set
+			{
+				if ((this._SortKey != value))
+				{
+					this.OnSortKeyChanging(value);
+					this.SendPropertyChanging();
+					this._SortKey = value;
+					this.SendPropertyChanged("SortKey");
+					this.OnSortKeyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VersionNo", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> VersionNo
+		{
+			get
+			{
+				return this._VersionNo;
+			}
+			set
+			{
+				if ((this._VersionNo != value))
+				{
+					this.OnVersionNoChanging(value);
+					this.SendPropertyChanging();
+					this._VersionNo = value;
+					this.SendPropertyChanged("VersionNo");
+					this.OnVersionNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateUser", DbType="VarChar(50)")]
+		public string CreateUser
+		{
+			get
+			{
+				return this._CreateUser;
+			}
+			set
+			{
+				if ((this._CreateUser != value))
+				{
+					this.OnCreateUserChanging(value);
+					this.SendPropertyChanging();
+					this._CreateUser = value;
+					this.SendPropertyChanged("CreateUser");
+					this.OnCreateUserChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreateDate
+		{
+			get
+			{
+				return this._CreateDate;
+			}
+			set
+			{
+				if ((this._CreateDate != value))
+				{
+					this.OnCreateDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreateDate = value;
+					this.SendPropertyChanged("CreateDate");
+					this.OnCreateDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdateUser", DbType="VarChar(50)")]
+		public string UpdateUser
+		{
+			get
+			{
+				return this._UpdateUser;
+			}
+			set
+			{
+				if ((this._UpdateUser != value))
+				{
+					this.OnUpdateUserChanging(value);
+					this.SendPropertyChanging();
+					this._UpdateUser = value;
+					this.SendPropertyChanged("UpdateUser");
+					this.OnUpdateUserChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdateDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> UpdateDate
+		{
+			get
+			{
+				return this._UpdateDate;
+			}
+			set
+			{
+				if ((this._UpdateDate != value))
+				{
+					this.OnUpdateDateChanging(value);
+					this.SendPropertyChanging();
+					this._UpdateDate = value;
+					this.SendPropertyChanged("UpdateDate");
+					this.OnUpdateDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeleteFlag", DbType="Bit")]
+		public System.Nullable<bool> DeleteFlag
+		{
+			get
+			{
+				return this._DeleteFlag;
+			}
+			set
+			{
+				if ((this._DeleteFlag != value))
+				{
+					this.OnDeleteFlagChanging(value);
+					this.SendPropertyChanging();
+					this._DeleteFlag = value;
+					this.SendPropertyChanged("DeleteFlag");
+					this.OnDeleteFlagChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MAPhotos")]
+	public partial class MAPhoto : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _TypeCd;
+		
+		private string _CategoryCd;
+		
+		private string _FileCd;
+		
+		private string _Notes;
+		
+		private System.Nullable<decimal> _SortKey;
+		
+		private System.Nullable<decimal> _VersionNo;
+		
+		private string _CreateUser;
+		
+		private System.Nullable<System.DateTime> _CreateDate;
+		
+		private string _UpdateUser;
+		
+		private System.Nullable<System.DateTime> _UpdateDate;
+		
+		private System.Nullable<bool> _DeleteFlag;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTypeCdChanging(string value);
+    partial void OnTypeCdChanged();
+    partial void OnCategoryCdChanging(string value);
+    partial void OnCategoryCdChanged();
+    partial void OnFileCdChanging(string value);
+    partial void OnFileCdChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    partial void OnSortKeyChanging(System.Nullable<decimal> value);
+    partial void OnSortKeyChanged();
+    partial void OnVersionNoChanging(System.Nullable<decimal> value);
+    partial void OnVersionNoChanged();
+    partial void OnCreateUserChanging(string value);
+    partial void OnCreateUserChanged();
+    partial void OnCreateDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreateDateChanged();
+    partial void OnUpdateUserChanging(string value);
+    partial void OnUpdateUserChanged();
+    partial void OnUpdateDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnUpdateDateChanged();
+    partial void OnDeleteFlagChanging(System.Nullable<bool> value);
+    partial void OnDeleteFlagChanged();
+    #endregion
+		
+		public MAPhoto()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string TypeCd
+		{
+			get
+			{
+				return this._TypeCd;
+			}
+			set
+			{
+				if ((this._TypeCd != value))
+				{
+					this.OnTypeCdChanging(value);
+					this.SendPropertyChanging();
+					this._TypeCd = value;
+					this.SendPropertyChanged("TypeCd");
+					this.OnTypeCdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string CategoryCd
+		{
+			get
+			{
+				return this._CategoryCd;
+			}
+			set
+			{
+				if ((this._CategoryCd != value))
+				{
+					this.OnCategoryCdChanging(value);
+					this.SendPropertyChanging();
+					this._CategoryCd = value;
+					this.SendPropertyChanged("CategoryCd");
+					this.OnCategoryCdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileCd", DbType="VarChar(50)")]
+		public string FileCd
+		{
+			get
+			{
+				return this._FileCd;
+			}
+			set
+			{
+				if ((this._FileCd != value))
+				{
+					this.OnFileCdChanging(value);
+					this.SendPropertyChanging();
+					this._FileCd = value;
+					this.SendPropertyChanged("FileCd");
+					this.OnFileCdChanged();
 				}
 			}
 		}

@@ -294,6 +294,7 @@
       <Column Name="SearchName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Slug" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="SortKey" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="VersionNo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="CreateUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -311,6 +312,21 @@
       <Column Name="ParamType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="[Rule]" Member="Rule" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="PermitModify" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SortKey" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="VersionNo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CreateUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAPhotos" Member="MAPhotos">
+    <Type Name="MAPhoto">
+      <Column Name="TypeCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CategoryCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FileCd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="SortKey" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="VersionNo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
