@@ -42,6 +42,8 @@
         public const string CD_INFO_CD_HOTEL_URL_2 = "ma.company-infos.hotel-url-2";
         public const string CD_INFO_CD_HOTEL_URL_3 = "ma.company-infos.hotel-url-3";
         public const string CD_INFO_CD_HOTEL_URL_4 = "ma.company-infos.hotel-url-4";
+        // Định nghĩa nhóm code
+        public const string GRPCD_CATEGORIES = "ma.codes.categories";
         // Định nghĩa mã quyền hạn
         public const string CD_ROLE_CD_ADM_MA_RMT_LI_VIEW = "im.roles.adm.ma_rmt_li.view";
         public const string CD_ROLE_CD_ADM_MA_RMT_LI_FILTER = "im.roles.adm.ma_rmt_li.filter";
@@ -53,5 +55,28 @@
         public const string CD_ROLE_CD_ADM_MA_TRT_LI_UPDATE = "im.roles.adm.ma_trt_li.update";
         public const string CD_ROLE_CD_ADM_MA_TRT_EN_VIEW = "im.roles.adm.ma_trt_en.view";
         public const string CD_ROLE_CD_ADM_MA_TRT_EN_UPDATE = "im.roles.adm.ma_trt_en.update";
+        public const string CD_ROLE_CD_ADM_MA_TOU_LI_VIEW = "im.roles.adm.ma_tou_li.view";
+        public const string CD_ROLE_CD_ADM_MA_TOU_LI_FILTER = "im.roles.adm.ma_tou_li.filter";
+        public const string CD_ROLE_CD_ADM_MA_TOU_LI_UPDATE = "im.roles.adm.ma_tou_li.update";
+        public const string CD_ROLE_CD_ADM_MA_TOU_EN_VIEW = "im.roles.adm.ma_tou_en.view";
+        public const string CD_ROLE_CD_ADM_MA_TOU_EN_UPDATE = "im.roles.adm.ma_tou_en.update";
+        public const string CD_ROLE_CD_ADM_MA_SRV_LI_VIEW = "im.roles.adm.ma_srv_li.view";
+        public const string CD_ROLE_CD_ADM_MA_SRV_LI_FILTER = "im.roles.adm.ma_srv_li.filter";
+        public const string CD_ROLE_CD_ADM_MA_SRV_LI_UPDATE = "im.roles.adm.ma_srv_li.update";
+        public const string CD_ROLE_CD_ADM_MA_SRV_EN_VIEW = "im.roles.adm.ma_srv_en.view";
+        public const string CD_ROLE_CD_ADM_MA_SRV_EN_UPDATE = "im.roles.adm.ma_srv_en.update";
+        public const string CD_ROLE_CD_ADM_MA_BNR_LI_VIEW = "im.roles.adm.ma_bnr_li.view";
+        public const string CD_ROLE_CD_ADM_MA_BNR_LI_FILTER = "im.roles.adm.ma_bnr_li.filter";
+        public const string CD_ROLE_CD_ADM_MA_BNR_LI_UPDATE = "im.roles.adm.ma_bnr_li.update";
+        public const string CD_ROLE_CD_ADM_MA_BNR_EN_VIEW = "im.roles.adm.ma_bnr_en.view";
+        public const string CD_ROLE_CD_ADM_MA_BNR_EN_UPDATE = "im.roles.adm.ma_bnr_en.update";
+        public const string CD_ROLE_CD_ADM_MA_PHT_LI_VIEW = "im.roles.adm.ma_pht_li.view";
+        public const string CD_ROLE_CD_ADM_MA_PHT_LI_FILTER = "im.roles.adm.ma_pht_li.filter";
+        public const string CD_ROLE_CD_ADM_MA_PHT_LI_UPDATE = "im.roles.adm.ma_pht_li.update";
+        public const string CD_ROLE_CD_ADM_MA_PHT_EN_VIEW = "im.roles.adm.ma_pht_en.view";
+        public const string CD_ROLE_CD_ADM_MA_PHT_EN_UPDATE = "im.roles.adm.ma_pht_en.update";
+        public const string CD_ROLE_CD_ADM_MA_PAG_LI_VIEW = "im.roles.adm.ma_pag_li.view";
+        public const string CD_ROLE_CD_ADM_MA_PAG_LI_FILTER = "im.roles.adm.ma_pag_li.filter";
+        public const string CD_ROLE_CD_ADM_MA_PAG_LI_UPDATE = "im.roles.adm.ma_pag_li.update";
     }
 }
