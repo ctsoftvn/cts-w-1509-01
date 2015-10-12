@@ -22,7 +22,6 @@
         public const string CD_META_CD_PAGE_DESTINATION = "ma.metas.ma.pages.destination";
         // Định nghĩa nhóm meta
         public const string GRPMETA_MA_PAGES = "ma.metas.ma.pages";
-        public const string GRPMETA_MA_ROOMTYPES = "ma.metas.ma.room-types";
         public const string GRPMETA_MA_TOURS = "ma.metas.ma.tours";
         // Định nghĩa mã thông tin công ty
         public const string CD_INFO_CD_COMPANY_NAME = "ma.company-infos.company-name";
