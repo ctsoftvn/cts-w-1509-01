@@ -29,10 +29,6 @@
         public const string CD_INFO_CD_SLOGAN = "ma.company-infos.slogan";
         public const string CD_INFO_CD_ADDRESS = "ma.company-infos.address";
         public const string CD_INFO_CD_COPYRIGHT = "ma.company-infos.copyright";
-        //public const string CD_INFO_CD_PHONE = "ma.company-infos.phone";
-        //public const string CD_INFO_CD_EMAIL_CONTACT = "ma.company-infos.email-contact";
-        //public const string CD_INFO_CD_EMAIL_RESERVE = "ma.company-infos.email-reserve";
-        //public const string CD_INFO_CD_WEBSITE = "ma.company-infos.website";
         public const string CD_INFO_CD_TWITTER_URL = "ma.company-infos.twitter-url";
         public const string CD_INFO_CD_GOOGLE_URL = "ma.company-infos.google-url";
         public const string CD_INFO_CD_FACEBOOK_URL = "ma.company-infos.facebook-url";
@@ -41,6 +37,12 @@
         public const string CD_INFO_CD_HOTEL_URL_2 = "ma.company-infos.hotel-url-2";
         public const string CD_INFO_CD_HOTEL_URL_3 = "ma.company-infos.hotel-url-3";
         public const string CD_INFO_CD_HOTEL_URL_4 = "ma.company-infos.hotel-url-4";
+
+        public const string CD_INFO_CD_EMAIL_CONTACT = "ma.company-infos.email-contact";
+        public const string CD_INFO_CD_EMAIL_CONTACT_PASSWORD = "ma.company-infos.email-contact-password";
+        public const string CD_INFO_CD_EMAIL_RESERVE = "ma.company-infos.email-reserve";
+        public const string CD_INFO_CD_EMAIL_RESERVE_PASSWORD = "ma.company-infos.email-reserve-password";
+        public const string CD_INFO_CD_HOST = "ma.company-infos.host";
         // Định nghĩa nhóm code
         public const string GRPCD_CATEGORIES = "ma.codes.categories";
         // Định nghĩa mã quyền hạn
