@@ -241,28 +241,28 @@ namespace CTS.W._150901.Models.Domain.Common.Utils
         /// <summary>
         /// Kiểm tra dữ liệu tồn tại
         /// </summary>
-        public bool IsExistPhoto(string typeCd, string categoryCd, bool ignoreDeleteFlag) {
+        public bool IsExistPhoto(string localeCd, string photoCd, bool ignoreDeleteFlag) {
             // Trường hợp tham số là null
-            if (DataCheckHelper.IsNull(typeCd)
-                || DataCheckHelper.IsNull(categoryCd)) {
+            if (DataCheckHelper.IsNull(localeCd)
+                || DataCheckHelper.IsNull(photoCd)) {
                 return true;
             }
             // Lấy thông tin dữ liệu
-            var dataInfo = GetInfoPhoto(typeCd, categoryCd, ignoreDeleteFlag);
+            var dataInfo = GetInfoPhoto(localeCd, photoCd, ignoreDeleteFlag);
             // Kết quả trả về
             return dataInfo != null;
         }
         /// <summary>
         /// Lấy thông tin dữ liệu
         /// </summary>
-        public MAPhoto GetInfoPhoto(string typeCd, string categoryCd, bool ignoreDeleteFlag) {
+        public MAPhoto GetInfoPhoto(string localeCd, string photoCd, bool ignoreDeleteFlag) {
             // Trường hợp tham số là null
-            if (DataCheckHelper.IsNull(typeCd)
-                || DataCheckHelper.IsNull(categoryCd)) {
+            if (DataCheckHelper.IsNull(localeCd)
+                || DataCheckHelper.IsNull(photoCd)) {
                 return null;
             }
             // Kết quả trả về
-            return _comDao.GetInfoPhoto(typeCd, categoryCd, ignoreDeleteFlag);
+            return _comDao.GetInfoPhoto(localeCd, photoCd, ignoreDeleteFlag);
         }
         /// <summary>
         /// Kiểm tra dữ liệu tồn tại

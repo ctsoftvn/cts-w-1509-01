@@ -187,11 +187,11 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
         /// <summary>
         /// Lấy thông tin dữ liệu
         /// </summary>
-        public MAPhoto GetInfoPhoto(string typeCd, string categoryCd, bool ignoreDeleteFlag) {
+        public MAPhoto GetInfoPhoto(string localeCd, string photoCd, bool ignoreDeleteFlag) {
             // Tạo tham số
             var param = new {
-                TypeCd = typeCd,
-                CategoryCd = categoryCd,
+                LocaleCd = localeCd,
+                PhotoCd = photoCd,
                 IgnoreDeleteFlag = ignoreDeleteFlag
             };
             // Kết quả trả về

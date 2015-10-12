@@ -324,8 +324,10 @@
   </Table>
   <Table Name="dbo.MAPhotos" Member="MAPhotos">
     <Type Name="MAPhoto">
-      <Column Name="TypeCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="CategoryCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LocaleCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PhotoCd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PhotoName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SearchName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="FileCd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="SortKey" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />

@@ -6919,9 +6919,13 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _TypeCd;
+		private string _LocaleCd;
 		
-		private string _CategoryCd;
+		private string _PhotoCd;
+		
+		private string _PhotoName;
+		
+		private string _SearchName;
 		
 		private string _FileCd;
 		
@@ -6945,10 +6949,14 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnTypeCdChanging(string value);
-    partial void OnTypeCdChanged();
-    partial void OnCategoryCdChanging(string value);
-    partial void OnCategoryCdChanged();
+    partial void OnLocaleCdChanging(string value);
+    partial void OnLocaleCdChanged();
+    partial void OnPhotoCdChanging(string value);
+    partial void OnPhotoCdChanged();
+    partial void OnPhotoNameChanging(string value);
+    partial void OnPhotoNameChanged();
+    partial void OnSearchNameChanging(string value);
+    partial void OnSearchNameChanged();
     partial void OnFileCdChanging(string value);
     partial void OnFileCdChanged();
     partial void OnNotesChanging(string value);
@@ -6974,42 +6982,82 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string TypeCd
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LocaleCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string LocaleCd
 		{
 			get
 			{
-				return this._TypeCd;
+				return this._LocaleCd;
 			}
 			set
 			{
-				if ((this._TypeCd != value))
+				if ((this._LocaleCd != value))
 				{
-					this.OnTypeCdChanging(value);
+					this.OnLocaleCdChanging(value);
 					this.SendPropertyChanging();
-					this._TypeCd = value;
-					this.SendPropertyChanged("TypeCd");
-					this.OnTypeCdChanged();
+					this._LocaleCd = value;
+					this.SendPropertyChanged("LocaleCd");
+					this.OnLocaleCdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string CategoryCd
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhotoCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PhotoCd
 		{
 			get
 			{
-				return this._CategoryCd;
+				return this._PhotoCd;
 			}
 			set
 			{
-				if ((this._CategoryCd != value))
+				if ((this._PhotoCd != value))
 				{
-					this.OnCategoryCdChanging(value);
+					this.OnPhotoCdChanging(value);
 					this.SendPropertyChanging();
-					this._CategoryCd = value;
-					this.SendPropertyChanged("CategoryCd");
-					this.OnCategoryCdChanged();
+					this._PhotoCd = value;
+					this.SendPropertyChanged("PhotoCd");
+					this.OnPhotoCdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhotoName", DbType="NVarChar(255)")]
+		public string PhotoName
+		{
+			get
+			{
+				return this._PhotoName;
+			}
+			set
+			{
+				if ((this._PhotoName != value))
+				{
+					this.OnPhotoNameChanging(value);
+					this.SendPropertyChanging();
+					this._PhotoName = value;
+					this.SendPropertyChanged("PhotoName");
+					this.OnPhotoNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchName", DbType="VarChar(255)")]
+		public string SearchName
+		{
+			get
+			{
+				return this._SearchName;
+			}
+			set
+			{
+				if ((this._SearchName != value))
+				{
+					this.OnSearchNameChanging(value);
+					this.SendPropertyChanging();
+					this._SearchName = value;
+					this.SendPropertyChanged("SearchName");
+					this.OnSearchNameChanged();
 				}
 			}
 		}
