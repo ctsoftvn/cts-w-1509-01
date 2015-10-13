@@ -9,6 +9,8 @@ using CTS.W._150901.Models.Domain.Object.Client.Tour;
 using CTS.W._150901.Models.Domain.Object.Client.Page;
 using CTS.W._150901.Models.Domain.Object.Client.Room;
 using CTS.W._150901.Models.Domain.Object.Client.Service;
+using CTS.W._150901.Models.Domain.Object.Client.Accom;
+using CTS.W._150901.Models.Domain.Object.Client.Photo;
 
 namespace CTS.W._150901.Models.Domain.Dao.Client
 {
@@ -22,7 +24,8 @@ namespace CTS.W._150901.Models.Domain.Dao.Client
         public const string MAINDAO_GETPAGE_SQL = "MainDao_GetPage.sql";
         public const string MAINDAO_GETLISTROOMSTYPE_SQL = "MainDao_GetListRoomsType.sql";
         public const string MAINDAO_GETLISTSERVICES_SQL = "MainDao_GetListServices.sql";
-        
+        public const string MAINDAO_GETLISTACCOMS_SQL = "MainDao_GetListAccoms.sql";
+        public const string MAINDAO_GETLISTPHOTOS_SQL = "MainDao_GetListPhotos.sql";
         
         /// <summary>
         /// Lấy danh sách dữ liệu đa ngôn ngữ
@@ -36,6 +39,17 @@ namespace CTS.W._150901.Models.Domain.Dao.Client
             };
             // Kết quả trả về
             return GetListByFile<BannerObject>(MAINDAO_GETLISTBANNERS_SQL, param);
+        }
+
+        public IList<PhotoObject> GetListPhotos(String localeCd)
+        {
+            // Tạo tham số
+            var param = new
+            {
+                LocaleCd = localeCd
+            };
+            // Kết quả trả về
+            return GetListByFile<PhotoObject>(MAINDAO_GETLISTPHOTOS_SQL, param);
         }
         public IList<TourObject> GetListToursType(String localeCd)
         {
@@ -99,6 +113,16 @@ namespace CTS.W._150901.Models.Domain.Dao.Client
             };
             // Kết quả trả về
             return GetListByFile<ServiceObject>(MAINDAO_GETLISTSERVICES_SQL, param);
+        }
+        public IList<AccomObject> GetListAccoms(String localeCd)
+        {
+            // Tạo tham số
+            var param = new
+            {
+                LocaleCd = localeCd
+            };
+            // Kết quả trả về
+            return GetListByFile<AccomObject>(MAINDAO_GETLISTACCOMS_SQL, param);
         }
     }
 }
