@@ -228,4 +228,8 @@
         <value>PAge</value>
     </data>
 
+  <!-- Client -->
+  <data name="CLN_CONTACT_SUBJECT" xml:space="preserve">
+        <value>Thông tin liên hệ</value>
+    </data>
 </root>
