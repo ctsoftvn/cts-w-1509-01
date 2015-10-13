@@ -8,6 +8,8 @@ using CTS.Web.Core.Domain.Controller;
 using CTS.Web.Core.Domain.Model;
 using CTS.W._150901.Models.Domain.Logic.Client.Page;
 using CTS.Core.Domain.Model;
+using CTS.W._150901.Models.Domain.Logic.Client.ContactUs;
+using Resources;
 
 namespace CTS.W._150901.Web
 {
@@ -27,7 +29,35 @@ namespace CTS.W._150901.Web
 
             Page.Title = PageCom.GetValue<string>(response, "MetaTitle");
             Page.MetaKeywords = PageCom.GetValue<string>(response, "MetaKey");
-            Page.MetaDescription = PageCom.GetValue<string>(response, "MetaDescription"); 
+            Page.MetaDescription = PageCom.GetValue<string>(response, "MetaDescription");
+        }
+        protected void btnSubmit_Command(object sender, CommandEventArgs e)
+        {
+            var request = new BasicRequest();
+            request.Add("Name", txtName.Text);
+            request.Add("Phone", txtPhone.Text);
+            request.Add("Email", txtEmail.Text);
+            request.Add("Description", txtDescription.Text);
+            var logic = new SendMailOperateLogic();
+            var response = PageCom.Invoke(logic, request);
+            if (response.ResultFlag)
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "clientscript", "<script> alert('" + Strings.CLN_ALERT_SUCCESS + "'); </script>");
+                clearControls();
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "clientscript", "<script> alert('" + Strings.CLN_ALERT_ERROR + "'); </script>");
+            }
+
+        }
+
+        private void clearControls()
+        {
+            txtName.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            txtDescription.Text = "";
         }
     }
 }
