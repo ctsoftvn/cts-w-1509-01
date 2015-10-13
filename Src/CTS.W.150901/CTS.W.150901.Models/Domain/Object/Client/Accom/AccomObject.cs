@@ -4,23 +4,22 @@ using System.Linq;
 using System.Text;
 using CTS.Core.Domain.Attr;
 
-namespace CTS.W._150901.Models.Domain.Object.Client.Tour
+namespace CTS.W._150901.Models.Domain.Object.Client.Accom
 {
-    public class TourObject
+    public class AccomObject
     {
         [OutputText]
         public string LocaleCd { get; set; }
         [OutputText]
-        public string TypeCd { get; set; }
+        public string AccomCd { get; set; }
         [OutputText]
-        public string TypeName { get; set; }
+        public string AccomName { get; set; }
         [OutputText]
         public string Slug { get; set; }
         [OutputText]
         public string FileCd { get; set; }
         [OutputText]
         public string Notes { get; set; }
-        [OutputList(IgnoreAttribute = false)]
-        public IList<TourDetailObject> ListTourByType { get; set; }
+
     }
 }

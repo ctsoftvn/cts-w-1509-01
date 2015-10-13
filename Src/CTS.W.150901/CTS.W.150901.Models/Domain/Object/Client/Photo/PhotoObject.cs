@@ -4,22 +4,19 @@ using System.Linq;
 using System.Text;
 using CTS.Core.Domain.Attr;
 
-namespace CTS.W._150901.Models.Domain.Object.Client.Service
+namespace CTS.W._150901.Models.Domain.Object.Client.Photo
 {
-    public class ServiceObject
+    public class PhotoObject
     {
         [OutputText]
         public string LocaleCd { get; set; }
         [OutputText]
-        public string ServiceCd { get; set; }
+        public string PhotoCd { get; set; }
         [OutputText]
-        public string ServiceName { get; set; }
-        [OutputText]
-        public string Slug { get; set; }
-        [OutputText]
-        public string FileCd { get; set; }
+        public string PhotoName { get; set; }
         [OutputText]
         public string Notes { get; set; }
-
+        [OutputText]
+        public string FileCd { get; set; }
     }
 }

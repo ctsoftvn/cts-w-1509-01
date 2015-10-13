@@ -21,8 +21,6 @@ namespace CTS.W._150901.Models.Domain.Object.Client.Room
         [OutputText]
         public string FileCd { get; set; }
         [OutputText]
-        public string RoomImage { get; set; }
-        [OutputText]
         public string Notes { get; set; }
 
     }
