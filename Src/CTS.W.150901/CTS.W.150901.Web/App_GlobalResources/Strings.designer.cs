@@ -133,6 +133,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /en/booking.
+        /// </summary>
+        internal static string CLN_MASTER_BOOKING_LINK {
+            get {
+                return ResourceManager.GetString("CLN_MASTER_BOOKING_LINK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /en/contact-us.
         /// </summary>
         internal static string CLN_MASTER_CONTACT_US_LINK {
@@ -336,15 +345,6 @@ namespace Resources {
         internal static string CLN_MASTER_RESERVATION_TEXT {
             get {
                 return ResourceManager.GetString("CLN_MASTER_RESERVATION_TEXT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to /en/rooms.
-        /// </summary>
-        internal static string CLN_MASTER_ROOMS_LINK {
-            get {
-                return ResourceManager.GetString("CLN_MASTER_ROOMS_LINK", resourceCulture);
             }
         }
         

@@ -136,8 +136,8 @@
   <data name="CLN_MASTER_RESERVATION_LINK" xml:space="preserve">
 		<value>/vi/reservation</value>
 	</data>
-  <data name="CLN_MASTER_ROOMS_LINK" xml:space="preserve">
-		<value>/vi/rooms</value>
+  <data name="CLN_MASTER_BOOKING_LINK" xml:space="preserve">
+		<value>/vi/booking</value>
 	</data>
   <data name="CLN_MASTER_DESTINATIONS_LINK" xml:space="preserve">
 		<value>/vi/destinations</value>
