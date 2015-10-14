@@ -7,7 +7,8 @@ ctrls.controller('LoginCtrl', ['$scope', '$state', '$window', function ($scope, 
     // Xử lý init
     $scope.init = function () {
         $pc({
-            action: 'Login.AdminInitLayout',
+            app: 'adm',
+            action: 'Login.InitLayout',
             url: '/cts/web/users',
             success: function (data) {
                 $scope.data = data;
@@ -22,7 +23,8 @@ ctrls.controller('LoginCtrl', ['$scope', '$state', '$window', function ($scope, 
     // Xử lý xác thực
     $scope.auth = function () {
         $pc({
-            action: 'Login.AdminAuth',
+            app: 'adm',
+            action: 'Login.Auth',
             url: '/cts/web/users',
             validate: '/adm/res/jss/ctrls/login_auth.json',
             data: {
@@ -31,7 +33,7 @@ ctrls.controller('LoginCtrl', ['$scope', '$state', '$window', function ($scope, 
                 Remember: $scope.data.Remember
             },
             success: function (data) {
-                $window.open('/adm/main', '_self');
+                $window.open('/administer/main', '_self');
             }
         });
     };

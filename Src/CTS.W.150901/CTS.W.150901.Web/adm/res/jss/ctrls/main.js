@@ -15,11 +15,12 @@ ctrls.controller('MainCtrl', ['$scope', '$state', '$window', function ($scope, $
             action: 'Main.AdminInitLayout',
             url: '/cts/web/main',
             success: function (data) {
+                $scope.data = data;
+                $scope.treeMenus.ListData = $dataHelper.toMenu(data.ListMenus);
+            },
+            error: function (data) {
                 if (data.HasAuth === false) {
-                    $window.open('/adm/login', '_self');
-                } else {
-                    $scope.data = data;
-                    $scope.treeMenus.ListData = $dataHelper.toMenu(data.ListMenus);
+                    $window.open('/admin/login', '_self');
                 }
             }
         });
@@ -30,7 +31,7 @@ ctrls.controller('MainCtrl', ['$scope', '$state', '$window', function ($scope, $
             action: 'Main.AdminLogout',
             url: '/cts/web/main',
             success: function () {
-                $window.open('/adm/login', '_self');
+                $window.open('/admin/login', '_self');
             }
         });
     };

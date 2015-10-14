@@ -73,17 +73,55 @@
     margin: 10px;
 }
 
-/* -- adm/ma/items/entry.html -- */
-.ma-items-entry-tblResult .row-fix { height: 100px!important; }
-/* -- adm/ma/items/list.html -- */
-.ma-items-tblResult { top: 227px!important; }
-.ma-items-tblResult-full { top: 58px!important; }
-.ma-items-tblResult .row-fix { height: 250px!important; }
-.ma-items-tblResult-full .row-fix { height: 419px!important; } /* 227-58+250=419 */
-/* -- adm/ma/categoris/entry.html -- */
-.ma-categories-entry-tblResult .row-fix { height: 100px!important; }
-/* -- adm/ma/categoris/list.html -- */
-.ma-categories-tblResult { top: 202px!important; }
-.ma-categories-tblResult-full { top: 58px!important; }
-.ma-categories-tblResult .row-fix { height: 250px!important; }
-.ma-categories-tblResult-full .row-fix { height: 394px!important; } /* 202-58+250=394 */
+/* -- adm/ma/room-types/entry.html -- */
+.ma-room-types-entry-tblResult .row-fix { height: 100px!important; }
+/* -- adm/ma/room-types/list.html -- */
+.ma-room-types-tblResult { top: 202px!important; }
+.ma-room-types-tblResult-full { top: 58px!important; }
+.ma-room-types-tblResult .row-fix { height: 250px!important; }
+.ma-room-types-tblResult-full .row-fix { height: 394px!important; } /* 202-58+250=394 */
+/* -- adm/ma/tour-types/entry.html -- */
+.ma-tour-types-entry-tblResult .row-fix { height: 100px!important; }
+/* -- adm/ma/tour-types/list.html -- */
+.ma-tour-types-tblResult { top: 202px!important; }
+.ma-tour-types-tblResult-full { top: 58px!important; }
+.ma-tour-types-tblResult .row-fix { height: 250px!important; }
+.ma-tour-types-tblResult-full .row-fix { height: 394px!important; } /* 202-58+250=394 */
+/* -- adm/ma/tours/entry.html -- */
+.ma-tours-entry-tblResult .row-fix { height: 50px!important; }
+/* -- adm/ma/tours/list.html -- */
+.ma-tours-tblResult { top: 227px!important; }
+.ma-tours-tblResult-full { top: 58px!important; }
+.ma-tours-tblResult .row-fix { height: 250px!important; }
+.ma-tours-tblResult-full .row-fix { height: 419px!important; } /* 227-58+250=419 */
+/* -- adm/ma/accoms/entry.html */
+.ma-accoms-entry-tblResult .row-fix { height: 100px!important; }
+/* -- adm/ma/accoms/list.html -- */
+.ma-accoms-tblResult { top: 177px!important; }
+.ma-accoms-tblResult-full { top: 58px!important; }
+.ma-accoms-tblResult .row-fix { height: 250px!important; }
+.ma-accoms-tblResult-full .row-fix { height: 369px!important; } /* 177-58+250=394 */
+/* -- adm/ma/services/entry.html */
+.ma-services-entry-tblResult .row-fix { height: 100px!important; }
+/* -- adm/ma/services/list.html -- */
+.ma-services-tblResult { top: 177px!important; }
+.ma-services-tblResult-full { top: 58px!important; }
+.ma-services-tblResult .row-fix { height: 250px!important; }
+.ma-services-tblResult-full .row-fix { height: 369px!important; } /* 177-58+250=394 */
+/* -- adm/ma/banners/entry.html */
+.ma-banners-entry-tblResult .row-fix { height: 100px!important; }
+/* -- adm/ma/banners/list.html -- */
+.ma-banners-tblResult { top: 177px!important; }
+.ma-banners-tblResult-full { top: 58px!important; }
+.ma-banners-tblResult .row-fix { height: 250px!important; }
+.ma-banners-tblResult-full .row-fix { height: 369px!important; } /* 177-58+250=369 */
+/* -- adm/ma/photos/entry.html */
+.ma-photos-entry-tblResult .row-fix { height: 100px!important; }
+/* -- adm/ma/photos/list.html -- */
+.ma-photos-tblResult { top: 177px!important; }
+.ma-photos-tblResult-full { top: 58px!important; }
+.ma-photos-tblResult .row-fix { height: 250px!important; }
+.ma-photos-tblResult-full .row-fix { height: 369px!important; } /* 177-58+250=369 */
+/* -- adm/ma/pages/list.html -- */
+.ma-pages-tblResult { top: 58px!important; }
+.ma-pages-tblResult .row-fix { height: 419px!important; }

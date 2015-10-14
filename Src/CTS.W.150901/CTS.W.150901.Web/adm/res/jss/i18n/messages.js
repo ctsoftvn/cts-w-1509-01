@@ -1,4 +1,4 @@
-var messages = jQuery.extend(true, messages, {
+var messages = $.extend(true, messages, {
     "vi": {
     }
 });
