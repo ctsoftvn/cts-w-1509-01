@@ -175,6 +175,44 @@ namespace CTS.W._150901.Models.Domain.Common.Utils
         /// <summary>
         /// Kiểm tra dữ liệu tồn tại
         /// </summary>
+        public bool IsExistAccom(string localeCd, string accomCd, bool ignoreDeleteFlag) {
+            // Trường hợp tham số là null
+            if (DataCheckHelper.IsNull(localeCd)
+                || DataCheckHelper.IsNull(accomCd)) {
+                return true;
+            }
+            // Lấy thông tin dữ liệu
+            var dataInfo = GetInfoAccom(localeCd, accomCd, ignoreDeleteFlag);
+            // Kết quả trả về
+            return dataInfo != null;
+        }
+        /// <summary>
+        /// Kiểm tra dữ liệu duy nhất
+        /// </summary>
+        public bool IsUniqueAccom(string accomCd, string slug) {
+            // Trường hợp tham số là null
+            if (DataCheckHelper.IsNull(accomCd)
+                || DataCheckHelper.IsNull(slug)) {
+                return true;
+            }
+            // Kết quả trả về
+            return _comDao.IsUniqueAccom(accomCd, slug);
+        }
+        /// <summary>
+        /// Lấy thông tin dữ liệu
+        /// </summary>
+        public MAAccom GetInfoAccom(string localeCd, string accomCd, bool ignoreDeleteFlag) {
+            // Trường hợp tham số là null
+            if (DataCheckHelper.IsNull(localeCd)
+                || DataCheckHelper.IsNull(accomCd)) {
+                return null;
+            }
+            // Kết quả trả về
+            return _comDao.GetInfoAccom(localeCd, accomCd, ignoreDeleteFlag);
+        }
+        /// <summary>
+        /// Kiểm tra dữ liệu tồn tại
+        /// </summary>
         public bool IsExistService(string localeCd, string serviceCd, bool ignoreDeleteFlag) {
             // Trường hợp tham số là null
             if (DataCheckHelper.IsNull(localeCd)
@@ -210,7 +248,6 @@ namespace CTS.W._150901.Models.Domain.Common.Utils
             // Kết quả trả về
             return _comDao.GetInfoService(localeCd, serviceCd, ignoreDeleteFlag);
         }
-
         /// <summary>
         /// Kiểm tra dữ liệu tồn tại
         /// </summary>

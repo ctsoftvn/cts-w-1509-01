@@ -72,6 +72,9 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void InsertIMUser(IMUser instance);
     partial void UpdateIMUser(IMUser instance);
     partial void DeleteIMUser(IMUser instance);
+    partial void InsertMAAccom(MAAccom instance);
+    partial void UpdateMAAccom(MAAccom instance);
+    partial void DeleteMAAccom(MAAccom instance);
     partial void InsertMABanner(MABanner instance);
     partial void UpdateMABanner(MABanner instance);
     partial void DeleteMABanner(MABanner instance);
@@ -237,6 +240,14 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 			get
 			{
 				return this.GetTable<IMUser>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MAAccom> MAAccoms
+		{
+			get
+			{
+				return this.GetTable<MAAccom>();
 			}
 		}
 		
@@ -4669,6 +4680,380 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MAAccoms")]
+	public partial class MAAccom : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _LocaleCd;
+		
+		private string _AccomCd;
+		
+		private string _AccomName;
+		
+		private string _SearchName;
+		
+		private string _Slug;
+		
+		private string _FileCd;
+		
+		private string _Notes;
+		
+		private System.Nullable<decimal> _SortKey;
+		
+		private System.Nullable<decimal> _VersionNo;
+		
+		private string _CreateUser;
+		
+		private System.Nullable<System.DateTime> _CreateDate;
+		
+		private string _UpdateUser;
+		
+		private System.Nullable<System.DateTime> _UpdateDate;
+		
+		private System.Nullable<bool> _DeleteFlag;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnLocaleCdChanging(string value);
+    partial void OnLocaleCdChanged();
+    partial void OnAccomCdChanging(string value);
+    partial void OnAccomCdChanged();
+    partial void OnAccomNameChanging(string value);
+    partial void OnAccomNameChanged();
+    partial void OnSearchNameChanging(string value);
+    partial void OnSearchNameChanged();
+    partial void OnSlugChanging(string value);
+    partial void OnSlugChanged();
+    partial void OnFileCdChanging(string value);
+    partial void OnFileCdChanged();
+    partial void OnNotesChanging(string value);
+    partial void OnNotesChanged();
+    partial void OnSortKeyChanging(System.Nullable<decimal> value);
+    partial void OnSortKeyChanged();
+    partial void OnVersionNoChanging(System.Nullable<decimal> value);
+    partial void OnVersionNoChanged();
+    partial void OnCreateUserChanging(string value);
+    partial void OnCreateUserChanged();
+    partial void OnCreateDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreateDateChanged();
+    partial void OnUpdateUserChanging(string value);
+    partial void OnUpdateUserChanged();
+    partial void OnUpdateDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnUpdateDateChanged();
+    partial void OnDeleteFlagChanging(System.Nullable<bool> value);
+    partial void OnDeleteFlagChanged();
+    #endregion
+		
+		public MAAccom()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LocaleCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string LocaleCd
+		{
+			get
+			{
+				return this._LocaleCd;
+			}
+			set
+			{
+				if ((this._LocaleCd != value))
+				{
+					this.OnLocaleCdChanging(value);
+					this.SendPropertyChanging();
+					this._LocaleCd = value;
+					this.SendPropertyChanged("LocaleCd");
+					this.OnLocaleCdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccomCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string AccomCd
+		{
+			get
+			{
+				return this._AccomCd;
+			}
+			set
+			{
+				if ((this._AccomCd != value))
+				{
+					this.OnAccomCdChanging(value);
+					this.SendPropertyChanging();
+					this._AccomCd = value;
+					this.SendPropertyChanged("AccomCd");
+					this.OnAccomCdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccomName", DbType="NVarChar(255)")]
+		public string AccomName
+		{
+			get
+			{
+				return this._AccomName;
+			}
+			set
+			{
+				if ((this._AccomName != value))
+				{
+					this.OnAccomNameChanging(value);
+					this.SendPropertyChanging();
+					this._AccomName = value;
+					this.SendPropertyChanged("AccomName");
+					this.OnAccomNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchName", DbType="VarChar(255)")]
+		public string SearchName
+		{
+			get
+			{
+				return this._SearchName;
+			}
+			set
+			{
+				if ((this._SearchName != value))
+				{
+					this.OnSearchNameChanging(value);
+					this.SendPropertyChanging();
+					this._SearchName = value;
+					this.SendPropertyChanged("SearchName");
+					this.OnSearchNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Slug", DbType="VarChar(255)")]
+		public string Slug
+		{
+			get
+			{
+				return this._Slug;
+			}
+			set
+			{
+				if ((this._Slug != value))
+				{
+					this.OnSlugChanging(value);
+					this.SendPropertyChanging();
+					this._Slug = value;
+					this.SendPropertyChanged("Slug");
+					this.OnSlugChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileCd", DbType="VarChar(50)")]
+		public string FileCd
+		{
+			get
+			{
+				return this._FileCd;
+			}
+			set
+			{
+				if ((this._FileCd != value))
+				{
+					this.OnFileCdChanging(value);
+					this.SendPropertyChanging();
+					this._FileCd = value;
+					this.SendPropertyChanged("FileCd");
+					this.OnFileCdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(MAX)")]
+		public string Notes
+		{
+			get
+			{
+				return this._Notes;
+			}
+			set
+			{
+				if ((this._Notes != value))
+				{
+					this.OnNotesChanging(value);
+					this.SendPropertyChanging();
+					this._Notes = value;
+					this.SendPropertyChanged("Notes");
+					this.OnNotesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SortKey", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> SortKey
+		{
+			get
+			{
+				return this._SortKey;
+			}
+			set
+			{
+				if ((this._SortKey != value))
+				{
+					this.OnSortKeyChanging(value);
+					this.SendPropertyChanging();
+					this._SortKey = value;
+					this.SendPropertyChanged("SortKey");
+					this.OnSortKeyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VersionNo", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> VersionNo
+		{
+			get
+			{
+				return this._VersionNo;
+			}
+			set
+			{
+				if ((this._VersionNo != value))
+				{
+					this.OnVersionNoChanging(value);
+					this.SendPropertyChanging();
+					this._VersionNo = value;
+					this.SendPropertyChanged("VersionNo");
+					this.OnVersionNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateUser", DbType="VarChar(50)")]
+		public string CreateUser
+		{
+			get
+			{
+				return this._CreateUser;
+			}
+			set
+			{
+				if ((this._CreateUser != value))
+				{
+					this.OnCreateUserChanging(value);
+					this.SendPropertyChanging();
+					this._CreateUser = value;
+					this.SendPropertyChanged("CreateUser");
+					this.OnCreateUserChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreateDate
+		{
+			get
+			{
+				return this._CreateDate;
+			}
+			set
+			{
+				if ((this._CreateDate != value))
+				{
+					this.OnCreateDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreateDate = value;
+					this.SendPropertyChanged("CreateDate");
+					this.OnCreateDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdateUser", DbType="VarChar(50)")]
+		public string UpdateUser
+		{
+			get
+			{
+				return this._UpdateUser;
+			}
+			set
+			{
+				if ((this._UpdateUser != value))
+				{
+					this.OnUpdateUserChanging(value);
+					this.SendPropertyChanging();
+					this._UpdateUser = value;
+					this.SendPropertyChanged("UpdateUser");
+					this.OnUpdateUserChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdateDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> UpdateDate
+		{
+			get
+			{
+				return this._UpdateDate;
+			}
+			set
+			{
+				if ((this._UpdateDate != value))
+				{
+					this.OnUpdateDateChanging(value);
+					this.SendPropertyChanging();
+					this._UpdateDate = value;
+					this.SendPropertyChanged("UpdateDate");
+					this.OnUpdateDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeleteFlag", DbType="Bit")]
+		public System.Nullable<bool> DeleteFlag
+		{
+			get
+			{
+				return this._DeleteFlag;
+			}
+			set
+			{
+				if ((this._DeleteFlag != value))
+				{
+					this.OnDeleteFlagChanging(value);
+					this.SendPropertyChanging();
+					this._DeleteFlag = value;
+					this.SendPropertyChanged("DeleteFlag");
+					this.OnDeleteFlagChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MABanners")]
 	public partial class MABanner : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -7281,6 +7666,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		
 		private System.Nullable<decimal> _Price;
 		
+		private System.Nullable<decimal> _AdultPerRoom;
+		
 		private string _FileCd;
 		
 		private string _Notes;
@@ -7315,6 +7702,8 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnSlugChanged();
     partial void OnPriceChanging(System.Nullable<decimal> value);
     partial void OnPriceChanged();
+    partial void OnAdultPerRoomChanging(System.Nullable<decimal> value);
+    partial void OnAdultPerRoomChanged();
     partial void OnFileCdChanging(string value);
     partial void OnFileCdChanged();
     partial void OnNotesChanging(string value);
@@ -7456,6 +7845,26 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._Price = value;
 					this.SendPropertyChanged("Price");
 					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdultPerRoom", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> AdultPerRoom
+		{
+			get
+			{
+				return this._AdultPerRoom;
+			}
+			set
+			{
+				if ((this._AdultPerRoom != value))
+				{
+					this.OnAdultPerRoomChanging(value);
+					this.SendPropertyChanging();
+					this._AdultPerRoom = value;
+					this.SendPropertyChanged("AdultPerRoom");
+					this.OnAdultPerRoomChanged();
 				}
 			}
 		}

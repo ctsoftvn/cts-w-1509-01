@@ -18,11 +18,12 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
         public const string MASTERDATACOMDAO_GETDIVTOURTYPE_SQL = "MasterDataComDao_GetDivTourType.sql";
         public const string MASTERDATACOMDAO_ISUNIQUETOUR_SQL = "MasterDataComDao_IsUniqueTour.sql";
         public const string MASTERDATACOMDAO_GETINFOTOUR_SQL = "MasterDataComDao_GetInfoTour.sql";
+        public const string MASTERDATACOMDAO_ISUNIQUEACCOM_SQL = "MasterDataComDao_IsUniqueAccom.sql";
+        public const string MASTERDATACOMDAO_GETINFOACCOM_SQL = "MasterDataComDao_GetInfoAccom.sql";
         public const string MASTERDATACOMDAO_ISUNIQUESERVICE_SQL = "MasterDataComDao_IsUniqueService.sql";
         public const string MASTERDATACOMDAO_GETINFOSERVICE_SQL = "MasterDataComDao_GetInfoService.sql";
         public const string MASTERDATACOMDAO_GETINFOBANNER_SQL = "MasterDataComDao_GetInfoBanner.sql";
         public const string MASTERDATACOMDAO_GETINFOPHOTO_SQL = "MasterDataComDao_GetInfoPhoto.sql";
-
         public const string MASTERDATACOMDAO_ISUNIQUEPAGE_SQL = "MasterDataComDao_IsUniquePage.sql";
         public const string MASTERDATACOMDAO_GETINFOPAGE_SQL = "MasterDataComDao_GetInfoPage.sql";
 
@@ -139,6 +140,35 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
             };
             // Kết quả trả về
             return GetObjectByFile<MATour>(MASTERDATACOMDAO_GETINFOTOUR_SQL, param);
+        }
+
+        /// <summary>
+        /// Kiểm tra dữ liệu duy nhất
+        /// </summary>
+        public bool IsUniqueAccom(string accomCd, string slug) {
+            // Tạo tham số
+            var param = new {
+                AccomCd = accomCd,
+                Slug = slug
+            };
+            // Kết quả trả về
+            var count = GetCountByFile(MASTERDATACOMDAO_ISUNIQUEACCOM_SQL, param);
+            // Kết quả trả về
+            return count == 0;
+        }
+
+        /// <summary>
+        /// Lấy thông tin dữ liệu
+        /// </summary>
+        public MAAccom GetInfoAccom(string localeCd, string accomCd, bool ignoreDeleteFlag) {
+            // Tạo tham số
+            var param = new {
+                LocaleCd = localeCd,
+                AccomCd = accomCd,
+                IgnoreDeleteFlag = ignoreDeleteFlag
+            };
+            // Kết quả trả về
+            return GetObjectByFile<MAAccom>(MASTERDATACOMDAO_GETINFOACCOM_SQL, param);
         }
 
         /// <summary>
