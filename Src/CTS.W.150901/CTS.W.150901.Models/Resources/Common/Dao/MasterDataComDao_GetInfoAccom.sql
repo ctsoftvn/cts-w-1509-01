@@ -1,7 +1,7 @@
 SELECT
 	*
-FROM [MAPhotos]
+FROM [MAAccoms]
 WHERE
 	[LocaleCd] = @LocaleCd
-	AND [PhotoCd] = @PhotoCd
+	AND [AccomCd] = @AccomCd
 	AND ([DeleteFlag] = 0 OR @IgnoreDeleteFlag = 1)
