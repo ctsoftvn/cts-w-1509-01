@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html data-ng-app="app" data-ng-controller="MainCtrl" lang="vi">
+<html data-ng-app="app" data-ng-controller="MainCtrl" app-cd="adm" lang="vi">
 <head>
     <!-------------------------- Icon ------------------------------------>
     <!-- Icon -->
@@ -74,7 +74,7 @@
                     <span class="glyphicon glyphicon-th-list" ng-click="showHideLeftPane()"></span>
                 </div>
                 <div id="userPane">
-                    {{$nm('ADM.MAIN.Hi')}}, {{data.UserContext.UserName}} | <a ui-sref="users_profile">{{$nm('ADM.MAIN.Profile')}}</a> | <a href ng-click="logout()">{{$nm('ADM.MAIN.Logout')}}</a>
+                    {{$nm('ADM.MAIN.Hi')}}, {{data.UserContext.UserName}} | <a ui-sref="users-account">{{$nm('ADM.MAIN.Profile')}}</a> | <a href ng-click="logout()">{{$nm('ADM.MAIN.Logout')}}</a>
                 </div>
             </div>
             <div id="mainContent" ui-view="main"></div>

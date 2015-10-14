@@ -7,7 +7,6 @@ ctrls.controller('LoginCtrl', ['$scope', '$state', '$window', function ($scope, 
     // Xử lý init
     $scope.init = function () {
         $pc({
-            app: 'adm',
             action: 'Login.InitLayout',
             url: '/cts/web/users',
             success: function (data) {
@@ -23,7 +22,6 @@ ctrls.controller('LoginCtrl', ['$scope', '$state', '$window', function ($scope, 
     // Xử lý xác thực
     $scope.auth = function () {
         $pc({
-            app: 'adm',
             action: 'Login.Auth',
             url: '/cts/web/users',
             validate: '/adm/res/jss/ctrls/login_auth.json',
