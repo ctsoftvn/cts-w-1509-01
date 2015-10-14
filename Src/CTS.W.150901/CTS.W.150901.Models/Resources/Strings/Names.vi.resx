@@ -129,10 +129,10 @@
         <value>Đơn giá</value>
     </data>
     <data name="ADM_MA_ROOMTYPES_00004" xml:space="preserve">
-        <value>Ảnh</value>
+        <value>Adult per room</value>
     </data>
     <data name="ADM_MA_ROOMTYPES_00005" xml:space="preserve">
-        <value>Nội dung</value>
+        <value>Ảnh</value>
     </data>
     <data name="ADM_MA_ROOMTYPES_00006" xml:space="preserve">
         <value>Loại phòng</value>
@@ -165,6 +165,22 @@
     </data>
     <data name="ADM_MA_TOURTYPES_00004" xml:space="preserve">
         <value>Loại tour</value>
+    </data>
+    <!-- adm/ma/accoms -->
+    <data name="ADM_MA_ACCOMS_00001" xml:space="preserve">
+        <value>Mã accommodation</value>
+    </data>
+    <data name="ADM_MA_ACCOMS_00002" xml:space="preserve">
+        <value>Tên accommodation</value>
+    </data>
+    <data name="ADM_MA_ACCOMS_00003" xml:space="preserve">
+        <value>Ảnh</value>
+    </data>
+    <data name="ADM_MA_ACCOMS_00004" xml:space="preserve">
+        <value>Nội dung</value>
+    </data>
+    <data name="ADM_MA_ACCOMS_00005" xml:space="preserve">
+        <value>Accommodation</value>
     </data>
     <!-- adm/ma/services -->
     <data name="ADM_MA_SERVICES_00001" xml:space="preserve">
@@ -227,9 +243,9 @@
     <data name="ADM_MA_PAGES_00004" xml:space="preserve">
         <value>PAge</value>
     </data>
-
-  <!-- Client -->
-  <data name="CLN_CONTACT_SUBJECT" xml:space="preserve">
+    <!-- Client -->
+    <data name="CLN_CONTACT_SUBJECT" xml:space="preserve">
         <value>Thông tin liên hệ</value>
     </data>
+    
 </root>
