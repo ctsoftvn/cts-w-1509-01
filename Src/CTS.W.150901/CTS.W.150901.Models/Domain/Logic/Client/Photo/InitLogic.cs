@@ -55,12 +55,8 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Photo
             
             // Khởi tạo biến cục bộ
             var getResult = new InitDataModel();
-            var companyCom = new CompanyCom();
-            var codeCom = new CodeCom();
-            var metaInfo = new BaseMeta();
             var processDao = new MainDao();
-            var localeCom = new LocaleCom();
-            var storageFileCom = new StorageFileCom();
+        
             // Map dữ liệu
             DataHelper.CopyObject(inputObject, getResult);
             // Lấy danh sách banner

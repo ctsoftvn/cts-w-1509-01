@@ -53,7 +53,6 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.TourDetail
             // Khởi tạo biến cục bộ
             var getResult = new InitDataModel();
             var processDao = new MainDao();
-            var storageFileCom = new StorageFileCom();
             var metaCom = new MetaCom();
             var metaInfo = new BaseMeta();
             // Map dữ liệu

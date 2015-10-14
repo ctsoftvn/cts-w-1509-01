@@ -52,9 +52,6 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Tours
             // Khởi tạo biến cục bộ
             var getResult = new InitDataModel();
             var processDao = new MainDao();
-            var storageFileCom = new StorageFileCom();
-            var metaCom = new MetaCom();
-            var metaInfo = new BaseMeta();
             // Map dữ liệu
             DataHelper.CopyObject(inputObject, getResult);
             // Lấy danh sách loại tour
