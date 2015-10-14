@@ -1,4 +1,7 @@
-﻿namespace CTS.W._150901.Models
+﻿using CTS.Core.Domain.Helper;
+using CTS.W._150901.Models.Resources.Strings;
+
+namespace CTS.W._150901.Models
 {
     /// <summary>
     /// W150901
@@ -9,6 +12,10 @@
         /// Áp dụng resource
         /// </summary>
         public static void ApplyResources() {
+            // Load validation rules
+            AppHelper.LoadValidationRules(typeof(W150901), "CTS.W._150901.Models.ValidationRules.xml");
+            // Load name resource
+            AppHelper.LoadNameResources(Names.ResourceManager);
         }
     }
 }
