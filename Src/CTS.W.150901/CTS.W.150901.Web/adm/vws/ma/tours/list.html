@@ -1,0 +1,74 @@
+﻿<cts-title text="{{$nm('ADM.MA.TOURS.LIST.Title')}}"></cts-title>
+<cts-toolbar>
+    <cts-toolbar-item onclick="add()" class="left-1" src="$res.Icons.Add" data-original-title="{{$nm('ADM.MA.TOURS.LIST.Tooltip.Add')}}" ui-jq="tooltip"></cts-toolbar-item>
+    <cts-toolbar-item onclick="saveBatch()" class="left-2" src="$res.Icons.SaveBatch" data-original-title="{{$nm('ADM.MA.TOURS.LIST.Tooltip.SaveBatch')}}" ui-jq="tooltip"></cts-toolbar-item>
+    <cts-toolbar-item onclick="showHideSearchPanel()" class="right-1" src="$res.Icons.ShowHide" data-original-title="{{$nm('ADM.MA.TOURS.LIST.Tooltip.ShowHideSearch')}}" ui-jq="tooltip"></cts-toolbar-item>
+</cts-toolbar>
+<cts-form-pane class="df-fp p-height-6" ng-show="variable.ShowSearchPane" cts-tabgroup="true">
+    <cts-label class="top-1 left-1 width-10" text="{{$nm('ADM.MA.TOURS.LIST.TourName')}}"></cts-label>
+    <cts-text tabindex="10" class="top-1 left-5 width-15" model="data.TourName" id="txtTourName"></cts-text>
+    <cts-label class="top-2 left-1 width-10" text="{{$nm('ADM.MA.TOURS.LIST.Slug')}}"></cts-label>
+    <cts-text tabindex="20" class="top-2 left-5 width-15" model="data.Slug"></cts-text>
+    <cts-label class="top-3 left-1 width-10" text="{{$nm('ADM.MA.TOURS.LIST.TourTypeCd')}}"></cts-label>
+    <cts-select tabindex="30" class="top-3 left-5 width-15" model="data.TourTypeCd" options="data.CboTourTypes"></cts-select>
+    <cts-label class="top-4 left-1 width-10" text="{{$nm('ADM.MA.TOURS.LIST.LocaleCd')}}"></cts-label>
+    <cts-select tabindex="40" class="top-4 left-5 width-10" model="data.LocaleCd" options="data.CboLocales"></cts-select>
+    <cts-label class="top-5 left-1 width-10" text="{{$nm('ADM.MA.TOURS.LIST.DeleteFlag')}}"></cts-label>
+    <cts-select tabindex="50" class="top-5 left-5 width-8" model="data.DeleteFlag" options="data.CboDeleteFlag"></cts-select>
+    <cts-button tabindex="60" class="top-6 left-5 width-8" id="btnSearch" text="{{$nm('ADM.MA.TOURS.LIST.Search')}}" onclick="search()"></cts-button>
+</cts-form-pane>
+<cts-grid-Pane ng-class="{'ma-tours-tblResult': variable.ShowSearchPane, 'ma-tours-tblResult-full': !variable.ShowSearchPane}">
+    <table dt-options="tblResult.Options" datatable="ng">
+        <thead>
+        <tr>
+            <td width="30"></td>
+            <td width="30"></td>
+            <td width="30"></td>
+            <td width="30"></td>
+            <td width="30"></td>
+            <td width="100" text="{{$nm('ADM.MA.TOURS.LIST.ColLocale')}}"  cts-grid-header="true"></td>
+            <td width="150" text="{{$nm('ADM.MA.TOURS.LIST.ColTourName')}}"  cts-grid-header="true"></td>
+            <td width="150" text="{{$nm('ADM.MA.TOURS.LIST.ColSlug')}}"  cts-grid-header="true"></td>
+            <td width="150" text="{{$nm('ADM.MA.TOURS.LIST.ColTourTypeCd')}}"  cts-grid-header="true"></td>
+            <td width="80" text="{{$nm('ADM.MA.TOURS.LIST.ColSortKey')}}"  cts-grid-header="true"></td>
+            <td width="100" text="{{$nm('ADM.MA.TOURS.LIST.ColDeleteFlag')}}" cts-grid-header="true"></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="obj in tblResult.ListData">
+            <td>
+                <cts-check model="obj.HasChanged"></cts-check>
+            </td>
+            <td>
+                <cts-image ng-show="obj.LocaleCd == data.BasicLocale" src="$res.Icons.Edit" onclick="edit(obj)" style="width: 16px;" data-original-title="{{$nm('ADM.MA.TOURS.LIST.Tooltip.Edit')}}" ui-jq="tooltip"></cts-image>
+            </td>
+            <td>
+                <cts-image ng-show="obj.LocaleCd == data.BasicLocale" src="$res.Icons.Copy" onclick="copy(obj)" style="width: 16px;" data-original-title="{{$nm('ADM.MA.TOURS.LIST.Tooltip.Copy')}}" ui-jq="tooltip"></cts-image>
+            </td>
+            <td class="editable">
+                <cts-image src="$res.Icons.Editor" onclick="editNotes(obj)" style="width: 16px;" data-original-title="{{$nm('ADM.MA.TOURS.LIST.Tooltip.EditorNotes')}}" ui-jq="tooltip"></cts-image>
+            </td>
+            <td class="editable">
+                <cts-image src="$res.Icons.MetaInfo" onclick="editMetaInfo(obj)" style="width: 16px;" data-original-title="{{$nm('ADM.MA.TOURS.LIST.Tooltip.MetaInfo')}}" ui-jq="tooltip"></cts-image>
+            </td>
+            <td>{{obj.LocaleName}}</td>
+            <td class="editable">
+                <cts-text model="obj.TourName" onchange="tblResultChange(data, obj)" onblur="blurTourName(obj)"></cts-text>
+            </td>
+            <td ng-class="{'editable': obj.LocaleCd == data.BasicLocale}">
+                <cts-text disabled="obj.LocaleCd != data.BasicLocale" model="obj.Slug" onchange="tblResultChange(data, obj)" tooltip="{ title: $nm('ADM.MA.TOURS.LIST.Tooltip.Slug'), trigger: 'focus', placement: 'right' }"></cts-text>
+            </td>
+            <td ng-class="{'editable': obj.LocaleCd == data.BasicLocale}">
+                <cts-select disabled="obj.LocaleCd != data.BasicLocale" model="obj.TourTypeCd" options="data.CboGrdTourTypes" onchange="tblResultChange(data, obj)"></cts-select>
+            </td>
+            <td ng-class="{'editable': obj.LocaleCd == data.BasicLocale}">
+                <cts-number disabled="obj.LocaleCd != data.BasicLocale" option="{ min: 0, max: 9999 }" model="obj.SortKey" onchange="tblResultChange(data, obj)"></cts-number>
+            </td>
+            <td ng-class="{'editable': obj.LocaleCd == data.BasicLocale}">
+                <cts-select disabled="obj.LocaleCd != data.BasicLocale" model="obj.DeleteFlag" options="data.CboGrdDeleteFlag" onchange="tblResultChange(data, obj)"></cts-select>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <cts-pager boundary="false" direction="true" model="tblResult" onchange="filter()"></cts-pager>
+</cts-grid-Pane>

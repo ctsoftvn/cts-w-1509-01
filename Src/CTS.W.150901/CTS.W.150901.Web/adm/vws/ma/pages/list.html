@@ -1,0 +1,36 @@
+﻿<cts-title text="{{$nm('ADM.MA.PAGES.LIST.Title')}}"></cts-title>
+<cts-toolbar>
+    <cts-toolbar-item onclick="saveBatch()" class="left-1" src="$res.Icons.SaveBatch" data-original-title="{{$nm('ADM.MA.PAGES.LIST.SaveBatch')}}" ui-jq="tooltip"></cts-toolbar-item>
+</cts-toolbar>
+<cts-grid-Pane class="ma-pages-tblResult">
+    <table dt-options="tblResult.Options" datatable="ng">
+        <thead>
+        <tr>
+            <td width="30px"></td>
+            <td width="30px"></td>
+            <td width="30px"></td>
+            <td width="100" text="{{$nm('ADM.MA.PAGES.LIST.ColLocale')}}"  cts-grid-header="true"></td>
+            <td width="150" text="{{$nm('ADM.MA.PAGES.LIST.ColPageName')}}"  cts-grid-header="true"></td>
+            <td width="450" text="{{$nm('ADM.MA.PAGES.LIST.ColNotes')}}" cts-grid-header="true"></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="obj in tblResult.ListData">
+            <td>
+                <cts-check model="obj.HasChanged"></cts-check>
+            </td>
+            <td class="editable">
+                <cts-image src="$res.Icons.Editor" onclick="editNotes(obj)" style="width: 16px;" data-original-title="{{$nm('ADM.MA.PAGES.LIST.Tooltip.EditorNotes')}}" ui-jq="tooltip"></cts-image>
+            </td>
+            <td class="editable">
+                <cts-image src="$res.Icons.MetaInfo" onclick="editMetaInfo(obj)" style="width: 16px;" data-original-title="{{$nm('ADM.MA.PAGES.LIST.Tooltip.MetaInfo')}}" ui-jq="tooltip"></cts-image>
+            </td>
+            <td>{{obj.LocaleName}}</td>
+            <td class="editable">
+                <cts-text model="obj.PageName" onchange="tblResultChange(data, obj)" onblur="blurPageName(obj)"></cts-text>
+            </td>
+            <td>{{obj.Notes}}</td>
+        </tr>
+        </tbody>
+    </table>
+</cts-grid-Pane>
