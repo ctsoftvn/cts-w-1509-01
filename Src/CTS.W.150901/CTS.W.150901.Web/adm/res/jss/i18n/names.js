@@ -1,15 +1,15 @@
 ﻿var names = $.extend(true, names, {
     "vi": {
         // adm/login.html
-        "ADM.LOGIN.Title": "Đăng Nhập | CT-Soft",
+        "ADM.LOGIN.Title": "Đăng Nhập | Hồng Vy",
         "ADM.LOGIN.Login": "Đăng nhập",
-        "ADM.LOGIN.CompanyName": "CT-Soft",
+        "ADM.LOGIN.CompanyName": "Hồng Vy",
         "ADM.LOGIN.Account": "Tài khoản",
         "ADM.LOGIN.Password": "Mật khẩu",
         "ADM.LOGIN.Remember": "Duy trì đăng nhập",
         // adm/main.html
-        "ADM.MAIN.Title": "Quản Trị | CT-Soft",
-        "ADM.MAIN.CompanyName": "CT-Soft",
+        "ADM.MAIN.Title": "Quản Trị | Hồng Vy",
+        "ADM.MAIN.CompanyName": "Hồng Vy",
         "ADM.MAIN.Hi": "Chào",
         "ADM.MAIN.Profile": "Tài khoản",
         "ADM.MAIN.Logout": "Đăng xuất",

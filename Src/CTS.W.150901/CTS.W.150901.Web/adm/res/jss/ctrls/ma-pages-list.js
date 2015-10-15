@@ -21,7 +21,7 @@ ctrls.controller('MAPagesListCtrl', ['$scope', '$state', '$stateParams', '$windo
                 // Gán đối tượng dữ liệu 
                 $scope.data = data;
                 // Gán dữ liệu table
-                $scope.tblResult.Limit = data.Limit;
+                $scope.tblResult.Limit = 999;
                 // Xử lý filter dữ liệu
                 $scope.search();
             }
