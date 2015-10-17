@@ -16,9 +16,9 @@ namespace CTS.W._150901.Models.Domain.Object.Client.Room
         public string TypeName { get; set; }
         [OutputText]
         public string Slug { get; set; }
-        [OutputText]
+        [OutputText(Format="{0:N0}")]
         public decimal? Price { get; set; }
-        [OutputText]
+        [OutputText(Format = "{0:N0}")]
         public decimal? AdultPerRoom { get; set; }
         [OutputText]
         public string FileCd { get; set; }
