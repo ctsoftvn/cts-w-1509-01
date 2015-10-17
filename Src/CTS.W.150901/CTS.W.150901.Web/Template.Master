@@ -14,12 +14,12 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <!--Css-->
+    <link rel='stylesheet' href='/res/css/fonts.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/style-01.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/bootstrap-social.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/bootstrap.min-preview.css' type='text/css'
         media='all' />
     <link rel='stylesheet' href='/res/css/font-awesome.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='/res/css/jquery-ui.css' type='text/css' media='' />
     <link rel='stylesheet' href='/res/css/bootstrap.min.css' type='text/css' media='' />
     <link rel='stylesheet' href='/res/css/style-02.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/ll-edit.css' type='text/css' media='all' />
@@ -28,6 +28,7 @@
     <script type='text/javascript' src='/res/jss/jquery.js'></script>
     <script type='text/javascript' src='/res/jss/jquery-migrate.min.js'></script>
     <meta name="generator" content="MasterSlider 2.20.3 - Responsive Touch Image Slider" />
+    
     <script type='text/javascript'>
         var $ = jQuery.noConflict();
     </script>
