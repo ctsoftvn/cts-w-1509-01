@@ -1997,7 +1997,7 @@ div.wpcf7-response-output {
 }
 
 .booking-side .select-wrapper {
-	width: 260px;
+	width: 270px;
 }
 
 .booking-side .one-third-form .select-wrapper {
@@ -2174,7 +2174,7 @@ div.wpcf7-response-output {
 
 .price-details .total {
 	width: 100px;
-	margin: -19px auto 0 auto;
+	margin: -12px auto 0 auto;
 	text-align: center;
 }
 
@@ -2344,7 +2344,7 @@ div.wpcf7-response-output {
 }
 
 .booking-side input[type="text"] {
-	width: 112px;
+	width: 125px;
 }
 
 .one-third-form {
