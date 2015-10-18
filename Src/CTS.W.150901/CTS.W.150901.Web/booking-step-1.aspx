@@ -132,5 +132,5 @@
             </div>
         </div>
     </div>
-    <script type='text/javascript' src='/res/jss/datepicker.js'></script>
+    <script type='text/javascript' src='/res/jss/booking.js'></script>
 </asp:Content>

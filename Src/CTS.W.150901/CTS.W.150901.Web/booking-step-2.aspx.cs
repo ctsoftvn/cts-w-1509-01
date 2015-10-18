@@ -16,8 +16,14 @@ namespace CTS.W._150901.Web
         {
             if (!Page.IsPostBack)
             {
+                var langBooking = Session["CLN.W150901.Booking.LangBooking"];
+                if (langBooking == null || langBooking.ToString() != WebContextHelper.LocaleCd)
+                {
+                    //clear all session
+                    Response.Redirect(string.Format("/{0}/{1}", WebContextHelper.LocaleCd, "booking-step-1"));
+                }
                 getRooms();
-                var sDatefrom = Session["CLN.W150901.Booking.DateForm"].ToString();
+                var sDatefrom = Session["CLN.W150901.Booking.DateFrom"].ToString();
                 var sDateto = Session["CLN.W150901.Booking.DateTo"].ToString();
                 ltDatefrom.Text = sDatefrom;
                 ltDateto.Text = sDateto;
@@ -41,7 +47,7 @@ namespace CTS.W._150901.Web
         }
         protected void booking_step2_Click(object sender, EventArgs e)
         {
-            Session["CLN.W150901.Booking.DateForm"] = datefrom.Text;
+            Session["CLN.W150901.Booking.DateFrom"] = datefrom.Text;
             Session["CLN.W150901.Booking.DateTo"] = dateto.Text;
             Response.Redirect(string.Format("/{0}/{1}", WebContextHelper.LocaleCd, "booking-step-2"));
         }
