@@ -358,5 +358,10 @@
   <data name="CLN_BOOKING_RESERVATION_COMPLETE_EMAIL" xml:space="preserve">
 		<value>Email</value>
 	</data>
-
+  <data name="CLN_BOOKING_FAIL_NOTES" xml:space="preserve">
+		<value>Please do not reload the page</value>
+	</data>
+  <data name="CLN_BOOKING_FAIL_REDIRECT" xml:space="preserve">
+		<value>begin your booking here</value>
+	</data>
 </root>

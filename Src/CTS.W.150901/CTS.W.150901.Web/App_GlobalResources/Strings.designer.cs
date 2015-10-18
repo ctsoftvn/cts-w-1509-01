@@ -151,6 +151,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please do not reload the page.
+        /// </summary>
+        internal static string CLN_BOOKING_FAIL_NOTES {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FAIL_NOTES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to begin your booking here.
+        /// </summary>
+        internal static string CLN_BOOKING_FAIL_REDIRECT {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FAIL_REDIRECT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Address *.
         /// </summary>
         internal static string CLN_BOOKING_FORM_ADDRESS {

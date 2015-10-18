@@ -357,4 +357,11 @@
   <data name="CLN_BOOKING_RESERVATION_COMPLETE_EMAIL" xml:space="preserve">
 		<value>Email</value>
 	</data>
+
+  <data name="CLN_BOOKING_FAIL_NOTES" xml:space="preserve">
+		<value>Xin quý khách vui lòng không tải lại trang web</value>
+	</data>
+  <data name="CLN_BOOKING_FAIL_REDIRECT" xml:space="preserve">
+		<value>xin mời quý khách đặt phòng lại</value>
+	</data>
 </root>
