@@ -42,6 +42,9 @@
         public const string CD_INFO_CD_EMAIL_RESERVE = "ma.company-infos.email-reserve";
         public const string CD_INFO_CD_EMAIL_RESERVE_PASSWORD = "ma.company-infos.email-reserve-password";
         public const string CD_INFO_CD_HOST = "ma.company-infos.host";
+        // Định nghĩa mã tham số
+        public const string CD_PARAM_CD_BOOKING_PICKUP = "ma.params.booking.pickup";
+        public const string CD_PARAM_CD_BOOKING_SEEOFF = "ma.params.booking.seeoff";
         // Định nghĩa nhóm code
         public const string GRPCD_CATEGORIES = "ma.codes.categories";
         // Định nghĩa mã quyền hạn
