@@ -8,7 +8,6 @@
         // Định nghĩa mã meta
         public const string CD_META_CD_PAGE_INDEX = "ma.metas.ma.pages.index";
         public const string CD_META_CD_PAGE_TOUR = "ma.metas.ma.pages.tour";
-        public const string CD_META_CD_PAGE_BOOKING = "ma.metas.ma.pages.booking";
         public const string CD_META_CD_PAGE_SERVICE = "ma.metas.ma.pages.service";
         public const string CD_META_CD_PAGE_FAQ = "ma.metas.ma.pages.faq";
         public const string CD_META_CD_PAGE_POLICY = "ma.metas.ma.pages.policy";
@@ -18,7 +17,6 @@
         public const string CD_META_CD_PAGE_PROMOTION = "ma.metas.ma.pages.promotion";
         public const string CD_META_CD_PAGE_GALLERY = "ma.metas.ma.pages.gallery";
         public const string CD_META_CD_PAGE_CONTACT_US = "ma.metas.ma.pages.contact-us";
-        public const string CD_META_CD_PAGE_RESERVATION = "ma.metas.ma.pages.reservation";
         public const string CD_META_CD_PAGE_DESTINATION = "ma.metas.ma.pages.destination";
         // Định nghĩa nhóm meta
         public const string GRPMETA_MA_PAGES = "ma.metas.ma.pages";
@@ -28,6 +26,7 @@
         public const string CD_INFO_CD_LOGO_FILE_CD = "ma.company-infos.logo-file-cd";
         public const string CD_INFO_CD_SLOGAN = "ma.company-infos.slogan";
         public const string CD_INFO_CD_ADDRESS = "ma.company-infos.address";
+        public const string CD_INFO_CD_PHONE = "ma.company-infos.phone";
         public const string CD_INFO_CD_COPYRIGHT = "ma.company-infos.copyright";
         public const string CD_INFO_CD_TWITTER_URL = "ma.company-infos.twitter-url";
         public const string CD_INFO_CD_GOOGLE_URL = "ma.company-infos.google-url";
