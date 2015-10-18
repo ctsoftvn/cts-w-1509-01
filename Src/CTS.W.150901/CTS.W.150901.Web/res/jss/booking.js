@@ -75,7 +75,9 @@ jQuery(function () {
     var datepickerDateFormat;
     if ($('body').hasClass('en')) {
         datepickerDateFormat = 'M/dd/yy';
-    } else { datepickerDateFormat = 'dd/mm/yy'; }
+    } else {
+        datepickerDateFormat = 'dd/mm/yy';
+    }
 
     // Datepicker
     jQuery(".datepicker").datepicker({
@@ -84,8 +86,8 @@ jQuery(function () {
     });
 
     // Make Datepicker Fields Read Only
-    jQuery("input[id$='datefrom']").attr('readonly', true);
-    jQuery("input[id$='dateto']").attr('readonly', true);
+    jQuery("input[id$='tbDateFrom']").attr('readonly', true);
+    jQuery("input[id$='tbDateTo']").attr('readonly', true);
 
     // Booking page open datepicker
     jQuery("#open_datepicker").datepicker({
@@ -93,24 +95,24 @@ jQuery(function () {
         numberOfMonths: 2,
         minDate: 0,
         beforeShowDay: function (date) {
-            var date1 = jQuery.datepicker.parseDate(datepickerDateFormat, jQuery("input[id$='datefrom']").val());
-            var date2 = jQuery.datepicker.parseDate(datepickerDateFormat, jQuery("input[id$='dateto']").val());
+            var date1 = jQuery.datepicker.parseDate(datepickerDateFormat, jQuery("input[id$='tbDateFrom']").val());
+            var date2 = jQuery.datepicker.parseDate(datepickerDateFormat, jQuery("input[id$='tbDateTo']").val());
             return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];
         },
         onSelect: function (dateText, inst) {
             var dateTextForParse = (inst.currentMonth + 1) + '/' + inst.currentDay + '/' + inst.currentYear;
-            var date1 = jQuery.datepicker.parseDate(datepickerDateFormat, jQuery("input[id$='datefrom']").val());
-            var date2 = jQuery.datepicker.parseDate(datepickerDateFormat, jQuery("input[id$='dateto']").val());
+            var date1 = jQuery.datepicker.parseDate(datepickerDateFormat, jQuery("input[id$='tbDateFrom']").val());
+            var date2 = jQuery.datepicker.parseDate(datepickerDateFormat, jQuery("input[id$='tbDateTo']").val());
             if (!date1 || date2) {
-                jQuery("input[id$='datefrom']").val(dateText);
-                jQuery("input[id$='dateto']").val("");
+                jQuery("input[id$='tbDateFrom']").val(dateText);
+                jQuery("input[id$='tbDateTo']").val("");
             } else {
                 if (Date.parse(dateTextForParse) < Date.parse(date1)) {
-                    jQuery("input[id$='datefrom']").val(dateText);
-                    jQuery("input[id$='dateto']").val("");
+                    jQuery("input[id$='tbDateFrom']").val(dateText);
+                    jQuery("input[id$='tbDateTo']").val("");
                 }
                 else {
-                    jQuery("input[id$='dateto']").val(dateText);
+                    jQuery("input[id$='tbDateTo']").val(dateText);
                 }
             }
         }
@@ -128,26 +130,26 @@ jQuery(document).ready(function () {
     // Validate Booking Form
     jQuery(".booking-form").click(function () {
 
-        if (jQuery("input[id$='datefrom']").val() == 'Check In' || jQuery("input[id$='dateto']").val() == 'Check Out') {
+        if (jQuery("input[id$='tbDateFrom']").val() == 'Check In' || jQuery("input[id$='tbDateTo']").val() == 'Check Out') {
             alert('Please Select Booking Dates');
-            jQuery("input[id$='datefrom']").effect("pulsate", { times: 2 }, 400);
-            jQuery("input[id$='dateto']").effect("pulsate", { times: 2 }, 400);
+            jQuery("input[id$='tbDateFrom']").effect("pulsate", { times: 2 }, 400);
+            jQuery("input[id$='tbDateTo']").effect("pulsate", { times: 2 }, 400);
             return false;
         }
 
-        if (jQuery("input[id$='datefrom']").val() == jQuery("input[id$='dateto']").val()) {
+        if (jQuery("input[id$='tbDateFrom']").val() == jQuery("input[id$='tbDateTo']").val()) {
             alert('Check In and Check Out Dates Cannot Be On The Same Day');
-            jQuery("input[id$='datefrom']").effect("pulsate", { times: 2 }, 400);
-            jQuery("input[id$='dateto']").effect("pulsate", { times: 2 }, 400);
+            jQuery("input[id$='tbDateFrom']").effect("pulsate", { times: 2 }, 400);
+            jQuery("input[id$='tbDateTo']").effect("pulsate", { times: 2 }, 400);
             return false;
         }
 
-        var dateFrom = jQuery.datepicker.parseDate('dd/mm/yy', jQuery("input[id$='datefrom']").val());
-        var dateTo = jQuery.datepicker.parseDate('dd/mm/yy', jQuery("input[id$='dateto']").val());
+        var dateFrom = jQuery.datepicker.parseDate('dd/mm/yy', jQuery("input[id$='tbDateFrom']").val());
+        var dateTo = jQuery.datepicker.parseDate('dd/mm/yy', jQuery("input[id$='tbDateTo']").val());
 
         if (dateTo < dateFrom) {
-            jQuery("input[id$='datefrom']").effect("pulsate", { times: 3 }, 250);
-            jQuery("input[id$='dateto']").effect("pulsate", { times: 3 }, 250);
+            jQuery("input[id$='tbDateFrom']").effect("pulsate", { times: 3 }, 250);
+            jQuery("input[id$='tbDateTo']").effect("pulsate", { times: 3 }, 250);
             alert('Check In Date Must Be Before Check Out Date');
             return false;
         }
@@ -160,18 +162,10 @@ jQuery(document).ready(function () {
         jQuery(".display-reservation-edit").show();
         return false;
     });
-
-    // calc total
-    jQuery(".booking-step3").load(function () {
-        alert('vô hàm');
-        calcTotal();
-
-    });
-
-    $("input[id$='pickup']").change(function () {
+    $("input[id$='chkPickUp']").change(function () {
         calcTotal();
     });
-    $("input[id$='seeoff']").change(function () {
+    $("input[id$='chkSeeOff']").change(function () {
         calcTotal();
     });
 
@@ -182,26 +176,23 @@ jQuery(window).load(function () {
     }
 });
 function calcTotal() {
-
-    var pickupPrice = 0;
-    var seeoffPrice = 0;
-
-    var hdRoomPrice = jQuery("input[id$='hdRoomPrice']").val();
-    var roomPrice = convertToNumber(hdRoomPrice, 0);
-
-    var hdNights = jQuery("input[id$='hdNights']").val();
-    var nights = convertToNumber(hdNights, 0);
-
-    if ($("input[id$='pickup']").is(":checked")) {
-        var hdPickup = jQuery("input[id$='hdPickup']").val();
-        pickupPrice = convertToNumber(hdPickup, 0);
+    var pickUpPrice = 0;
+    var seeOffPrice = 0;
+    var hdPrice = jQuery("input[id$='hdPrice']").val();
+    var price = convertToNumber(hdPrice, 0);
+    var hdRoomQty = jQuery("input[id$='hdRoomQty']").val();
+    var roomQty = convertToNumber(hdRoomQty, 0);
+    var hdDays = jQuery("input[id$='hdDays']").val();
+    var days = convertToNumber(hdDays, 0);
+    if ($("input[id$='chkPickUp']").is(":checked")) {
+        var hdPickUpPrice = jQuery("input[id$='hdPickUpPrice']").val();
+        pickUpPrice = convertToNumber(hdPickUpPrice, 0);
     }
-    if ($("input[id$='seeoff']").is(":checked")) {
-        var hdSeeoff = jQuery("input[id$='hdSeeoff']").val();
-        seeoffPrice = convertToNumber(hdSeeoff, 0);
+    if ($("input[id$='chkSeeOff']").is(":checked")) {
+        var hdSeeOffPrice = jQuery("input[id$='hdSeeOffPrice']").val();
+        seeOffPrice = convertToNumber(hdSeeOffPrice, 0);
     }
-
-    var total = (roomPrice * nights) + pickupPrice + seeoffPrice;
+    var total = (price * roomQty * days) + pickUpPrice + seeOffPrice;
     jQuery('#totalPrice').html(total + "$");
 
 }
