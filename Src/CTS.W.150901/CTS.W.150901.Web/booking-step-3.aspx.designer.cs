@@ -94,13 +94,13 @@ namespace CTS.W._150901.Web {
         protected global::System.Web.UI.WebControls.TextBox tbNotes;
         
         /// <summary>
-        /// booking_step3 control.
+        /// btnBookingStep3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button booking_step3;
+        protected global::System.Web.UI.WebControls.Button btnBookingStep3;
         
         /// <summary>
         /// ltTypeName control.
@@ -112,93 +112,102 @@ namespace CTS.W._150901.Web {
         protected global::System.Web.UI.WebControls.Literal ltTypeName;
         
         /// <summary>
-        /// ltDatefrom control.
+        /// ltDateFrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltDatefrom;
+        protected global::System.Web.UI.WebControls.Literal ltDateFrom;
         
         /// <summary>
-        /// ltDateto control.
+        /// ltDateTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltDateto;
+        protected global::System.Web.UI.WebControls.Literal ltDateTo;
         
         /// <summary>
-        /// pickup control.
+        /// chkPickUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox pickup;
+        protected global::System.Web.UI.WebControls.CheckBox chkPickUp;
         
         /// <summary>
-        /// ltPickup control.
+        /// ltPickUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltPickup;
+        protected global::System.Web.UI.WebControls.Literal ltPickUp;
         
         /// <summary>
-        /// seeoff control.
+        /// chkSeeOff control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox seeoff;
+        protected global::System.Web.UI.WebControls.CheckBox chkSeeOff;
         
         /// <summary>
-        /// ltSeeoff control.
+        /// ltSeeOff control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltSeeoff;
+        protected global::System.Web.UI.WebControls.Literal ltSeeOff;
         
         /// <summary>
-        /// hdRoomPrice control.
+        /// hdPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdRoomPrice;
+        protected global::System.Web.UI.WebControls.HiddenField hdPrice;
         
         /// <summary>
-        /// hdNights control.
+        /// hdRoomQty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdNights;
+        protected global::System.Web.UI.WebControls.HiddenField hdRoomQty;
         
         /// <summary>
-        /// hdPickup control.
+        /// hdDays control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdPickup;
+        protected global::System.Web.UI.WebControls.HiddenField hdDays;
         
         /// <summary>
-        /// hdSeeoff control.
+        /// hdPickUpPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdSeeoff;
+        protected global::System.Web.UI.WebControls.HiddenField hdPickUpPrice;
+        
+        /// <summary>
+        /// hdSeeOffPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdSeeOffPrice;
     }
 }

@@ -13,57 +13,57 @@ namespace CTS.W._150901.Web {
     public partial class booking_step_2 {
         
         /// <summary>
-        /// rptRooms control.
+        /// rptRoomTypes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptRooms;
+        protected global::System.Web.UI.WebControls.Repeater rptRoomTypes;
         
         /// <summary>
-        /// ltDatefrom control.
+        /// ltDateFrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltDatefrom;
+        protected global::System.Web.UI.WebControls.Literal ltDateFrom;
         
         /// <summary>
-        /// ltDateto control.
+        /// ltDateTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltDateto;
+        protected global::System.Web.UI.WebControls.Literal ltDateTo;
         
         /// <summary>
-        /// datefrom control.
+        /// tbDateFrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datefrom;
+        protected global::System.Web.UI.WebControls.TextBox tbDateFrom;
         
         /// <summary>
-        /// dateto control.
+        /// tbDateTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dateto;
+        protected global::System.Web.UI.WebControls.TextBox tbDateTo;
         
         /// <summary>
-        /// booking_step2 control.
+        /// btnBookingStep2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button booking_step2;
+        protected global::System.Web.UI.WebControls.Button btnBookingStep2;
     }
 }

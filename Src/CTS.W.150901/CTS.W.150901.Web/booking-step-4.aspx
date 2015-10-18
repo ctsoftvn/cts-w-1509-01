@@ -86,13 +86,13 @@
                                     <asp:Literal runat="server" ID="ltTypeName"></asp:Literal></li>
                                 <li><span>
                                     <%= Strings.CLN_BOOKING_CHECK_IN%>: </span>
-                                    <asp:Literal runat="server" ID="ltDatefrom"></asp:Literal></li>
+                                    <asp:Literal runat="server" ID="ltDateFrom"></asp:Literal></li>
                                 <li><span>
                                     <%= Strings.CLN_BOOKING_CHECK_OUT%>: </span>
-                                    <asp:Literal runat="server" ID="ltDateto"></asp:Literal></li>
+                                    <asp:Literal runat="server" ID="ltDateTo"></asp:Literal></li>
                                 <li><span>
                                     <%= Strings.CLN_BOOKING_OCCUPANCY%>: </span>
-                                    <asp:Literal runat="server" ID="ltAdult"></asp:Literal>
+                                    <asp:Literal runat="server" ID="ltMaxAdult"></asp:Literal>
                                     <%= Strings.CLN_BOOKING_PERSONS%>
                                 </li>
                             </ul>

@@ -13,39 +13,39 @@ namespace CTS.W._150901.Web {
     public partial class booking_step_1 {
         
         /// <summary>
-        /// datefrom control.
+        /// tbDateFrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datefrom;
+        protected global::System.Web.UI.WebControls.TextBox tbDateFrom;
         
         /// <summary>
-        /// dateto control.
+        /// tbDateTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dateto;
+        protected global::System.Web.UI.WebControls.TextBox tbDateTo;
         
         /// <summary>
-        /// room_qty control.
+        /// cbRoomQty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList room_qty;
+        protected global::System.Web.UI.WebControls.DropDownList cbRoomQty;
         
         /// <summary>
-        /// booking_step1 control.
+        /// btnBookingStep1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button booking_step1;
+        protected global::System.Web.UI.WebControls.Button btnBookingStep1;
     }
 }

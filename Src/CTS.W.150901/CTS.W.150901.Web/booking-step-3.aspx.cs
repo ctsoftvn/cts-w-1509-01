@@ -1,76 +1,74 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using CTS.Web.Core.Domain.Controller;
-using CTS.W._150901.Models.Domain.Common.Utils;
-using CTS.Web.Core.Domain.Helper;
-using CTS.Data.Com.Domain.Utils;
 using CTS.Core.Domain.Helper;
+using CTS.W._150901.Models.Domain.Logic.Client.Booking;
+using CTS.W._150901.Models.Domain.Object.Client.Booking;
+using CTS.Web.Core.Domain.Controller;
+using CTS.Web.Core.Domain.Helper;
+using CTS.Web.Core.Domain.Model;
+using Resources;
 
 namespace CTS.W._150901.Web
 {
+    /// <summary>
+    /// booking_step_3
+    /// </summary>
     public partial class booking_step_3 : PageBase
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!Page.IsPostBack)
-            {
-                //getRooms();
-                var sDatefrom = Session["CLN.W150901.Booking.DateFrom"].ToString();
-                var sDateto = Session["CLN.W150901.Booking.DateTo"].ToString();
-                ltDatefrom.Text = sDatefrom;
-                ltDateto.Text = sDateto;
-                var datefrom = DataHelper.ConvertInputDate(sDatefrom);
-                var dateto = DataHelper.ConvertInputDate(sDateto);
-                var nights = dateto - datefrom;
-                hdNights.Value = nights.Value.Days.ToString();
-                getRooms();
+        protected void Page_Load(object sender, EventArgs e) {
+            if (!IsPostBack) {
+                if (Session["CLN.W150901.BookingData"] == null
+                    || Session["CLN.W150901.BookingData"].GetType() != typeof(BookingObject)) {
+                    Response.Redirect(string.Format("/{0}/{1}", WebContextHelper.LocaleCd, "booking-fail"));
+                    return;
+                }
+                var bookingObj = Session["CLN.W150901.BookingData"] as BookingObject;
+                if (!bookingObj.IsCompleteStep1()
+                    || !bookingObj.IsCompleteStep2()) {
+                    Response.Redirect(string.Format("/{0}/{1}", WebContextHelper.LocaleCd, "booking-fail"));
+                    return;
+                }
+                ltDateFrom.Text = DataHelper.ToString(Formats.FM_DATE, bookingObj.DateFrom);
+                ltDateTo.Text = DataHelper.ToString(Formats.FM_DATE, bookingObj.DateTo);
+                hdRoomQty.Value = DataHelper.ToString(Formats.FM_NUMBER, bookingObj.RoomQty);
+                hdDays.Value = DataHelper.ToString(Formats.FM_NUMBER, bookingObj.GetDays());
+                var response = GetInfo(bookingObj.TypeCd);
+                ltTypeName.Text = PageCom.GetValue(response, "TypeName");
+                ltPickUp.Text = PageCom.GetValue(response, "PickUpPrice");
+                ltSeeOff.Text = PageCom.GetValue(response, "SeeOffPrice");
+                hdPrice.Value = PageCom.GetValue(response, "Price");
+                hdPickUpPrice.Value = PageCom.GetValue(response, "PickUpPrice");
+                hdSeeOffPrice.Value = PageCom.GetValue(response, "SeeOffPrice");
+                ClearData();
             }
+            btnBookingStep3.Text = Strings.CLN_BOOKING_FORM_BOOK_NOW;
         }
-        public void getRooms()
-        {
-            var roomCd = Session["CLN.W150901.Booking.RoomCd"].ToString();
-            var dataCom = new MasterDataCom();
-            var param = new ParameterCom();
-            var dataInfo = dataCom.GetInfoRoomType(WebContextHelper.LocaleCd, roomCd, false);
-            ltTypeName.Text = dataInfo.TypeName;
-
-            hdRoomPrice.Value = dataInfo.Price.ToString();
-            var pickupPrice = param.GetNumber("ma.params.booking.pickup", true);
-            var seeoffPrice = param.GetNumber("ma.params.booking.seeoff", true);
-            if (!pickupPrice.HasValue)
-            {
-                pickupPrice = Decimal.Zero;
-            }
-            if (!seeoffPrice.HasValue)
-            {
-                seeoffPrice = Decimal.Zero;
-            }
-            hdPickup.Value = pickupPrice.ToString();
-            hdSeeoff.Value = seeoffPrice.ToString();
-            ltPickup.Text = pickupPrice.ToString();
-            ltSeeoff.Text = seeoffPrice.ToString();
-        }
-        protected void booking_step3_Click(object sender, EventArgs e)
-        {
-            Session["CLN.W150901.Booking.FirstName"] = tbFirstName.Text;
-            Session["CLN.W150901.Booking.LastName"] = tbLastName.Text;
-            Session["CLN.W150901.Booking.Email"] = tbEmail.Text;
-            Session["CLN.W150901.Booking.Phone"] = tbPhone.Text;
-            Session["CLN.W150901.Booking.Address"] = tbAddress.Text;
-            Session["CLN.W150901.Booking.StateCounty"] = tbStateCounty.Text;
-            Session["CLN.W150901.Booking.City"] = tbCity.Text;
-            Session["CLN.W150901.Booking.Country"] = tbCountry.Text;
-            Session["CLN.W150901.Booking.Request"] = tbNotes.Text;
-
-            Session["CLN.W150901.Booking.PickupPrice"] = pickup.Checked;
-            Session["CLN.W150901.Booking.SeeoffPrice"] = seeoff.Checked;
-
-            
+        protected void btnBookingStep3_Click(object sender, EventArgs e) {
+            var bookingObj = Session["CLN.W150901.BookingData"] as BookingObject;
+            bookingObj.FirstName = tbFirstName.Text;
+            bookingObj.LastName = tbLastName.Text;
+            bookingObj.Email = tbEmail.Text;
+            bookingObj.Phone = tbPhone.Text;
+            bookingObj.Address = tbAddress.Text;
+            bookingObj.StateCounty = tbStateCounty.Text;
+            bookingObj.City = tbCity.Text;
+            bookingObj.Country = tbCountry.Text;
+            bookingObj.Request = tbNotes.Text;
+            bookingObj.PickUp = chkPickUp.Checked;
+            bookingObj.SeeOff = chkSeeOff.Checked;
+            Session["CLN.W150901.BookingData"] = bookingObj;
             Response.Redirect(string.Format("/{0}/{1}", WebContextHelper.LocaleCd, "booking-step-4"));
+        }
+        private BasicResponse GetInfo(string typeCd) {
+            var request = new BasicRequest();
+            request.Add("TypeCd", typeCd);
+            var logic = new GetOperateLogic();
+            var response = PageCom.Invoke(logic, request);
+            return response;
+        }
+        private void ClearData() {
+            var bookingObj = Session["CLN.W150901.BookingData"] as BookingObject;
+            bookingObj.ClearStep3();
+            Session["CLN.W150901.BookingData"] = bookingObj;
         }
     }
 }

@@ -59,7 +59,7 @@
                             <h4 class="title-style4">
                                 <%= Strings.CLN_BOOKING_STEP_2%><span class="title-block"></span>
                             </h4>
-                            <asp:Repeater ID="rptRooms" runat="server">
+                            <asp:Repeater ID="rptRoomTypes" runat="server">
                                 <HeaderTemplate>
                                     <ul class="room-list-wrapper clearfix">
                                 </HeaderTemplate>
@@ -95,8 +95,10 @@
                                             </div>
                                             <div class="clearboth">
                                             </div>
-                                            <asp:LinkButton runat="server" ID="booking_select_room" OnCommand="lnkSelectRoom_Command"
-                                                CommandArgument='<%# ((HashMap)Container.DataItem)["TypeCd"] %>' CssClass="button2"><%= Strings.CLN_BOOKING_SELECT_ROOM%></asp:LinkButton>
+											<asp:LinkButton ID="lnkSelectRoomType" runat="server" CssClass="button2"
+                                                OnCommand="lnkSelectRoomType_Command" CommandArgument='<%# ((HashMap)Container.DataItem)["TypeCd"] %>'>
+												<%= Strings.CLN_BOOKING_SELECT_ROOM%>
+											</asp:LinkButton>
                                         </div>
                                         <!-- END .room-item -->
                                     </li>
@@ -121,10 +123,10 @@
                                 <ul>
                                     <li><span>
                                         <%= Strings.CLN_BOOKING_CHECK_IN%>: </span>
-                                        <asp:Literal ID="ltDatefrom" runat="server"></asp:Literal></li>
+                                        <asp:Literal ID="ltDateFrom" runat="server"></asp:Literal></li>
                                     <li><span>
                                         <%= Strings.CLN_BOOKING_CHECK_OUT%>: </span>
-                                        <asp:Literal ID="ltDateto" runat="server"></asp:Literal></li>
+                                        <asp:Literal ID="ltDateTo" runat="server"></asp:Literal></li>
                                 </ul>
                                 <a href="#" class="button3 edit-reservation">
                                     <%= Strings.CLN_BOOKING_EDIT_RESERVATION%></a>
@@ -134,21 +136,19 @@
                             <div class="display-reservation-edit" style="display: none">
                                 <!-- BEGIN .booking-form -->
                                 <div class="clearfix">
-                                    <div class="one-half-form">
-                                        <label for="datefrom">
-                                            <%= Strings.CLN_BOOKING_CHECK_IN%></label>
-                                        <asp:TextBox ID="datefrom" runat="server" CssClass="datepicker" size="10" name="open_date_from_edit_0"></asp:TextBox>
+									<div class="one-half-form">
+                                        <asp:Label AssociatedControlID="tbDateFrom" runat="server"><%= Strings.CLN_BOOKING_CHECK_IN%></asp:Label>
+                                        <asp:TextBox ID="tbDateFrom" runat="server" CssClass="datepicker" size="10"></asp:TextBox>
                                     </div>
                                     <div class="one-half-form last-col">
-                                        <label for="dateto">
-                                            <%= Strings.CLN_BOOKING_CHECK_OUT%></label>
-                                        <asp:TextBox ID="dateto" runat="server" CssClass="datepicker" size="10" name="open_date_to_edit_0"></asp:TextBox>
+                                        <asp:Label AssociatedControlID="tbDateTo" runat="server"><%= Strings.CLN_BOOKING_CHECK_OUT%></asp:Label>
+                                        <asp:TextBox ID="tbDateTo" runat="server" CssClass="datepicker" size="10"></asp:TextBox>
                                     </div>
                                 </div>
                                 <!-- BEGIN .rooms-wrapper -->
                                 <hr class="space8">
-                                <asp:Button runat="server" ID="booking_step2" CssClass="bookbutton booking-form"
-                                    Text='<%= Strings.CLN_BOOKING_CHECK_AVAILABILITY%>' OnClick="booking_step2_Click" />
+								<asp:Button runat="server" ID="btnBookingStep2" CssClass="bookbutton booking-form"
+                                    Text='<%= Strings.CLN_BOOKING_CHECK_AVAILABILITY%>' OnClick="btnBookingStep2_Click" />
                                 <!-- END .booking-form -->
                                 <!-- END .display-reservation-edit -->
                             </div>

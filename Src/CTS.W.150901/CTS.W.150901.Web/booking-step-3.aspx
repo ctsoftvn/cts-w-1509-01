@@ -62,41 +62,31 @@
                             <h4 class="title-style4">
                                 <%= Strings.CLN_BOOKING_FORM_GUEST_DETAIL%><span class="title-block"></span></h4>
                             <div class="input-left">
-                                <label for="first_name">
-                                    <%= Strings.CLN_BOOKING_FORM_FIRST_NAME%></label>
-                                <asp:TextBox runat="server" name="first_name" ID="tbFirstName"></asp:TextBox>
-                                <label for="last_name">
-                                    <%= Strings.CLN_BOOKING_FORM_LAST_NAME%></label>
-                                <asp:TextBox ID="tbLastName" name="last_name" runat="server"></asp:TextBox>
-                                <label for="email_address">
-                                    <%= Strings.CLN_BOOKING_FORM_EMAIL%></label>
-                                <asp:TextBox ID="tbEmail" name="email_address" runat="server"></asp:TextBox>
-                                <label for="phone_number">
-                                    <%= Strings.CLN_BOOKING_FORM_TELEPHONE%></label>
-                                <asp:TextBox ID="tbPhone" name="phone_number" runat="server"></asp:TextBox>
+                                <asp:Label AssociatedControlID="tbFirstName" runat="server"><%= Strings.CLN_BOOKING_FORM_FIRST_NAME%></asp:Label>
+                                <asp:TextBox ID="tbFirstName" runat="server"></asp:TextBox>
+                                <asp:Label AssociatedControlID="tbLastName" runat="server"><%= Strings.CLN_BOOKING_FORM_LAST_NAME%></asp:Label>
+                                <asp:TextBox ID="tbLastName" runat="server"></asp:TextBox>
+                                <asp:Label AssociatedControlID="tbEmail" runat="server"><%= Strings.CLN_BOOKING_FORM_EMAIL%></asp:Label>
+                                <asp:TextBox ID="tbEmail" runat="server"></asp:TextBox>
+                                <asp:Label AssociatedControlID="tbPhone" runat="server"><%= Strings.CLN_BOOKING_FORM_TELEPHONE%></asp:Label>
+                                <asp:TextBox ID="tbPhone" runat="server"></asp:TextBox>
                             </div>
                             <div class="input-right">
-                                <label for="address_line2">
-                                    <%= Strings.CLN_BOOKING_FORM_ADDRESS%></label>
-                                <asp:TextBox ID="tbAddress" name="address" runat="server"></asp:TextBox>
-                                <label for="state_county">
-                                    <%= Strings.CLN_BOOKING_FORM_STATE_COUNTY%></label>
-                                <asp:TextBox ID="tbStateCounty" name="state_county" runat="server"></asp:TextBox>
-                                <label for="city">
-                                    <%= Strings.CLN_BOOKING_FORM_CITY%></label>
-                                <asp:TextBox ID="tbCity" name="city" runat="server"></asp:TextBox>
-                                <label for="country">
-                                    <%= Strings.CLN_BOOKING_FORM_COUNTRY%></label>
-                                <asp:TextBox ID="tbCountry" name="country" runat="server"></asp:TextBox>
+								<asp:Label AssociatedControlID="tbAddress" runat="server"><%= Strings.CLN_BOOKING_FORM_ADDRESS%></asp:Label>
+                                <asp:TextBox ID="tbAddress" runat="server"></asp:TextBox>
+                                <asp:Label AssociatedControlID="tbStateCounty" runat="server"><%= Strings.CLN_BOOKING_FORM_STATE_COUNTY%></asp:Label>
+                                <asp:TextBox ID="tbStateCounty" runat="server"></asp:TextBox>
+                                <asp:Label AssociatedControlID="tbCity" runat="server"><%= Strings.CLN_BOOKING_FORM_CITY%></asp:Label>
+                                <asp:TextBox ID="tbCity" runat="server"></asp:TextBox>
+                                <asp:Label AssociatedControlID="tbCountry" runat="server"><%= Strings.CLN_BOOKING_FORM_COUNTRY%></asp:Label>
+                                <asp:TextBox ID="tbCountry" runat="server"></asp:TextBox>
                             </div>
-                            <label for="special_requirements">
-                                <%= Strings.CLN_BOOKING_FORM_NOTES%></label>
-                            <asp:TextBox runat="server" ID="tbNotes" TextMode="MultiLine" name="special_requirements"
-                                Rows="10" Columns="1"></asp:TextBox>
+							<asp:Label AssociatedControlID="tbCountry" runat="server"><%= Strings.CLN_BOOKING_FORM_NOTES%></asp:Label>
+                            <asp:TextBox ID="tbNotes" runat="server" TextMode="MultiLine" Rows="10" Columns="1"></asp:TextBox>
                             <div class="clearfix">
                             </div>
-                            <asp:Button runat="server" ID="booking_step3" CssClass="book-deposit booking-fields-form"
-                                Text="<%= Strings.CLN_BOOKING_FORM_BOOK_NOW%>" OnClick="booking_step3_Click" />
+							<asp:Button ID="btnBookingStep3" CssClass="book-deposit booking-fields-form"
+								Text='<%= Strings.CLN_BOOKING_FORM_BOOK_NOW%>' OnClick="btnBookingStep3_Click" runat="server" />
                             <!-- BEGIN .booking-main -->
                         </div>
                         <!-- BEGIN .booking-main-wrapper -->
@@ -113,18 +103,18 @@
                                     <asp:Literal runat="server" ID="ltTypeName"></asp:Literal></li>
                                 <li><span>
                                     <%= Strings.CLN_BOOKING_CHECK_IN%>: </span>
-                                    <asp:Literal runat="server" ID="ltDatefrom"></asp:Literal></li>
+                                    <asp:Literal runat="server" ID="ltDateFrom"></asp:Literal></li>
                                 <li><span>
                                     <%= Strings.CLN_BOOKING_CHECK_OUT%>: </span>
-                                    <asp:Literal runat="server" ID="ltDateto"></asp:Literal></li>
+                                    <asp:Literal runat="server" ID="ltDateTo"></asp:Literal></li>
                                 <li>
-                                    <asp:CheckBox runat="server" ID="pickup" CssClass="ckbAirport" /><span><%= Strings.CLN_BOOKING_PICKUP%>:
+                                    <asp:CheckBox runat="server" ID="chkPickUp" CssClass="ckbAirport"/><span><%= Strings.CLN_BOOKING_PICKUP%>:
                                     </span>
-                                    <asp:Literal runat="server" ID="ltPickup"></asp:Literal>$ </li>
+                                    <asp:Literal runat="server" ID="ltPickUp"></asp:Literal>$ </li>
                                 <li>
-                                    <asp:CheckBox runat="server" ID="seeoff" CssClass="ckbAirport" /><span><%= Strings.CLN_BOOKING_SEEOFF%>:
+                                    <asp:CheckBox runat="server" ID="chkSeeOff" CssClass="ckbAirport"/><span><%= Strings.CLN_BOOKING_SEEOFF%>:
                                     </span>
-                                    <asp:Literal runat="server" ID="ltSeeoff"></asp:Literal>$</li>
+                                    <asp:Literal runat="server" ID="ltSeeOff"></asp:Literal>$</li>
                             </ul>
                             <div class="price-details">
                                 <p class="total">
@@ -146,9 +136,10 @@
             </div>
         </div>
     </div>
-    <asp:HiddenField ID="hdRoomPrice" runat="server" />
-    <asp:HiddenField ID="hdNights" runat="server" />
-    <asp:HiddenField ID="hdPickup" runat="server" />
-    <asp:HiddenField ID="hdSeeoff" runat="server" />
+    <asp:HiddenField ID="hdPrice" runat="server" />
+    <asp:HiddenField ID="hdRoomQty" runat="server" />
+    <asp:HiddenField ID="hdDays" runat="server" />
+    <asp:HiddenField ID="hdPickUpPrice" runat="server" />
+    <asp:HiddenField ID="hdSeeOffPrice" runat="server" />
     <script type='text/javascript' src='/res/jss/booking.js'></script>
 </asp:Content>

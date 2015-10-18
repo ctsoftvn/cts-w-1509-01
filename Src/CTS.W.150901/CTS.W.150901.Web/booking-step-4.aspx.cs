@@ -1,65 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using CTS.Web.Core.Domain.Controller;
-using CTS.W._150901.Models.Domain.Common.Utils;
-using CTS.Web.Core.Domain.Helper;
-using CTS.Data.Com.Domain.Utils;
 using CTS.Core.Domain.Helper;
+using CTS.Data.Com.Domain.Utils;
 using CTS.W._150901.Models.Domain.Common.Constants;
+using CTS.W._150901.Models.Domain.Logic.Client.Booking;
+using CTS.W._150901.Models.Domain.Object.Client.Booking;
+using CTS.Web.Core.Domain.Controller;
+using CTS.Web.Core.Domain.Helper;
+using CTS.Web.Core.Domain.Model;
+using Resources;
 
 namespace CTS.W._150901.Web
 {
     public partial class booking_step_4 : PageBase
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!Page.IsPostBack)
-            {
-                //getRooms();
-                getRooms();
+        protected void Page_Load(object sender, EventArgs e) {
+            if (!IsPostBack) {
+                if (Session["CLN.W150901.BookingData"] == null
+                    || Session["CLN.W150901.BookingData"].GetType() != typeof(BookingObject)) {
+                    Response.Redirect(string.Format("/{0}/{1}", WebContextHelper.LocaleCd, "booking-fail"));
+                    return;
+                }
+                var bookingObj = Session["CLN.W150901.BookingData"] as BookingObject;
+                if (!bookingObj.IsCompleteStep1()
+                    || !bookingObj.IsCompleteStep2()
+                    || !bookingObj.IsCompleteStep3()) {
+                    Response.Redirect(string.Format("/{0}/{1}", WebContextHelper.LocaleCd, "booking-fail"));
+                    return;
+                }
+                ltDateFrom.Text = DataHelper.ToString(Formats.FM_DATE, bookingObj.DateFrom);
+                ltDateTo.Text = DataHelper.ToString(Formats.FM_DATE, bookingObj.DateTo);
+                var response = GetInfo(bookingObj.TypeCd);
+                ltTypeName.Text = PageCom.GetValue(response, "TypeName");
+                ltMaxAdult.Text = PageCom.GetValue(response, "AdultPerRoom");
+                var calcResponse = CalcInfo(bookingObj);
+                ltTotal.Text = PageCom.GetValue(calcResponse, "Total");
             }
             var companyCom = new CompanyCom();
             ltPhone.Text = companyCom.GetString("en", W150901Logics.CD_INFO_CD_PHONE, false);
             ltAddress.Text = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_ADDRESS, false);
             ltEmail.Text = companyCom.GetString("en", W150901Logics.CD_INFO_CD_EMAIL_RESERVE, false);
         }
-        public void getRooms()
-        {
-            var dataCom = new MasterDataCom();
-            var param = new ParameterCom();
-            var roomCd = Session["CLN.W150901.Booking.RoomCd"].ToString();
-            var sDatefrom = Session["CLN.W150901.Booking.DateFrom"].ToString();
-            var sDateto = Session["CLN.W150901.Booking.DateTo"].ToString();
-
-            var dataInfo = dataCom.GetInfoRoomType(WebContextHelper.LocaleCd, roomCd, false);
-            ltTypeName.Text = dataInfo.TypeName;
-            ltAdult.Text = dataInfo.AdultPerRoom.ToString();
-            ltDatefrom.Text = sDatefrom;
-            ltDateto.Text = sDateto;
-
-            var roomPrice = dataInfo.Price;
-            var datefrom = DataHelper.ConvertInputDate(sDatefrom);
-            var dateto = DataHelper.ConvertInputDate(sDateto);
-            var dates = dateto - datefrom;
-            var nights = dates.Value.Days;
-            var pickupPrice = param.GetNumber("ma.params.booking.pickup", true);
-            var seeoffPrice = param.GetNumber("ma.params.booking.seeoff", true);
-            if (!pickupPrice.HasValue || !(bool)Session["CLN.W150901.Booking.PickupPrice"])
-            {
-                pickupPrice = Decimal.Zero;
-            }
-            if (!seeoffPrice.HasValue || !(bool)Session["CLN.W150901.Booking.SeeoffPrice"])
-            {
-                seeoffPrice = Decimal.Zero;
-            }
-            var total = (roomPrice * nights) + pickupPrice + seeoffPrice;
-
-            ltTotal.Text = total.ToString() + "$";
-
+        private BasicResponse GetInfo(string typeCd) {
+            var request = new BasicRequest();
+            request.Add("TypeCd", typeCd);
+            var logic = new GetOperateLogic();
+            var response = PageCom.Invoke(logic, request);
+            return response;
+        }
+        private BasicResponse CalcInfo(BookingObject bookingObj) {
+            var request = new BasicRequest();
+            request.Add("TypeCd", bookingObj.TypeCd);
+            request.Add("DateFrom", bookingObj.DateFrom);
+            request.Add("DateTo", bookingObj.DateTo);
+            request.Add("RoomQty", bookingObj.RoomQty);
+            request.Add("HasPickUp", bookingObj.PickUp);
+            request.Add("HasSeeOff", bookingObj.SeeOff);
+            var logic = new CalcOperateLogic();
+            var response = PageCom.Invoke(logic, request);
+            return response;
         }
     }
 }

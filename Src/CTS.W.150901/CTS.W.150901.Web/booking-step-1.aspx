@@ -96,21 +96,19 @@
                             <!-- booking-form -->
                             <div class="clearfix">
                                 <div class="one-half-form">
-                                    <label for="datefrom">
-                                        <%= Strings.CLN_BOOKING_CHECK_IN%></label>
-                                    <asp:TextBox ID="datefrom" runat="server" CssClass="datepicker2" size="10" name="dateform"></asp:TextBox>
+                                    <asp:Label AssociatedControlID="tbDateFrom" runat="server"><%= Strings.CLN_BOOKING_CHECK_IN%></asp:Label>
+                                    <asp:TextBox ID="tbDateFrom" runat="server" CssClass="datepicker2" size="10"></asp:TextBox>
                                 </div>
                                 <div class="one-half-form last-col">
-                                    <label for="dateto">
-                                        <%= Strings.CLN_BOOKING_CHECK_OUT%></label>
-                                    <asp:TextBox ID="dateto" runat="server" CssClass="datepicker2" size="10" name="dateto"></asp:TextBox>
+                                    <asp:Label AssociatedControlID="tbDateTo" runat="server"><%= Strings.CLN_BOOKING_CHECK_OUT%></asp:Label>
+                                    <asp:TextBox ID="tbDateTo" runat="server" CssClass="datepicker2" size="10"></asp:TextBox>
                                 </div>
                             </div>
                             <hr class="space8" />
                             <label for="book_room">
                                 <%= Strings.CLN_BOOKING_ROOMS%></label>
                             <div class="select-wrapper">
-                                <asp:DropDownList ID="room_qty" runat="server" name="room_qty">
+                                <asp:DropDownList ID="cbRoomQty" runat="server">
                                     <asp:ListItem>1</asp:ListItem>
                                     <asp:ListItem>2</asp:ListItem>
                                     <asp:ListItem>3</asp:ListItem>
@@ -119,8 +117,8 @@
                                 </asp:DropDownList>
                             </div>
                             <hr class="space8" />
-                            <asp:Button runat="server" ID="booking_step1" CssClass="bookbutton booking-form"
-                                Text='<%= Strings.CLN_BOOKING_CHECK_AVAILABILITY%>' OnClick="booking_step1_Click" />
+							<asp:Button runat="server" ID="btnBookingStep1" CssClass="bookbutton booking-form"
+                                Text='<%= Strings.CLN_BOOKING_CHECK_AVAILABILITY%>' OnClick="btnBookingStep1_Click" />
                             <!-- BEGIN .booking-side -->
                         </div>
                         <!-- BEGIN .booking-side-wrapper -->
