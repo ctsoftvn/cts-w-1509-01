@@ -198,7 +198,7 @@
                         <p class="slocan">
                             <asp:Literal ID="ltSlogan" runat="server" /></p>
                         <div class='button'>
-                            <a href='<%= Strings.CLN_MASTER_RESERVATION_LINK %>'>
+                            <a href='<%= Strings.CLN_MASTER_BOOKING_LINK %>'>
                                 <%= Strings.CLN_MASTER_RESERVATION_MOBI_BUTTON%></a>
                         </div>
                     </div>
@@ -293,7 +293,7 @@
                                     <%= Strings.CLN_MASTER_RESERVATION_DES %></p>
                             </div>
                             <div class='button form-group'>
-                                <a href="<%= Strings.CLN_MASTER_RESERVATION_LINK %>" target="_self">
+                                <a href="<%= Strings.CLN_MASTER_BOOKING_LINK %>" target="_self">
                                     <%= Strings.CLN_MASTER_RESERVATION_BUTTON %></a>
                             </div>
                         </div>

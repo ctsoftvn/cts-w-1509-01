@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true"
     CodeBehind="booking-step-4.aspx.cs" Inherits="CTS.W._150901.Web.booking_step_4" %>
 
+<%@ Import Namespace="Resources" %>
 <asp:Content ID="ContentHead" ContentPlaceHolderID="ContentHead" runat="server">
     <link rel='stylesheet' href='/res/css/style-booking.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/responsive-booking.css' type='text/css' media='all' />
@@ -20,7 +21,7 @@
                                     1.</div>
                             </div>
                             <div class="step-title">
-                                Choose Your Date</div>
+                                <%= Strings.CLN_BOOKING_STEP_1%></div>
                         </div>
                         <div class="step-wrapper">
                             <div class="step-icon-wrapper">
@@ -28,7 +29,7 @@
                                     2.</div>
                             </div>
                             <div class="step-title">
-                                Choose Your Room</div>
+                                <%= Strings.CLN_BOOKING_STEP_2%></div>
                         </div>
                         <div class="step-wrapper">
                             <div class="step-icon-wrapper">
@@ -36,7 +37,7 @@
                                     3.</div>
                             </div>
                             <div class="step-title">
-                                Place Your Reservation</div>
+                                <%= Strings.CLN_BOOKING_STEP_3%></div>
                         </div>
                         <div class="step-wrapper last-col">
                             <div class="step-icon-wrapper">
@@ -44,7 +45,7 @@
                                     4.</div>
                             </div>
                             <div class="step-title">
-                                Confirmation</div>
+                                <%= Strings.CLN_BOOKING_STEP_4%></div>
                         </div>
                         <div class="step-line">
                         </div>
@@ -55,17 +56,18 @@
                         <!-- BEGIN .booking-main -->
                         <div class="booking-main">
                             <h4 class="title-style4">
-                                Reservation Complete<span class="title-block"></span></h4>
+                                <%= Strings.CLN_BOOKING_RESERVATION_COMPLETE%><span class="title-block"></span></h4>
                             <p>
-                                Details of your reservation have just been sent to you in a confirmation email,
-                                we look forward to seeing you soon. In the meantime if you have any questions feel
-                                free to contact us.</p>
+                                <%= Strings.CLN_BOOKING_RESERVATION_COMPLETE_INFO%></p>
                             <ul class="contact_details_list contact_details_list_dark">
-                                <li class="phone_list"><strong>Phone:</strong>
+                                <li class="phone_list"><strong>
+                                    <%= Strings.CLN_BOOKING_RESERVATION_COMPLETE_PHONE%>:</strong>
                                     <asp:Literal runat="server" ID="ltPhone"></asp:Literal></li>
-                                <li class="fax_list"><strong>Address:</strong>
+                                <li class="fax_list"><strong>
+                                    <%= Strings.CLN_BOOKING_RESERVATION_COMPLETE_ADDRESS%>:</strong>
                                     <asp:Literal runat="server" ID="ltAddress"></asp:Literal></li>
-                                <li class="email_list"><strong>Email:</strong>
+                                <li class="email_list"><strong>
+                                    <%= Strings.CLN_BOOKING_RESERVATION_COMPLETE_EMAIL%>:</strong>
                                     <asp:Literal runat="server" ID="ltEmail"></asp:Literal></li>
                             </ul>
                             <!-- END .booking-main -->
@@ -77,19 +79,26 @@
                         <!-- BEGIN .booking-side -->
                         <div class="booking-side clearfix">
                             <h4 class="title-style4">
-                                Your Reservation<span class="title-block"></span></h4>
+                                <%= Strings.CLN_BOOKING_YOUR_RESERVATION%><span class="title-block"></span></h4>
                             <ul>
-                                <li><span>Room: </span>
+                                <li><span>
+                                    <%= Strings.CLN_BOOKING_ROOM%>: </span>
                                     <asp:Literal runat="server" ID="ltTypeName"></asp:Literal></li>
-                                <li><span>Check In: </span>
+                                <li><span>
+                                    <%= Strings.CLN_BOOKING_CHECK_IN%>: </span>
                                     <asp:Literal runat="server" ID="ltDatefrom"></asp:Literal></li>
-                                <li><span>Check Out: </span>
+                                <li><span>
+                                    <%= Strings.CLN_BOOKING_CHECK_OUT%>: </span>
                                     <asp:Literal runat="server" ID="ltDateto"></asp:Literal></li>
-                                <li><span>Max adult: </span>
-                                    <asp:Literal runat="server" ID="ltAdult"></asp:Literal></li></ul>
+                                <li><span>
+                                    <%= Strings.CLN_BOOKING_OCCUPANCY%>: </span>
+                                    <asp:Literal runat="server" ID="ltAdult"></asp:Literal>
+                                    <%= Strings.CLN_BOOKING_PERSONS%>
+                                </li>
+                            </ul>
                             <div class="price-details">
                                 <p class="total">
-                                    Total Price</p>
+                                    <%= Strings.CLN_BOOKING_TOTAL_PRICE%></p>
                                 <h3 class="total-price">
                                     <asp:Literal runat="server" ID="ltTotal"></asp:Literal></h3>
                             </div>

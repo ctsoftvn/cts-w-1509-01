@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true"
     CodeBehind="booking-step-1.aspx.cs" Inherits="CTS.W._150901.Web.booking_step_1" %>
 
+<%@ Import Namespace="Resources" %>
 <asp:Content ID="ContentHead" ContentPlaceHolderID="ContentHead" runat="server">
     <link rel='stylesheet' href='/res/css/style-booking.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/responsive-booking.css' type='text/css' media='all' />
@@ -20,7 +21,7 @@
                                     1.</div>
                             </div>
                             <div class="step-title">
-                                Choose Your Date</div>
+                                <%= Strings.CLN_BOOKING_STEP_1%></div>
                         </div>
                         <div class="step-wrapper">
                             <div class="step-icon-wrapper">
@@ -28,7 +29,7 @@
                                     2.</div>
                             </div>
                             <div class="step-title">
-                                Choose Your Room</div>
+                                <%= Strings.CLN_BOOKING_STEP_2%></div>
                         </div>
                         <div class="step-wrapper">
                             <div class="step-icon-wrapper">
@@ -36,7 +37,7 @@
                                     3.</div>
                             </div>
                             <div class="step-title">
-                                Place Your Reservation</div>
+                               <%= Strings.CLN_BOOKING_STEP_3%></div>
                         </div>
                         <div class="step-wrapper last-col">
                             <div class="step-icon-wrapper">
@@ -44,7 +45,7 @@
                                     4.</div>
                             </div>
                             <div class="step-title">
-                                Confirmation</div>
+                                <%= Strings.CLN_BOOKING_STEP_4%></div>
                         </div>
                         <div class="step-line">
                         </div>
@@ -56,7 +57,7 @@
                         <div class="booking-main">
                             <div class="dark-notice calendar-notice">
                                 <p>
-                                    Please select your dates from the calendar</p>
+                                    <%= Strings.CLN_BOOKING_CALENDAR_NOTICE%></p>
                             </div>
                             <div id="open_datepicker">
                             </div>
@@ -67,19 +68,19 @@
                                     <div class="key-unavailable-icon">
                                     </div>
                                     <div class="key-unavailable-text">
-                                        Unavailable</div>
+                                        <%= Strings.CLN_BOOKING_CALENDAR_UNAVAILABLE%></div>
                                 </div>
                                 <div class="key-available-wrapper clearfix">
                                     <div class="key-available-icon">
                                     </div>
                                     <div class="key-available-text">
-                                        Available</div>
+                                        <%= Strings.CLN_BOOKING_CALENDAR_AVAILABLE%></div>
                                 </div>
                                 <div class="key-selected-wrapper clearfix">
                                     <div class="key-selected-icon">
                                     </div>
                                     <div class="key-selected-text">
-                                        Selected Dates</div>
+                                        <%= Strings.CLN_BOOKING_CALENDAR_SELECTED_DATE%></div>
                                 </div>
                             </div>
                             <!-- END .booking-main -->
@@ -91,23 +92,23 @@
                         <!-- BEGIN .booking-side -->
                         <div class="booking-side">
                             <h4 class="title-style4">
-                                Your Reservation<span class="title-block"></span></h4>
+                                <%= Strings.CLN_BOOKING_YOUR_RESERVATION%><span class="title-block"></span></h4>
                             <!-- booking-form -->
                             <div class="clearfix">
                                 <div class="one-half-form">
                                     <label for="datefrom">
-                                        Check In</label>
+                                        <%= Strings.CLN_BOOKING_CHECK_IN%></label>
                                     <asp:TextBox ID="datefrom" runat="server" CssClass="datepicker2" size="10" name="dateform"></asp:TextBox>
                                 </div>
                                 <div class="one-half-form last-col">
                                     <label for="dateto">
-                                        Check Out</label>
+                                        <%= Strings.CLN_BOOKING_CHECK_OUT%></label>
                                     <asp:TextBox ID="dateto" runat="server" CssClass="datepicker2" size="10" name="dateto"></asp:TextBox>
                                 </div>
                             </div>
                             <hr class="space8" />
                             <label for="book_room">
-                                Rooms</label>
+                                <%= Strings.CLN_BOOKING_ROOMS%></label>
                             <div class="select-wrapper">
                                 <asp:DropDownList ID="room_qty" runat="server" name="room_qty">
                                     <asp:ListItem>1</asp:ListItem>
@@ -119,7 +120,7 @@
                             </div>
                             <hr class="space8" />
                             <asp:Button runat="server" ID="booking_step1" CssClass="bookbutton booking-form"
-                                Text="Check Availability" OnClick="booking_step1_Click" />
+                                Text='<%= Strings.CLN_BOOKING_CHECK_AVAILABILITY%>' OnClick="booking_step1_Click" />
                             <!-- BEGIN .booking-side -->
                         </div>
                         <!-- BEGIN .booking-side-wrapper -->

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true"
     CodeBehind="booking-step-3.aspx.cs" Inherits="CTS.W._150901.Web.booking_step_3" %>
 
+<%@ Import Namespace="Resources" %>
 <asp:Content ID="ContentHead" ContentPlaceHolderID="ContentHead" runat="server">
     <link rel='stylesheet' href='/res/css/style-booking.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/responsive-booking.css' type='text/css' media='all' />
@@ -20,7 +21,7 @@
                                     1.</div>
                             </div>
                             <div class="step-title">
-                                Choose Your Date</div>
+                                <%= Strings.CLN_BOOKING_STEP_1%></div>
                         </div>
                         <div class="step-wrapper">
                             <div class="step-icon-wrapper">
@@ -28,7 +29,7 @@
                                     2.</div>
                             </div>
                             <div class="step-title">
-                                Choose Your Room</div>
+                                <%= Strings.CLN_BOOKING_STEP_2%></div>
                         </div>
                         <div class="step-wrapper">
                             <div class="step-icon-wrapper">
@@ -36,7 +37,7 @@
                                     3.</div>
                             </div>
                             <div class="step-title">
-                                Place Your Reservation</div>
+                                <%= Strings.CLN_BOOKING_STEP_3%></div>
                         </div>
                         <div class="step-wrapper last-col">
                             <div class="step-icon-wrapper">
@@ -44,7 +45,7 @@
                                     4.</div>
                             </div>
                             <div class="step-title">
-                                Confirmation</div>
+                                <%= Strings.CLN_BOOKING_STEP_4%></div>
                         </div>
                         <div class="step-line">
                         </div>
@@ -56,50 +57,46 @@
                         <div class="booking-main">
                             <div class="dark-notice booking-form-notice">
                                 <p>
-                                    Please fill out the required fields marked with *</p>
-                            </div>
-                            <div class="dark-notice booking-form-terms">
-                                <p>
-                                    Please accept the terms and conditions</p>
+                                    <%= Strings.CLN_BOOKING_FORM_NOTICE%></p>
                             </div>
                             <h4 class="title-style4">
-                                Guest Details<span class="title-block"></span></h4>
+                                <%= Strings.CLN_BOOKING_FORM_GUEST_DETAIL%><span class="title-block"></span></h4>
                             <div class="input-left">
                                 <label for="first_name">
-                                    First Name *</label>
+                                    <%= Strings.CLN_BOOKING_FORM_FIRST_NAME%></label>
                                 <asp:TextBox runat="server" name="first_name" ID="tbFirstName"></asp:TextBox>
                                 <label for="last_name">
-                                    Last Name *</label>
+                                    <%= Strings.CLN_BOOKING_FORM_LAST_NAME%></label>
                                 <asp:TextBox ID="tbLastName" name="last_name" runat="server"></asp:TextBox>
                                 <label for="email_address">
-                                    Email Address *</label>
+                                    <%= Strings.CLN_BOOKING_FORM_EMAIL%></label>
                                 <asp:TextBox ID="tbEmail" name="email_address" runat="server"></asp:TextBox>
                                 <label for="phone_number">
-                                    Telephone Number *</label>
+                                    <%= Strings.CLN_BOOKING_FORM_TELEPHONE%></label>
                                 <asp:TextBox ID="tbPhone" name="phone_number" runat="server"></asp:TextBox>
                             </div>
                             <div class="input-right">
                                 <label for="address_line2">
-                                    Address *</label>
+                                    <%= Strings.CLN_BOOKING_FORM_ADDRESS%></label>
                                 <asp:TextBox ID="tbAddress" name="address" runat="server"></asp:TextBox>
                                 <label for="state_county">
-                                    State / County *</label>
+                                    <%= Strings.CLN_BOOKING_FORM_STATE_COUNTY%></label>
                                 <asp:TextBox ID="tbStateCounty" name="state_county" runat="server"></asp:TextBox>
                                 <label for="city">
-                                    City *</label>
+                                    <%= Strings.CLN_BOOKING_FORM_CITY%></label>
                                 <asp:TextBox ID="tbCity" name="city" runat="server"></asp:TextBox>
                                 <label for="country">
-                                    Country *</label>
+                                    <%= Strings.CLN_BOOKING_FORM_COUNTRY%></label>
                                 <asp:TextBox ID="tbCountry" name="country" runat="server"></asp:TextBox>
                             </div>
                             <label for="special_requirements">
-                                Special Requirements</label>
+                                <%= Strings.CLN_BOOKING_FORM_NOTES%></label>
                             <asp:TextBox runat="server" ID="tbNotes" TextMode="MultiLine" name="special_requirements"
                                 Rows="10" Columns="1"></asp:TextBox>
                             <div class="clearfix">
                             </div>
                             <asp:Button runat="server" ID="booking_step3" CssClass="book-deposit booking-fields-form"
-                                Text="Book Now" OnClick="booking_step3_Click" />
+                                Text="<%= Strings.CLN_BOOKING_FORM_BOOK_NOW%>" OnClick="booking_step3_Click" />
                             <!-- BEGIN .booking-main -->
                         </div>
                         <!-- BEGIN .booking-main-wrapper -->
@@ -109,26 +106,29 @@
                         <!-- BEGIN .booking-side -->
                         <div class="booking-side clearfix">
                             <h4 class="title-style4">
-                                Your Reservation<span class="title-block"></span></h4>
+                                <%= Strings.CLN_BOOKING_YOUR_RESERVATION%><span class="title-block"></span></h4>
                             <ul>
-                                <li><span>Room: </span>
+                                <li><span>
+                                    <%= Strings.CLN_BOOKING_ROOM%>: </span>
                                     <asp:Literal runat="server" ID="ltTypeName"></asp:Literal></li>
-                                <li><span>Check In: </span>
+                                <li><span>
+                                    <%= Strings.CLN_BOOKING_CHECK_IN%>: </span>
                                     <asp:Literal runat="server" ID="ltDatefrom"></asp:Literal></li>
-                                <li><span>Check Out: </span>
+                                <li><span>
+                                    <%= Strings.CLN_BOOKING_CHECK_OUT%>: </span>
                                     <asp:Literal runat="server" ID="ltDateto"></asp:Literal></li>
                                 <li>
-                                    <asp:CheckBox runat="server" ID="pickup" /><span>Airport pickup Request </span>
-                                    <br />
-                                    <span>Price :</span><asp:Literal runat="server" ID="ltPickup"></asp:Literal></li>
+                                    <asp:CheckBox runat="server" ID="pickup" CssClass="ckbAirport" /><span><%= Strings.CLN_BOOKING_PICKUP%>:
+                                    </span>
+                                    <asp:Literal runat="server" ID="ltPickup"></asp:Literal>$ </li>
                                 <li>
-                                    <asp:CheckBox runat="server" ID="seeoff" /><span>Airport
-                                        see off Request </span>
-                                    <asp:Literal runat="server" ID="ltSeeoff"></asp:Literal></li>
+                                    <asp:CheckBox runat="server" ID="seeoff" CssClass="ckbAirport" /><span><%= Strings.CLN_BOOKING_SEEOFF%>:
+                                    </span>
+                                    <asp:Literal runat="server" ID="ltSeeoff"></asp:Literal>$</li>
                             </ul>
                             <div class="price-details">
                                 <p class="total">
-                                    Total Price</p>
+                                    <%= Strings.CLN_BOOKING_TOTAL_PRICE%></p>
                                 <h3 class="total-price">
                                     <span id="totalPrice"></span>
                                 </h3>
