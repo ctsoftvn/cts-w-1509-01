@@ -58,7 +58,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.ContactUs
             DataHelper.CopyObject(inputObject, getResult);
             // Lấy thông tin dữ liệu
             var fileTemplate = FileHelper.ToString(HttpHelper.MapPath("/stg/tmpl/email/contact-us.html"));
-            var emailContact = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_EMAIL_CONTACT, false);
+            var emailContact = companyCom.GetString("en", W150901Logics.CD_INFO_CD_EMAIL_CONTACT, false);
             var host = companyCom.GetString("en", W150901Logics.CD_INFO_CD_HOST, false);
             var subject = NameHelper.GetNameString("CLN_CONTACT_SUBJECT");
             var body = new StringBuilder(fileTemplate);
