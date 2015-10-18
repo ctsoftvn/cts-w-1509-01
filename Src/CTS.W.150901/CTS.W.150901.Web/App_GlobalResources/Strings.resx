@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
 		Microsoft ResX Schema
 
 		Version 1.3
@@ -58,48 +58,48 @@
 			: using a System.ComponentModel.TypeConverter
 			: and then encoded with base64 encoding.
 	-->
-	
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
 
-  <!-- cln/index.master -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- cln/template.master -->
   <data name="CLN_MASTER_HOMEPAGE_LINK" xml:space="preserve">
 		<value>/en/index</value>
 	</data>
@@ -133,11 +133,8 @@
   <data name="CLN_MASTER_CONTACT_US_LINK" xml:space="preserve">
 		<value>/en/contact-us</value>
 	</data>
-  <data name="CLN_MASTER_RESERVATION_LINK" xml:space="preserve">
-		<value>/en/reservation</value>
-	</data>
   <data name="CLN_MASTER_BOOKING_LINK" xml:space="preserve">
-		<value>/en/booking</value>
+		<value>/en/booking-step-1</value>
 	</data>
   <data name="CLN_MASTER_DESTINATIONS_LINK" xml:space="preserve">
 		<value>/en/destinations</value>
@@ -209,7 +206,7 @@
   <data name="CLN_MASTER_RESERVATION_MOBI_BUTTON" xml:space="preserve">
 		<value>Book Your Stay</value>
 	</data>
-  
+
   <!-- common -->
   <data name="CLN_BTN_SUBMIT" xml:space="preserve">
 		<value>Send</value>
@@ -223,5 +220,143 @@
   <data name="CLN_ALERT_ERROR" xml:space="preserve">
 		<value>Connecting to the server failed.</value>
 	</data>
-	
+
+  <!-- cln/index -->
+  <data name="CLN_INDEX_LOCATION" xml:space="preserve">
+		<value>Our location</value>
+	</data>
+  <data name="CLN_INDEX_SPECIAL_DEAL" xml:space="preserve">
+		<value>Special deal</value>
+	</data>
+  <data name="CLN_INDEX_TOUR" xml:space="preserve">
+		<value>Tours</value>
+	</data>
+  <data name="CLN_INDEX_READMORE" xml:space="preserve">
+		<value>Read More+</value>
+	</data>
+
+  <!-- cln/booking -->
+  <data name="CLN_BOOKING_STEP_1" xml:space="preserve">
+		<value>Choose Your Date</value>
+	</data>
+  <data name="CLN_BOOKING_STEP_2" xml:space="preserve">
+		<value> Choose Your Room</value>
+	</data>
+  <data name="CLN_BOOKING_STEP_3" xml:space="preserve">
+		<value>Place Your Reservation</value>
+	</data>
+  <data name="CLN_BOOKING_STEP_4" xml:space="preserve">
+		<value>Confirmation</value>
+	</data>
+  <data name="CLN_BOOKING_CALENDAR_NOTICE" xml:space="preserve">
+		<value>Please select your dates from the calendar</value>
+	</data>
+  <data name="CLN_BOOKING_CALENDAR_UNAVAILABLE" xml:space="preserve">
+		<value>Unavailable</value>
+	</data>
+  <data name="CLN_BOOKING_CALENDAR_AVAILABLE" xml:space="preserve">
+		<value>Available</value>
+	</data>
+  <data name="CLN_BOOKING_CALENDAR_SELECTED_DATE" xml:space="preserve">
+		<value>Selected Dates</value>
+	</data>
+  <data name="CLN_BOOKING_YOUR_RESERVATION" xml:space="preserve">
+		<value>Your Reservation</value>
+	</data>
+  <data name="CLN_BOOKING_CHECK_IN" xml:space="preserve">
+		<value>Check In</value>
+	</data>
+  <data name="CLN_BOOKING_CHECK_OUT" xml:space="preserve">
+		<value>Check Out</value>
+	</data>
+  <data name="CLN_BOOKING_ROOMS" xml:space="preserve">
+		<value>Rooms</value>
+	</data>
+  <data name="CLN_BOOKING_ROOM" xml:space="preserve">
+		<value>Room</value>
+	</data>
+  <data name="CLN_BOOKING_OCCUPANCY" xml:space="preserve">
+		<value>Occupancy</value>
+	</data>
+  <data name="CLN_BOOKING_PERSONS" xml:space="preserve">
+		<value>Person(s)</value>
+	</data>
+  <data name="CLN_BOOKING_FROM" xml:space="preserve">
+		<value>From</value>
+	</data>
+  <data name="CLN_BOOKING_NIGHT" xml:space="preserve">
+		<value>Night</value>
+	</data>
+  <data name="CLN_BOOKING_EDIT_RESERVATION" xml:space="preserve">
+		<value>Edit Reservation</value>
+	</data>
+  <data name="CLN_BOOKING_CHECK_AVAILABILITY" xml:space="preserve">
+		<value>Check Availability</value>
+	</data>
+  <data name="CLN_BOOKING_SELECT_ROOM" xml:space="preserve">
+		<value>Select room</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_NOTICE" xml:space="preserve">
+		<value>Please fill out the required fields marked with *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_GUEST_DETAIL" xml:space="preserve">
+		<value>Guest Details</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_FIRST_NAME" xml:space="preserve">
+		<value>First Name *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_LAST_NAME" xml:space="preserve">
+		<value>Last Name *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_EMAIL" xml:space="preserve">
+		<value>Email Address *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_TELEPHONE" xml:space="preserve">
+		<value>Telephone Number *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_ADDRESS" xml:space="preserve">
+		<value>Address *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_STATE_COUNTY" xml:space="preserve">
+		<value>State / County *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_CITY" xml:space="preserve">
+		<value>City *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_COUNTRY" xml:space="preserve">
+		<value>Country *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_NOTES" xml:space="preserve">
+		<value>Special Requirements</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_BOOK_NOW" xml:space="preserve">
+		<value>Book Now</value>
+	</data>
+  <data name="CLN_BOOKING_PICKUP" xml:space="preserve">
+		<value>Airport pick up</value>
+	</data>
+  <data name="CLN_BOOKING_SEEOFF" xml:space="preserve">
+		<value>Airport see off</value>
+	</data>
+  <data name="CLN_BOOKING_TOTAL_PRICE" xml:space="preserve">
+		<value>Total Price</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE" xml:space="preserve">
+		<value>Reservation Complete</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE_INFO" xml:space="preserve">
+		<value>Details of your reservation have just been sent to you in a confirmation email,
+                                we look forward to seeing you soon. In the meantime if you have any questions feel
+                                free to contact us.</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE_PHONE" xml:space="preserve">
+		<value>Phone</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE_ADDRESS" xml:space="preserve">
+		<value>Address</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE_EMAIL" xml:space="preserve">
+		<value>Email</value>
+	</data>
+
 </root>

@@ -133,11 +133,8 @@
   <data name="CLN_MASTER_CONTACT_US_LINK" xml:space="preserve">
 		<value>/vi/contact-us</value>
 	</data>
-  <data name="CLN_MASTER_RESERVATION_LINK" xml:space="preserve">
-		<value>/vi/reservation</value>
-	</data>
   <data name="CLN_MASTER_BOOKING_LINK" xml:space="preserve">
-		<value>/vi/booking</value>
+		<value>/vi/booking-step-1</value>
 	</data>
   <data name="CLN_MASTER_DESTINATIONS_LINK" xml:space="preserve">
 		<value>/vi/destinations</value>
@@ -221,5 +218,143 @@
 	</data>
   <data name="CLN_ALERT_ERROR" xml:space="preserve">
 		<value>Kết nối đến máy chủ thất bại.</value>
+	</data>
+
+  <!-- cln/index -->
+  <data name="CLN_INDEX_LOCATION" xml:space="preserve">
+		<value>Địa điểm</value>
+	</data>
+  <data name="CLN_INDEX_SPECIAL_DEAL" xml:space="preserve">
+		<value>Khuyến mãi</value>
+	</data>
+  <data name="CLN_INDEX_TOUR" xml:space="preserve">
+		<value>Du lịch địa phương</value>
+	</data>
+  <data name="CLN_INDEX_READMORE" xml:space="preserve">
+		<value>Xem thêm+</value>
+	</data>
+
+  <!-- cln/booking -->
+  <data name="CLN_BOOKING_STEP_1" xml:space="preserve">
+		<value>Chọn ngày tháng</value>
+	</data>
+  <data name="CLN_BOOKING_STEP_2" xml:space="preserve">
+		<value> Chọn phòng</value>
+	</data>
+  <data name="CLN_BOOKING_STEP_3" xml:space="preserve">
+		<value>Đặt phòng</value>
+	</data>
+  <data name="CLN_BOOKING_STEP_4" xml:space="preserve">
+		<value>Xác nhận</value>
+	</data>
+  <data name="CLN_BOOKING_CALENDAR_NOTICE" xml:space="preserve">
+		<value>Vui lòng chọn ngày từ lịch</value>
+	</data>
+  <data name="CLN_BOOKING_CALENDAR_UNAVAILABLE" xml:space="preserve">
+		<value>Ngày đã qua</value>
+	</data>
+  <data name="CLN_BOOKING_CALENDAR_AVAILABLE" xml:space="preserve">
+		<value>Ngày hiện tại</value>
+	</data>
+  <data name="CLN_BOOKING_CALENDAR_SELECTED_DATE" xml:space="preserve">
+		<value>Ngày đã chọn</value>
+	</data>
+  <data name="CLN_BOOKING_YOUR_RESERVATION" xml:space="preserve">
+		<value>Đặt phòng của quý khách</value>
+	</data>
+  <data name="CLN_BOOKING_CHECK_IN" xml:space="preserve">
+		<value>Ngày đến</value>
+	</data>
+  <data name="CLN_BOOKING_CHECK_OUT" xml:space="preserve">
+		<value>Ngày đi</value>
+	</data>
+  <data name="CLN_BOOKING_ROOMS" xml:space="preserve">
+		<value>Số lượng phòng</value>
+	</data>
+  <data name="CLN_BOOKING_ROOM" xml:space="preserve">
+		<value>Chọn phòng</value>
+	</data>
+  <data name="CLN_BOOKING_OCCUPANCY" xml:space="preserve">
+		<value>Số lượng</value>
+	</data>
+  <data name="CLN_BOOKING_PERSONS" xml:space="preserve">
+		<value>người(s)</value>
+	</data>
+  <data name="CLN_BOOKING_FROM" xml:space="preserve">
+		<value>Từ</value>
+	</data>
+  <data name="CLN_BOOKING_NIGHT" xml:space="preserve">
+		<value>Đêm</value>
+	</data>
+  <data name="CLN_BOOKING_EDIT_RESERVATION" xml:space="preserve">
+		<value>Chọn lại ngày</value>
+	</data>
+  <data name="CLN_BOOKING_CHECK_AVAILABILITY" xml:space="preserve">
+		<value>Kiểm tra</value>
+	</data>
+  <data name="CLN_BOOKING_SELECT_ROOM" xml:space="preserve">
+		<value>Chọn phòng</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_NOTICE" xml:space="preserve">
+		<value>Vui lòng điền vào các chỗ bắt buộc được đánh dấu bằng *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_GUEST_DETAIL" xml:space="preserve">
+		<value>Thông tin quý khách</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_FIRST_NAME" xml:space="preserve">
+		<value>Tên *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_LAST_NAME" xml:space="preserve">
+		<value>Họ *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_EMAIL" xml:space="preserve">
+		<value>Email *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_TELEPHONE" xml:space="preserve">
+		<value>Số điện thoại *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_ADDRESS" xml:space="preserve">
+		<value>Địa chỉ *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_STATE_COUNTY" xml:space="preserve">
+		<value>Quận *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_CITY" xml:space="preserve">
+		<value>Thành phố *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_COUNTRY" xml:space="preserve">
+		<value>Quốc gia *</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_NOTES" xml:space="preserve">
+		<value>Yêu cầu đặc biệt</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_BOOK_NOW" xml:space="preserve">
+		<value>Chấp nhận</value>
+	</data>
+  <data name="CLN_BOOKING_PICKUP" xml:space="preserve">
+		<value>Đón sân bay</value>
+	</data>
+  <data name="CLN_BOOKING_SEEOFF" xml:space="preserve">
+		<value>Tiễn sân bay</value>
+	</data>
+  <data name="CLN_BOOKING_TOTAL_PRICE" xml:space="preserve">
+		<value>Tổng cộng</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE" xml:space="preserve">
+		<value>Đặt phòng thành công</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE_INFO" xml:space="preserve">
+		<value>Thông tin chi tiết đặt phòng của quý khách vừa được gửi đến email của quý khách,
+                                 chúng tôi sẽ liên hệ với quý khách trong thời gian sớm nhất. Trong khi đó nếu quý khách có bất kỳ câu hỏi nào
+                                 liên hệ với chúng tôi.</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE_PHONE" xml:space="preserve">
+		<value>Điện thoại</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE_ADDRESS" xml:space="preserve">
+		<value>Địa chỉ</value>
+	</data>
+  <data name="CLN_BOOKING_RESERVATION_COMPLETE_EMAIL" xml:space="preserve">
+		<value>Email</value>
 	</data>
 </root>

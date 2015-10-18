@@ -79,6 +79,368 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Available.
+        /// </summary>
+        internal static string CLN_BOOKING_CALENDAR_AVAILABLE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_CALENDAR_AVAILABLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select your dates from the calendar.
+        /// </summary>
+        internal static string CLN_BOOKING_CALENDAR_NOTICE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_CALENDAR_NOTICE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selected Dates.
+        /// </summary>
+        internal static string CLN_BOOKING_CALENDAR_SELECTED_DATE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_CALENDAR_SELECTED_DATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unavailable.
+        /// </summary>
+        internal static string CLN_BOOKING_CALENDAR_UNAVAILABLE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_CALENDAR_UNAVAILABLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Availability.
+        /// </summary>
+        internal static string CLN_BOOKING_CHECK_AVAILABILITY {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_CHECK_AVAILABILITY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check In.
+        /// </summary>
+        internal static string CLN_BOOKING_CHECK_IN {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_CHECK_IN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Out.
+        /// </summary>
+        internal static string CLN_BOOKING_CHECK_OUT {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_CHECK_OUT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Reservation.
+        /// </summary>
+        internal static string CLN_BOOKING_EDIT_RESERVATION {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_EDIT_RESERVATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address *.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_ADDRESS {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_ADDRESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book Now.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_BOOK_NOW {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_BOOK_NOW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City *.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_CITY {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_CITY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country *.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_COUNTRY {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_COUNTRY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email Address *.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_EMAIL {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_EMAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Name *.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_FIRST_NAME {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_FIRST_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guest Details.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_GUEST_DETAIL {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_GUEST_DETAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Name *.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_LAST_NAME {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_LAST_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Requirements.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_NOTES {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_NOTES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please fill out the required fields marked with *.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_NOTICE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_NOTICE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State / County *.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_STATE_COUNTY {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_STATE_COUNTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telephone Number *.
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_TELEPHONE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_TELEPHONE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        internal static string CLN_BOOKING_FROM {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FROM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Night.
+        /// </summary>
+        internal static string CLN_BOOKING_NIGHT {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_NIGHT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Occupancy.
+        /// </summary>
+        internal static string CLN_BOOKING_OCCUPANCY {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_OCCUPANCY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Person(s).
+        /// </summary>
+        internal static string CLN_BOOKING_PERSONS {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_PERSONS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Airport pick up.
+        /// </summary>
+        internal static string CLN_BOOKING_PICKUP {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_PICKUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservation Complete.
+        /// </summary>
+        internal static string CLN_BOOKING_RESERVATION_COMPLETE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_RESERVATION_COMPLETE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        internal static string CLN_BOOKING_RESERVATION_COMPLETE_ADDRESS {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_RESERVATION_COMPLETE_ADDRESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string CLN_BOOKING_RESERVATION_COMPLETE_EMAIL {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_RESERVATION_COMPLETE_EMAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details of your reservation have just been sent to you in a confirmation email,
+        ///                                we look forward to seeing you soon. In the meantime if you have any questions feel
+        ///                                free to contact us..
+        /// </summary>
+        internal static string CLN_BOOKING_RESERVATION_COMPLETE_INFO {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_RESERVATION_COMPLETE_INFO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        internal static string CLN_BOOKING_RESERVATION_COMPLETE_PHONE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_RESERVATION_COMPLETE_PHONE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Room.
+        /// </summary>
+        internal static string CLN_BOOKING_ROOM {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_ROOM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rooms.
+        /// </summary>
+        internal static string CLN_BOOKING_ROOMS {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_ROOMS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Airport see off.
+        /// </summary>
+        internal static string CLN_BOOKING_SEEOFF {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_SEEOFF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select room.
+        /// </summary>
+        internal static string CLN_BOOKING_SELECT_ROOM {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_SELECT_ROOM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose Your Date.
+        /// </summary>
+        internal static string CLN_BOOKING_STEP_1 {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_STEP_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Choose Your Room.
+        /// </summary>
+        internal static string CLN_BOOKING_STEP_2 {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_STEP_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Place Your Reservation.
+        /// </summary>
+        internal static string CLN_BOOKING_STEP_3 {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_STEP_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirmation.
+        /// </summary>
+        internal static string CLN_BOOKING_STEP_4 {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_STEP_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Price.
+        /// </summary>
+        internal static string CLN_BOOKING_TOTAL_PRICE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_TOTAL_PRICE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Reservation.
+        /// </summary>
+        internal static string CLN_BOOKING_YOUR_RESERVATION {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_YOUR_RESERVATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reset.
         /// </summary>
         internal static string CLN_BTN_RESER {
@@ -93,6 +455,42 @@ namespace Resources {
         internal static string CLN_BTN_SUBMIT {
             get {
                 return ResourceManager.GetString("CLN_BTN_SUBMIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Our location.
+        /// </summary>
+        internal static string CLN_INDEX_LOCATION {
+            get {
+                return ResourceManager.GetString("CLN_INDEX_LOCATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Read More+.
+        /// </summary>
+        internal static string CLN_INDEX_READMORE {
+            get {
+                return ResourceManager.GetString("CLN_INDEX_READMORE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special deal.
+        /// </summary>
+        internal static string CLN_INDEX_SPECIAL_DEAL {
+            get {
+                return ResourceManager.GetString("CLN_INDEX_SPECIAL_DEAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tours.
+        /// </summary>
+        internal static string CLN_INDEX_TOUR {
+            get {
+                return ResourceManager.GetString("CLN_INDEX_TOUR", resourceCulture);
             }
         }
         
@@ -133,7 +531,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /en/booking.
+        ///   Looks up a localized string similar to /en/booking-step-1.
         /// </summary>
         internal static string CLN_MASTER_BOOKING_LINK {
             get {
@@ -318,15 +716,6 @@ namespace Resources {
         internal static string CLN_MASTER_RESERVATION_DES {
             get {
                 return ResourceManager.GetString("CLN_MASTER_RESERVATION_DES", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to /en/reservation.
-        /// </summary>
-        internal static string CLN_MASTER_RESERVATION_LINK {
-            get {
-                return ResourceManager.GetString("CLN_MASTER_RESERVATION_LINK", resourceCulture);
             }
         }
         
