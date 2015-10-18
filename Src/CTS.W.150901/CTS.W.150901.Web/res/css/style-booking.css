@@ -989,7 +989,7 @@ blockquote p {
 	color: #1c1c1c;
 	font-size: 12px;
 	font-weight: 600;
-	display: block;
+	/*display: block;*/
 	margin: 0 0 10px 0;
 }
 
@@ -2207,7 +2207,7 @@ div.wpcf7-response-output {
 
 .booking-main input[type="text"] {
 	margin: 0 0 20px 0;
-	color: #d3d3d3;
+	color: #1f1f1f;
 	font-size: 12px;
 	width: 93%;
 }
@@ -2217,7 +2217,7 @@ div.wpcf7-response-output {
 	padding: 10px 9px;
 	margin: 0 0 30px 0;
 	font-size: 12px;
-	color: #d3d3d3;
+	color: #1f1f1f;
 	border: none;
 	font-size: 12px;
 }
@@ -2491,7 +2491,7 @@ div.wpcf7-response-output {
 }
 
 #open_datepicker .ui-datepicker-group {
-	width: 250px;
+	/*width: 250px;*/
 	float: left;
 }
 
@@ -2517,7 +2517,7 @@ div.wpcf7-response-output {
 	border-right: 1px solid;
 	padding: 0 20px 0 0;
 }
-
+.ie #open_datepicker .ui-datepicker-group-first {padding: 0 25px 0 0;}
 #open_datepicker .ui-datepicker-group-last {
 	float: right;
 }
@@ -2566,6 +2566,7 @@ div.wpcf7-response-output {
 	outline: none;
 	font-size: 14px;
 }
+.ie .select-wrapper select {width: 117%;background-position: 80% center;}
 
 /* 7.2.5 - Booking Contact Info */
 .contact_details_list {
