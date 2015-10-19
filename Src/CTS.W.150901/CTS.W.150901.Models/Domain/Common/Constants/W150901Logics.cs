@@ -5,6 +5,9 @@
     /// </summary>
     public class W150901Logics
     {
+        // Định nghĩa mã locale
+        public const string CD_LOCALE_CD_EN = "en";
+        public const string CD_LOCALE_CD_VI = "vi";
         // Định nghĩa mã meta
         public const string CD_META_CD_PAGE_INDEX = "ma.metas.ma.pages.index";
         public const string CD_META_CD_PAGE_TOUR = "ma.metas.ma.pages.tour";
