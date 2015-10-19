@@ -16,6 +16,8 @@ namespace CTS.W._150901.Models
             AppHelper.LoadValidationRules(typeof(W150901), "CTS.W._150901.Models.ValidationRules.xml");
             // Load name resource
             AppHelper.LoadNameResources(Names.ResourceManager);
+            // Load name resource
+            AppHelper.LoadFormatResources(Formats.ResourceManager);
         }
     }
 }
