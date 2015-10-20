@@ -58,8 +58,21 @@ jQuery(document).ready(function () {
             });
         }
 
-
         if (bookingError == true) {
+            return false;
+        }
+
+        var bookingEmailError = false;
+        if (!checkMail(jQuery("input[id$='tbEmail']").val())) {
+            bookingEmailError = true;
+        }
+        if (bookingEmailError == true) {
+            jQuery(".booking-form-email-notice").effect("pulsate", { times: 2 }, 400);
+            jQuery(".booking-form-email-notice").fadeIn(1200, function () {
+                // Animation complete
+            });
+        }
+        if (bookingEmailError == true) {
             return false;
         }
 
@@ -202,4 +215,9 @@ function convertToNumber(data, defValue) {
         result = defValue;
     }
     return result;
+}
+function checkMail(data) {
+    var re = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g;
+    var regex = new RegExp(re);
+    return regex.test(data);
 }
