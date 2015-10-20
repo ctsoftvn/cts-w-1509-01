@@ -33,9 +33,9 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void InsertAPFileGroup(APFileGroup instance);
     partial void UpdateAPFileGroup(APFileGroup instance);
     partial void DeleteAPFileGroup(APFileGroup instance);
-    partial void InsertMATourType(MATourType instance);
-    partial void UpdateMATourType(MATourType instance);
-    partial void DeleteMATourType(MATourType instance);
+    partial void InsertMATour(MATour instance);
+    partial void UpdateMATour(MATour instance);
+    partial void DeleteMATour(MATour instance);
     partial void InsertAPImageSize(APImageSize instance);
     partial void UpdateAPImageSize(APImageSize instance);
     partial void DeleteAPImageSize(APImageSize instance);
@@ -102,9 +102,6 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void InsertMAService(MAService instance);
     partial void UpdateMAService(MAService instance);
     partial void DeleteMAService(MAService instance);
-    partial void InsertMATour(MATour instance);
-    partial void UpdateMATour(MATour instance);
-    partial void DeleteMATour(MATour instance);
     #endregion
 		
 		public EntitiesDataContext(string connection) : 
@@ -139,11 +136,11 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 			}
 		}
 		
-		public System.Data.Linq.Table<MATourType> MATourTypes
+		public System.Data.Linq.Table<MATour> MATours
 		{
 			get
 			{
-				return this.GetTable<MATourType>();
+				return this.GetTable<MATour>();
 			}
 		}
 		
@@ -320,14 +317,6 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 			get
 			{
 				return this.GetTable<MAService>();
-			}
-		}
-		
-		public System.Data.Linq.Table<MATour> MATours
-		{
-			get
-			{
-				return this.GetTable<MATour>();
 			}
 		}
 	}
@@ -682,23 +671,25 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MATourTypes")]
-	public partial class MATourType : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MATours")]
+	public partial class MATour : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private string _LocaleCd;
 		
-		private string _TypeCd;
+		private string _TourCd;
 		
-		private string _TypeName;
+		private string _TourName;
 		
 		private string _SearchName;
 		
 		private string _Slug;
 		
 		private string _FileCd;
+		
+		private string _Summary;
 		
 		private string _Notes;
 		
@@ -722,16 +713,18 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnCreated();
     partial void OnLocaleCdChanging(string value);
     partial void OnLocaleCdChanged();
-    partial void OnTypeCdChanging(string value);
-    partial void OnTypeCdChanged();
-    partial void OnTypeNameChanging(string value);
-    partial void OnTypeNameChanged();
+    partial void OnTourCdChanging(string value);
+    partial void OnTourCdChanged();
+    partial void OnTourNameChanging(string value);
+    partial void OnTourNameChanged();
     partial void OnSearchNameChanging(string value);
     partial void OnSearchNameChanged();
     partial void OnSlugChanging(string value);
     partial void OnSlugChanged();
     partial void OnFileCdChanging(string value);
     partial void OnFileCdChanged();
+    partial void OnSummaryChanging(string value);
+    partial void OnSummaryChanged();
     partial void OnNotesChanging(string value);
     partial void OnNotesChanged();
     partial void OnSortKeyChanging(System.Nullable<decimal> value);
@@ -750,7 +743,7 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
     partial void OnDeleteFlagChanged();
     #endregion
 		
-		public MATourType()
+		public MATour()
 		{
 			OnCreated();
 		}
@@ -775,42 +768,42 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string TypeCd
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TourCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string TourCd
 		{
 			get
 			{
-				return this._TypeCd;
+				return this._TourCd;
 			}
 			set
 			{
-				if ((this._TypeCd != value))
+				if ((this._TourCd != value))
 				{
-					this.OnTypeCdChanging(value);
+					this.OnTourCdChanging(value);
 					this.SendPropertyChanging();
-					this._TypeCd = value;
-					this.SendPropertyChanged("TypeCd");
-					this.OnTypeCdChanged();
+					this._TourCd = value;
+					this.SendPropertyChanged("TourCd");
+					this.OnTourCdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeName", DbType="NVarChar(255)")]
-		public string TypeName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TourName", DbType="NVarChar(255)")]
+		public string TourName
 		{
 			get
 			{
-				return this._TypeName;
+				return this._TourName;
 			}
 			set
 			{
-				if ((this._TypeName != value))
+				if ((this._TourName != value))
 				{
-					this.OnTypeNameChanging(value);
+					this.OnTourNameChanging(value);
 					this.SendPropertyChanging();
-					this._TypeName = value;
-					this.SendPropertyChanged("TypeName");
-					this.OnTypeNameChanged();
+					this._TourName = value;
+					this.SendPropertyChanged("TourName");
+					this.OnTourNameChanged();
 				}
 			}
 		}
@@ -871,6 +864,26 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._FileCd = value;
 					this.SendPropertyChanged("FileCd");
 					this.OnFileCdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Summary", DbType="NVarChar(MAX)")]
+		public string Summary
+		{
+			get
+			{
+				return this._Summary;
+			}
+			set
+			{
+				if ((this._Summary != value))
+				{
+					this.OnSummaryChanging(value);
+					this.SendPropertyChanging();
+					this._Summary = value;
+					this.SendPropertyChanged("Summary");
+					this.OnSummaryChanged();
 				}
 			}
 		}
@@ -8259,380 +8272,6 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
 					this._FileCd = value;
 					this.SendPropertyChanged("FileCd");
 					this.OnFileCdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Notes", DbType="NVarChar(MAX)")]
-		public string Notes
-		{
-			get
-			{
-				return this._Notes;
-			}
-			set
-			{
-				if ((this._Notes != value))
-				{
-					this.OnNotesChanging(value);
-					this.SendPropertyChanging();
-					this._Notes = value;
-					this.SendPropertyChanged("Notes");
-					this.OnNotesChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SortKey", DbType="Decimal(18,0)")]
-		public System.Nullable<decimal> SortKey
-		{
-			get
-			{
-				return this._SortKey;
-			}
-			set
-			{
-				if ((this._SortKey != value))
-				{
-					this.OnSortKeyChanging(value);
-					this.SendPropertyChanging();
-					this._SortKey = value;
-					this.SendPropertyChanged("SortKey");
-					this.OnSortKeyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VersionNo", DbType="Decimal(18,0)")]
-		public System.Nullable<decimal> VersionNo
-		{
-			get
-			{
-				return this._VersionNo;
-			}
-			set
-			{
-				if ((this._VersionNo != value))
-				{
-					this.OnVersionNoChanging(value);
-					this.SendPropertyChanging();
-					this._VersionNo = value;
-					this.SendPropertyChanged("VersionNo");
-					this.OnVersionNoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateUser", DbType="VarChar(50)")]
-		public string CreateUser
-		{
-			get
-			{
-				return this._CreateUser;
-			}
-			set
-			{
-				if ((this._CreateUser != value))
-				{
-					this.OnCreateUserChanging(value);
-					this.SendPropertyChanging();
-					this._CreateUser = value;
-					this.SendPropertyChanged("CreateUser");
-					this.OnCreateUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> CreateDate
-		{
-			get
-			{
-				return this._CreateDate;
-			}
-			set
-			{
-				if ((this._CreateDate != value))
-				{
-					this.OnCreateDateChanging(value);
-					this.SendPropertyChanging();
-					this._CreateDate = value;
-					this.SendPropertyChanged("CreateDate");
-					this.OnCreateDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdateUser", DbType="VarChar(50)")]
-		public string UpdateUser
-		{
-			get
-			{
-				return this._UpdateUser;
-			}
-			set
-			{
-				if ((this._UpdateUser != value))
-				{
-					this.OnUpdateUserChanging(value);
-					this.SendPropertyChanging();
-					this._UpdateUser = value;
-					this.SendPropertyChanged("UpdateUser");
-					this.OnUpdateUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UpdateDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> UpdateDate
-		{
-			get
-			{
-				return this._UpdateDate;
-			}
-			set
-			{
-				if ((this._UpdateDate != value))
-				{
-					this.OnUpdateDateChanging(value);
-					this.SendPropertyChanging();
-					this._UpdateDate = value;
-					this.SendPropertyChanged("UpdateDate");
-					this.OnUpdateDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeleteFlag", DbType="Bit")]
-		public System.Nullable<bool> DeleteFlag
-		{
-			get
-			{
-				return this._DeleteFlag;
-			}
-			set
-			{
-				if ((this._DeleteFlag != value))
-				{
-					this.OnDeleteFlagChanging(value);
-					this.SendPropertyChanging();
-					this._DeleteFlag = value;
-					this.SendPropertyChanged("DeleteFlag");
-					this.OnDeleteFlagChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MATours")]
-	public partial class MATour : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _LocaleCd;
-		
-		private string _TourCd;
-		
-		private string _TourName;
-		
-		private string _SearchName;
-		
-		private string _Slug;
-		
-		private string _TourTypeCd;
-		
-		private string _Notes;
-		
-		private System.Nullable<decimal> _SortKey;
-		
-		private System.Nullable<decimal> _VersionNo;
-		
-		private string _CreateUser;
-		
-		private System.Nullable<System.DateTime> _CreateDate;
-		
-		private string _UpdateUser;
-		
-		private System.Nullable<System.DateTime> _UpdateDate;
-		
-		private System.Nullable<bool> _DeleteFlag;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnLocaleCdChanging(string value);
-    partial void OnLocaleCdChanged();
-    partial void OnTourCdChanging(string value);
-    partial void OnTourCdChanged();
-    partial void OnTourNameChanging(string value);
-    partial void OnTourNameChanged();
-    partial void OnSearchNameChanging(string value);
-    partial void OnSearchNameChanged();
-    partial void OnSlugChanging(string value);
-    partial void OnSlugChanged();
-    partial void OnTourTypeCdChanging(string value);
-    partial void OnTourTypeCdChanged();
-    partial void OnNotesChanging(string value);
-    partial void OnNotesChanged();
-    partial void OnSortKeyChanging(System.Nullable<decimal> value);
-    partial void OnSortKeyChanged();
-    partial void OnVersionNoChanging(System.Nullable<decimal> value);
-    partial void OnVersionNoChanged();
-    partial void OnCreateUserChanging(string value);
-    partial void OnCreateUserChanged();
-    partial void OnCreateDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnCreateDateChanged();
-    partial void OnUpdateUserChanging(string value);
-    partial void OnUpdateUserChanged();
-    partial void OnUpdateDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnUpdateDateChanged();
-    partial void OnDeleteFlagChanging(System.Nullable<bool> value);
-    partial void OnDeleteFlagChanged();
-    #endregion
-		
-		public MATour()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LocaleCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string LocaleCd
-		{
-			get
-			{
-				return this._LocaleCd;
-			}
-			set
-			{
-				if ((this._LocaleCd != value))
-				{
-					this.OnLocaleCdChanging(value);
-					this.SendPropertyChanging();
-					this._LocaleCd = value;
-					this.SendPropertyChanged("LocaleCd");
-					this.OnLocaleCdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TourCd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string TourCd
-		{
-			get
-			{
-				return this._TourCd;
-			}
-			set
-			{
-				if ((this._TourCd != value))
-				{
-					this.OnTourCdChanging(value);
-					this.SendPropertyChanging();
-					this._TourCd = value;
-					this.SendPropertyChanged("TourCd");
-					this.OnTourCdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TourName", DbType="NVarChar(255)")]
-		public string TourName
-		{
-			get
-			{
-				return this._TourName;
-			}
-			set
-			{
-				if ((this._TourName != value))
-				{
-					this.OnTourNameChanging(value);
-					this.SendPropertyChanging();
-					this._TourName = value;
-					this.SendPropertyChanged("TourName");
-					this.OnTourNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchName", DbType="VarChar(255)")]
-		public string SearchName
-		{
-			get
-			{
-				return this._SearchName;
-			}
-			set
-			{
-				if ((this._SearchName != value))
-				{
-					this.OnSearchNameChanging(value);
-					this.SendPropertyChanging();
-					this._SearchName = value;
-					this.SendPropertyChanged("SearchName");
-					this.OnSearchNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Slug", DbType="VarChar(255)")]
-		public string Slug
-		{
-			get
-			{
-				return this._Slug;
-			}
-			set
-			{
-				if ((this._Slug != value))
-				{
-					this.OnSlugChanging(value);
-					this.SendPropertyChanging();
-					this._Slug = value;
-					this.SendPropertyChanged("Slug");
-					this.OnSlugChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TourTypeCd", DbType="VarChar(50)")]
-		public string TourTypeCd
-		{
-			get
-			{
-				return this._TourTypeCd;
-			}
-			set
-			{
-				if ((this._TourTypeCd != value))
-				{
-					this.OnTourTypeCdChanging(value);
-					this.SendPropertyChanging();
-					this._TourTypeCd = value;
-					this.SendPropertyChanged("TourTypeCd");
-					this.OnTourTypeCdChanged();
 				}
 			}
 		}
