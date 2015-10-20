@@ -77,66 +77,6 @@ namespace CTS.W._150901.Models.Domain.Common.Utils
         /// <summary>
         /// Kiểm tra dữ liệu tồn tại
         /// </summary>
-        public bool IsExistTourType(string localeCd, string typeCd, bool ignoreDeleteFlag) {
-            // Trường hợp tham số là null
-            if (DataCheckHelper.IsNull(localeCd)
-                || DataCheckHelper.IsNull(typeCd)) {
-                return true;
-            }
-            // Lấy thông tin dữ liệu
-            var dataInfo = GetInfoTourType(localeCd, typeCd, ignoreDeleteFlag);
-            // Kết quả trả về
-            return dataInfo != null;
-        }
-        /// <summary>
-        /// Kiểm tra dữ liệu duy nhất
-        /// </summary>
-        public bool IsUniqueTourType(string typeCd, string slug) {
-            // Trường hợp tham số là null
-            if (DataCheckHelper.IsNull(typeCd)
-                || DataCheckHelper.IsNull(slug)) {
-                return true;
-            }
-            // Kết quả trả về
-            return _comDao.IsUniqueTourType(typeCd, slug);
-        }
-        /// <summary>
-        /// Lấy thông tin dữ liệu
-        /// </summary>
-        public MATourType GetInfoTourType(string localeCd, string typeCd, bool ignoreDeleteFlag) {
-            // Trường hợp tham số là null
-            if (DataCheckHelper.IsNull(localeCd)
-                || DataCheckHelper.IsNull(typeCd)) {
-                return null;
-            }
-            // Kết quả trả về
-            return _comDao.GetInfoTourType(localeCd, typeCd, ignoreDeleteFlag);
-        }
-        /// <summary>
-        /// Lấy danh sách code
-        /// </summary>
-        public IList<KeyValueObject> GetDivTourType(string localeCd, string skipCode, bool nullValue, bool ignoreDeleteFlag) {
-            // Khởi tạo biến cục bộ
-            var skipCodes = new string[0];
-            var listResult = new List<KeyValueObject>();
-            // Lấy danh sách skip code trong trường hợp skip code khác null
-            if (skipCode != null) {
-                skipCodes = skipCode.Split(DataComLogics.DELIMITER_SKIP_CODE);
-            }
-            // Tạo giá trị trắng trong trường hợp có thêm giá trị trắng
-            if (nullValue) {
-                listResult.Add(new KeyValueObject());
-            }
-            // Lấy danh sách code
-            var listData = _comDao.GetDivTourType(localeCd, skipCodes, ignoreDeleteFlag);
-            // Thêm danh sách code vào danh sách kết quả
-            listResult.AddRange(listData);
-            // Kết quả trả về
-            return listResult;
-        }
-        /// <summary>
-        /// Kiểm tra dữ liệu tồn tại
-        /// </summary>
         public bool IsExistTour(string localeCd, string tourCd, bool ignoreDeleteFlag) {
             // Trường hợp tham số là null
             if (DataCheckHelper.IsNull(localeCd)

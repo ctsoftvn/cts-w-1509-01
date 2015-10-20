@@ -13,9 +13,6 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
         public const string MASTERDATACOMDAO_ISUNIQUEROOMTYPE_SQL = "MasterDataComDao_IsUniqueRoomType.sql";
         public const string MASTERDATACOMDAO_GETINFOROOMTYPE_SQL = "MasterDataComDao_GetInfoRoomType.sql";
         public const string MASTERDATACOMDAO_GETDIVROOMTYPE_SQL = "MasterDataComDao_GetDivRoomType.sql";
-        public const string MASTERDATACOMDAO_ISUNIQUETOURTYPE_SQL = "MasterDataComDao_IsUniqueTourType.sql";
-        public const string MASTERDATACOMDAO_GETINFOTOURTYPE_SQL = "MasterDataComDao_GetInfoTourType.sql";
-        public const string MASTERDATACOMDAO_GETDIVTOURTYPE_SQL = "MasterDataComDao_GetDivTourType.sql";
         public const string MASTERDATACOMDAO_ISUNIQUETOUR_SQL = "MasterDataComDao_IsUniqueTour.sql";
         public const string MASTERDATACOMDAO_GETINFOTOUR_SQL = "MasterDataComDao_GetInfoTour.sql";
         public const string MASTERDATACOMDAO_ISUNIQUEACCOM_SQL = "MasterDataComDao_IsUniqueAccom.sql";
@@ -68,49 +65,6 @@ namespace CTS.W._150901.Models.Domain.Common.Dao
             };
             // Kết quả trả về
             return GetListByFile<KeyValueObject>(MASTERDATACOMDAO_GETDIVROOMTYPE_SQL, param);
-        }
-
-        /// <summary>
-        /// Kiểm tra dữ liệu duy nhất
-        /// </summary>
-        public bool IsUniqueTourType(string typeCd, string slug) {
-            // Tạo tham số
-            var param = new {
-                TypeCd = typeCd,
-                Slug = slug
-            };
-            // Kết quả trả về
-            var count = GetCountByFile(MASTERDATACOMDAO_ISUNIQUETOURTYPE_SQL, param);
-            // Kết quả trả về
-            return count == 0;
-        }
-
-        /// <summary>
-        /// Lấy thông tin dữ liệu
-        /// </summary>
-        public MATourType GetInfoTourType(string localeCd, string typeCd, bool ignoreDeleteFlag) {
-            // Tạo tham số
-            var param = new {
-                LocaleCd = localeCd,
-                TypeCd = typeCd,
-                IgnoreDeleteFlag = ignoreDeleteFlag
-            };
-            // Kết quả trả về
-            return GetObjectByFile<MATourType>(MASTERDATACOMDAO_GETINFOTOURTYPE_SQL, param);
-        }
-
-        /// <summary>
-        /// Lấy danh sách code
-        /// </summary>
-        public IList<KeyValueObject> GetDivTourType(string localeCd, string[] skipCodes, bool ignoreDeleteFlag) {
-            // Tạo tham số
-            var param = new {
-                LocaleCd = localeCd,
-                SkipCodes = skipCodes,
-                IgnoreDeleteFlag = ignoreDeleteFlag
-            };
-            // Kết quả trả về
-            return GetListByFile<KeyValueObject>(MASTERDATACOMDAO_GETDIVTOURTYPE_SQL, param);
         }
 
         /// <summary>
