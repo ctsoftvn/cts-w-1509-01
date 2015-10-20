@@ -79,11 +79,6 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.List
                     msgs.Add(MessageHelper.GetMessageForList(
                         "P_CM_00015", i, "E_MSG_00001", "P_CM_00027"));
                 }
-                if (DataCheckHelper.IsNull(info.TourTypeCd)) {
-                    flagError = true;
-                    msgs.Add(MessageHelper.GetMessageForList(
-                        "P_CM_00015", i, "E_MSG_00001", "ADM_MA_TOURS_00003"));
-                }
                 // Trường hợp lỗi thì đi đến record tiếp theo
                 if (flagError) {
                     // Tăng giá trị i
@@ -99,7 +94,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.List
                 if (!isExist || !isExistMeta) {
                     flagError = true;
                     msgs.Add(MessageHelper.GetMessageForList(
-                        "P_CM_00015", i, "E_MSG_00016", "ADM_MA_TOURS_00005"));
+                        "P_CM_00015", i, "E_MSG_00016", "ADM_MA_TOURS_00006"));
                 }
                 // Trường hợp lỗi thì đi đến record tiếp theo
                 if (flagError) {
@@ -163,7 +158,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.List
                     // Gán dữ liệu cập nhật
                     other.TourCd = info.TourCd;
                     other.Slug = info.Slug;
-                    other.TourTypeCd = info.TourTypeCd;
+                    other.FileCd = info.FileCd;
                     other.SortKey = info.SortKey;
                     other.DeleteFlag = info.DeleteFlag;
                     // Thêm vào danh sách cập nhật
@@ -188,6 +183,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.List
                     // Gán dữ liệu cập nhật
                     listUpdate[idxObj].TourName = info.TourName;
                     listUpdate[idxObj].SearchName = info.SearchName;
+                    listUpdate[idxObj].Summary = info.Summary;
                     listUpdate[idxObj].Notes = info.Notes;
                 } else {
                     // Thêm vào danh sách cập nhật

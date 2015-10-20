@@ -17,8 +17,6 @@ namespace CTS.W._150901.Models.Domain.Model.Admin.Master.Tours.Entry
         [OutputObject(IgnoreAttribute = false)]
         public LocaleModel<TourObject> LocaleModel { get; set; }
         [OutputList(IgnoreAttribute = true)]
-        public IList<ComboItem> CboTourTypes { get; set; }
-        [OutputList(IgnoreAttribute = true)]
         public IList<ComboItem> CboDeleteFlag { get; set; }
         [OutputList(IgnoreAttribute = true)]
         public IList<ComboItem> CboLocales { get; set; }

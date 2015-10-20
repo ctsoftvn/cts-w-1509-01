@@ -5,8 +5,8 @@ SELECT
 	mt.TourName,
 	mt.SearchName,
 	mt.Slug,
-	mt.TourTypeCd,
-	mtt.TypeName AS TourTypeName,
+	mt.FileCd,
+	mt.Summary,
 	mt.Notes,
 	mt.SortKey,
 	mt.VersionNo,
@@ -16,10 +16,6 @@ SELECT
 	mm.MetaDesc,
 	mm.MetaKeys
 FROM [MATours] mt
-	INNER JOIN [MATourTypes] mtt
-		ON (mtt.LocaleCd = @BasicLocale
-			AND mtt.TypeCd = mt.TourTypeCd
-			AND mtt.DeleteFlag = 0)
 	LEFT OUTER JOIN [MACodes] cd1
 		ON (cd1.LocaleCd = @ContextLocale
 			AND cd1.CodeGroupCd = @GrpCdLocales
@@ -38,7 +34,6 @@ WHERE
 		OR mt.SearchName LIKE '%' + @TourName + '%'
 		OR @TourName IS NULL)
 	AND (mt.Slug LIKE '%' + @Slug + '%' OR @Slug IS NULL)
-	AND (mt.TourTypeCd = @TourTypeCd OR @TourTypeCd IS NULL)
 	AND (mt.DeleteFlag = @DeleteFlag OR @DeleteFlag IS NULL)
 ORDER BY
 	\*OrderByClause*\,

@@ -27,10 +27,13 @@ namespace CTS.W._150901.Models.Domain.Object.Admin.Master
         [InputText(RuleName = "slug", MessageParam = "P_CM_00027")]
         public string Slug { get; set; }
         [OutputText]
-        [InputText(RuleName = "code", MessageParam = "ADM_MA_TOURS_00003")]
-        public string TourTypeCd { get; set; }
+        [InputText(RuleName = "fileCd", MessageParam = "ADM_MA_TOURS_00003")]
+        public string FileCd { get; set; }
         [OutputText]
-        [InputText(RuleName = "notes", MessageParam = "ADM_MA_TOURS_00004")]
+        [InputText(RuleName = "notes1000", MessageParam = "ADM_MA_TOURS_00004")]
+        public string Summary { get; set; }
+        [OutputText]
+        [InputText(RuleName = "notes", MessageParam = "ADM_MA_TOURS_00005")]
         public string Notes { get; set; }
         [OutputText(Format = "{0:N0}")]
         [InputText(RuleName = "sortKey", MessageParam = "P_CM_00013")]
@@ -44,8 +47,6 @@ namespace CTS.W._150901.Models.Domain.Object.Admin.Master
 
         [OutputText]
         public string LocaleName { get; set; }
-        [OutputText]
-        public string TourTypeName { get; set; }
         [OutputText]
         public string DeleteFlagName { get; set; }
     }

@@ -64,7 +64,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.Entry
                     basicLocale, W150901Logics.GRPMETA_MA_TOURS, inputObject.TourCd, true);
                 if (!isExist || !isExistMeta) {
                     msgs.Add(MessageHelper.GetMessage(
-                        "E_MSG_00016", "ADM_MA_TOURS_00005"));
+                        "E_MSG_00016", "ADM_MA_TOURS_00006"));
                 }
                 // Kiểm tra danh sách lỗi
                 if (!DataCheckHelper.IsNull(msgs)) {
@@ -134,7 +134,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.Entry
                 localeModel.DataInfo.TourName = string.Empty;
                 localeModel.DataInfo.SearchName = string.Empty;
                 localeModel.DataInfo.Slug = string.Empty;
-                localeModel.DataInfo.TourTypeCd = string.Empty;
+                localeModel.DataInfo.FileCd = string.Empty;
                 localeModel.DataInfo.LocaleCd = basicLocale;
                 localeModel.DataInfo.SortKey = decimal.One;
                 localeModel.DataInfo.DeleteFlag = false;
@@ -145,13 +145,9 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.Entry
             // Lấy danh sách code
             var listLocales = codeCom.GetDiv(
                 WebContextHelper.LocaleCd, DataComLogics.GRPCD_CLN_LOCALES, basicLocale, false, false);
-            var listTourTypes = masterDataCom.GetDivTourType(
-                basicLocale, null, false, false);
             var listDeleteFlag = codeCom.GetDivDeleteFlag(WebContextHelper.LocaleCd, false);
             // Lấy giá trị combo
             var cbLocales = DataHelper.ToComboItems(listLocales, string.Empty);
-            var cbTourTypes = DataHelper.ToComboItems(
-                listTourTypes, localeModel.DataInfo.TourTypeCd);
             var cbDeleteFlag = DataHelper.ToComboItems(
                 listDeleteFlag, localeModel.DataInfo.DeleteFlag);
             // Gán giá trị trả về
@@ -159,8 +155,6 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.Entry
             getResult.LocaleModel = localeModel;
             getResult.CboLocales = cbLocales.ListItems;
             getResult.CboLocalesSeleted = cbLocales.SeletedValue;
-            getResult.CboTourTypes = cbTourTypes.ListItems;
-            getResult.LocaleModel.DataInfo.TourTypeCd = cbTourTypes.SeletedValue;
             getResult.CboDeleteFlag = cbDeleteFlag.ListItems;
             getResult.LocaleModel.DataInfo.DeleteFlag = cbDeleteFlag.SeletedValueBoolean;
             // Kết quả trả về

@@ -10,10 +10,6 @@ namespace CTS.W._150901.Models.Domain.Model.Admin.Master.Tours.List
     public class InitDataModel : BasicInfoModel
     {
         [OutputList(IgnoreAttribute = true)]
-        public IList<ComboItem> CboTourTypes { get; set; }
-        [OutputText]
-        public string CboTourTypesSeleted { get; set; }
-        [OutputList(IgnoreAttribute = true)]
         public IList<ComboItem> CboLocales { get; set; }
         [OutputText]
         public string CboLocalesSeleted { get; set; }
@@ -23,8 +19,6 @@ namespace CTS.W._150901.Models.Domain.Model.Admin.Master.Tours.List
         public bool? CboDeleteFlagSeleted { get; set; }
         [OutputList(IgnoreAttribute = true)]
         public IList<ComboItem> CboGrdDeleteFlag { get; set; }
-        [OutputList(IgnoreAttribute = true)]
-        public IList<ComboItem> CboGrdTourTypes { get; set; }
         [OutputText]
         public string BasicLocale { get; set; }
         [OutputText(Format = "{0:N0}")]

@@ -57,24 +57,17 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.List
             // Lấy danh sách code
             var listLocales = codeCom.GetDiv(
                 WebContextHelper.LocaleCd, DataComLogics.GRPCD_CLN_LOCALES, null, true, false);
-            var listTourTypes = masterDataCom.GetDivTourType(basicLocale, null, true, false);
-            var listTourTypesGrd = masterDataCom.GetDivTourType(basicLocale, null, false, false);
             var listDeleteFlag = codeCom.GetDivDeleteFlag(WebContextHelper.LocaleCd, true);
             var listDeleteFlagGrd = codeCom.GetDivDeleteFlag(WebContextHelper.LocaleCd, false);
             // Lấy giá trị combo
             var cbLocales = DataHelper.ToComboItems(listLocales, basicLocale);
-            var cbTourTypes = DataHelper.ToComboItems(listTourTypes, string.Empty);
-            var cbTourTypesGrd = DataHelper.ToComboItems(listTourTypesGrd, string.Empty);
             var cbDeleteFlag = DataHelper.ToComboItems(listDeleteFlag, false);
             var cbDeleteFlagGrd = DataHelper.ToComboItems(listDeleteFlagGrd, false);
             // Gán giá trị trả về
             getResult.CboLocales = cbLocales.ListItems;
             getResult.CboLocalesSeleted = cbLocales.SeletedValue;
-            getResult.CboTourTypes = cbTourTypes.ListItems;
-            getResult.CboTourTypesSeleted = cbTourTypes.SeletedValue;
             getResult.CboDeleteFlag = cbDeleteFlag.ListItems;
             getResult.CboDeleteFlagSeleted = cbDeleteFlag.SeletedValueBoolean;
-            getResult.CboGrdTourTypes = cbTourTypesGrd.ListItems;
             getResult.CboGrdDeleteFlag = cbDeleteFlagGrd.ListItems;
             getResult.BasicLocale = basicLocale;
             getResult.Limit = limit;

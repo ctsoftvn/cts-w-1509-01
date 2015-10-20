@@ -63,9 +63,6 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.Entry
             if (DataCheckHelper.IsNull(dataInfo.Slug)) {
                 msgs.Add(MessageHelper.GetMessage("E_MSG_00001", "P_CM_00027"));
             }
-            if (DataCheckHelper.IsNull(dataInfo.TourTypeCd)) {
-                msgs.Add(MessageHelper.GetMessage("E_MSG_00001", "ADM_MA_TOURS_00003"));
-            }
             // Kiểm tra danh sách lỗi
             if (!DataCheckHelper.IsNull(msgs)) {
                 throw new ExecuteException(msgs);
@@ -85,11 +82,11 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.Entry
                 dataInfo.LocaleCd, W150901Logics.GRPMETA_MA_TOURS, dataInfo.TourCd, true);
             // Kiểm tra dữ liệu tồn tại trường hợp status là add
             if (inputObject.IsAdd && (isExist || isExistMeta)) {
-                msgs.Add(MessageHelper.GetMessage("E_MSG_00017", "ADM_MA_TOURS_00005"));
+                msgs.Add(MessageHelper.GetMessage("E_MSG_00017", "ADM_MA_TOURS_00006"));
             }
             // Kiểm tra dữ liệu tồn tại trường hợp status là edit
             if (inputObject.IsEdit && (!isExist || !isExistMeta)) {
-                msgs.Add(MessageHelper.GetMessage("E_MSG_00016", "ADM_MA_TOURS_00005"));
+                msgs.Add(MessageHelper.GetMessage("E_MSG_00016", "ADM_MA_TOURS_00006"));
             }
             // Kiểm tra danh sách lỗi
             if (!DataCheckHelper.IsNull(msgs)) {
@@ -188,7 +185,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.Entry
                     // Gán dữ liệu cập nhật
                     info.TourCd = dataInfo.TourCd;
                     info.Slug = dataInfo.Slug;
-                    info.TourTypeCd = dataInfo.TourTypeCd;
+                    info.FileCd = dataInfo.FileCd;
                     info.SortKey = dataInfo.SortKey;
                     info.DeleteFlag = dataInfo.DeleteFlag;
                     // Xử lý insert đối tượng dữ liệu
@@ -204,7 +201,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Tours.Entry
                     // Gán dữ liệu cập nhật
                     info.TourCd = dataInfo.TourCd;
                     info.Slug = dataInfo.Slug;
-                    info.TourTypeCd = dataInfo.TourTypeCd;
+                    info.FileCd = dataInfo.FileCd;
                     info.SortKey = dataInfo.SortKey;
                     info.DeleteFlag = dataInfo.DeleteFlag;
                     // Trường hợp không tồn tại dữ liệu
