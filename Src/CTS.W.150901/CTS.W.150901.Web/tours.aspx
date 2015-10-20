@@ -11,20 +11,11 @@
         <HeaderTemplate>
         </HeaderTemplate>
         <ItemTemplate>
-            <%# ((HashMap)Container.DataItem)["TypeName"]%>
-            <img alt='<%# ((HashMap)Container.DataItem)["TypeName"] %>' title='<%# ((HashMap)Container.DataItem)["TypeName"] %>'
+            <a href='<%# "/tours/" + ((HashMap)Container.DataItem)["Slug"]%>'>
+                <%# ((HashMap)Container.DataItem)["TourName"]%></a>
+            <%# ((HashMap)Container.DataItem)["Summary"]%>
+            <img alt='<%# ((HashMap)Container.DataItem)["TourName"] %>' title='<%# ((HashMap)Container.DataItem)["TourName"] %>'
                 src='<%# "/file-manager?fcd=" + ((HashMap)Container.DataItem)["FileCd"] + "&lang=en&s=normal" %>' />
-            <asp:Repeater DataSource='<%# ((HashMap)Container.DataItem)["ListTourByType"]%>' 
-                runat="server">
-                <HeaderTemplate>
-                </HeaderTemplate>
-                <ItemTemplate>
-                    <a href='<%# "/tours/" +  ((Container.Parent.Parent as RepeaterItem).DataItem as HashMap)["Slug"]+ "/" + ((HashMap)Container.DataItem)["Slug"]%>'>
-                        <%# ((HashMap)Container.DataItem)["TourName"]%></a>
-                </ItemTemplate>
-                <FooterTemplate>
-                </FooterTemplate>
-            </asp:Repeater>
         </ItemTemplate>
         <FooterTemplate>
         </FooterTemplate>

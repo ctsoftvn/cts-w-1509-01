@@ -30,15 +30,15 @@ namespace CTS.W._150901.Web
             Page.MetaKeywords = PageCom.GetValue<string>(response, "MetaKey");
             Page.MetaDescription = PageCom.GetValue<string>(response, "MetaDescription");
 
-            getTourTypes();
+            getTours();
         }
 
-        public void getTourTypes()
+        public void getTours()
         {
             var logicTour = new LogicTour.InitOperateLogic();
             var responseTour = PageCom.Invoke(logicTour, null);
 
-            var listTours = PageCom.GetValue<IList<object>>(responseTour, "ListTourType");
+            var listTours = PageCom.GetValue<IList<object>>(responseTour, "ListTours");
             
             rptTours.DataSource = listTours;
             rptTours.DataBind();
