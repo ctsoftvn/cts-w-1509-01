@@ -29,35 +29,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     });
-    // Master|TourTypes|List
-    $stateProvider.state('master-tour-types-list', {
-        url: "/administer/ma/tour-types/list",
-        views: {
-            main: {
-                templateUrl: "/adm/vws/ma/tour-types/list.html",
-                controller: "MATourTypesListCtrl"
-            }
-        }
-    });
-    // Master|TourTypes|Entry
-    $stateProvider.state('master-tour-types-entry', {
-        url: "/administer/ma/tour-types/entry",
-        views: {
-            main: {
-                templateUrl: "/adm/vws/ma/tour-types/entry.html",
-                controller: "MATourTypesEntryCtrl"
-            }
-        }
-    });
-    $stateProvider.state('master-tour-types-list-entry', {
-        url: "/administer/ma/tour-types/entry/{Status}/{CallType}/{TypeCd}",
-        views: {
-            main: {
-                templateUrl: "/adm/vws/ma/tour-types/entry.html",
-                controller: "MATourTypesEntryCtrl"
-            }
-        }
-    });
     // Master|Tours|List
     $stateProvider.state('master-tours-list', {
         url: "/administer/ma/tours/list",
