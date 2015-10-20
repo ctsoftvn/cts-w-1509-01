@@ -56,11 +56,6 @@
         public const string CD_ROLE_CD_ADM_MA_RMT_LI_UPDATE = "im.roles.adm.ma_rmt_li.update";
         public const string CD_ROLE_CD_ADM_MA_RMT_EN_VIEW = "im.roles.adm.ma_rmt_en.view";
         public const string CD_ROLE_CD_ADM_MA_RMT_EN_UPDATE = "im.roles.adm.ma_rmt_en.update";
-        public const string CD_ROLE_CD_ADM_MA_TRT_LI_VIEW = "im.roles.adm.ma_trt_li.view";
-        public const string CD_ROLE_CD_ADM_MA_TRT_LI_FILTER = "im.roles.adm.ma_trt_li.filter";
-        public const string CD_ROLE_CD_ADM_MA_TRT_LI_UPDATE = "im.roles.adm.ma_trt_li.update";
-        public const string CD_ROLE_CD_ADM_MA_TRT_EN_VIEW = "im.roles.adm.ma_trt_en.view";
-        public const string CD_ROLE_CD_ADM_MA_TRT_EN_UPDATE = "im.roles.adm.ma_trt_en.update";
         public const string CD_ROLE_CD_ADM_MA_TOU_LI_VIEW = "im.roles.adm.ma_tou_li.view";
         public const string CD_ROLE_CD_ADM_MA_TOU_LI_FILTER = "im.roles.adm.ma_tou_li.filter";
         public const string CD_ROLE_CD_ADM_MA_TOU_LI_UPDATE = "im.roles.adm.ma_tou_li.update";
