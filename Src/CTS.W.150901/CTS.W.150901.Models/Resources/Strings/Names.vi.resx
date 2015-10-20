@@ -145,26 +145,16 @@
         <value>Tên tour</value>
     </data>
     <data name="ADM_MA_TOURS_00003" xml:space="preserve">
-        <value>Loại tour</value>
-    </data>
-    <data name="ADM_MA_TOURS_00004" xml:space="preserve">
-        <value>Nội dung</value>
-    </data>
-    <data name="ADM_MA_TOURS_00005" xml:space="preserve">
-        <value>Tour</value>
-    </data>
-    <!-- adm/ma/tour-types -->
-    <data name="ADM_MA_TOURTYPES_00001" xml:space="preserve">
-        <value>Mã loại</value>
-    </data>
-    <data name="ADM_MA_TOURTYPES_00002" xml:space="preserve">
-        <value>Tên loại</value>
-    </data>
-    <data name="ADM_MA_TOURTYPES_00003" xml:space="preserve">
         <value>Ảnh</value>
     </data>
-    <data name="ADM_MA_TOURTYPES_00004" xml:space="preserve">
-        <value>Loại tour</value>
+    <data name="ADM_MA_TOURS_00004" xml:space="preserve">
+        <value>Tóm tắt</value>
+    </data>
+    <data name="ADM_MA_TOURS_00005" xml:space="preserve">
+        <value>Nội dung</value>
+    </data>
+    <data name="ADM_MA_TOURS_00006" xml:space="preserve">
+        <value>Tour</value>
     </data>
     <!-- adm/ma/accoms -->
     <data name="ADM_MA_ACCOMS_00001" xml:space="preserve">
