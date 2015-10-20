@@ -70,7 +70,6 @@
                                     <%= Strings.CLN_BOOKING_RESERVATION_COMPLETE_EMAIL%>:</strong>
                                     <asp:Literal runat="server" ID="ltEmail"></asp:Literal></li>
                             </ul>
-                            <asp:LinkButton ID="btnSubmit" OnClick="btnSubmit_Click" Text="Submit" runat="server" />
                             <!-- END .booking-main -->
                         </div>
                         <!-- END .booking-main-wrapper -->

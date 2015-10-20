@@ -14,6 +14,7 @@ namespace CTS.W._150901.Models.Domain.Object.Client.Booking
 
         public string TypeCd { get; set; }
         public string TypeName { get; set; }
+        public decimal? AdultPerRoom { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
