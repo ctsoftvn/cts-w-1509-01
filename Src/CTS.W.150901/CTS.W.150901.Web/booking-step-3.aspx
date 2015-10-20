@@ -59,6 +59,10 @@
                                 <p>
                                     <%= Strings.CLN_BOOKING_FORM_NOTICE%></p>
                             </div>
+                            <div class="dark-notice booking-form-email-notice">
+                                <p>
+                                    <%= Strings.CLN_BOOKING_FORM_EMAIL_NOTICE%></p>
+                            </div>
                             <h4 class="title-style4">
                                 <%= Strings.CLN_BOOKING_FORM_GUEST_DETAIL%><span class="title-block"></span></h4>
                             <div class="input-left">
@@ -72,7 +76,7 @@
                                 <asp:TextBox ID="tbPhone" runat="server"></asp:TextBox>
                             </div>
                             <div class="input-right">
-								<asp:Label AssociatedControlID="tbAddress" runat="server"><%= Strings.CLN_BOOKING_FORM_ADDRESS%></asp:Label>
+                                <asp:Label AssociatedControlID="tbAddress" runat="server"><%= Strings.CLN_BOOKING_FORM_ADDRESS%></asp:Label>
                                 <asp:TextBox ID="tbAddress" runat="server"></asp:TextBox>
                                 <asp:Label AssociatedControlID="tbStateCounty" runat="server"><%= Strings.CLN_BOOKING_FORM_STATE_COUNTY%></asp:Label>
                                 <asp:TextBox ID="tbStateCounty" runat="server"></asp:TextBox>
@@ -81,12 +85,12 @@
                                 <asp:Label AssociatedControlID="tbCountry" runat="server"><%= Strings.CLN_BOOKING_FORM_COUNTRY%></asp:Label>
                                 <asp:TextBox ID="tbCountry" runat="server"></asp:TextBox>
                             </div>
-							<asp:Label AssociatedControlID="tbCountry" runat="server"><%= Strings.CLN_BOOKING_FORM_NOTES%></asp:Label>
+                            <asp:Label AssociatedControlID="tbCountry" runat="server"><%= Strings.CLN_BOOKING_FORM_NOTES%></asp:Label>
                             <asp:TextBox ID="tbNotes" runat="server" TextMode="MultiLine" Rows="10" Columns="1"></asp:TextBox>
                             <div class="clearfix">
                             </div>
-							<asp:Button ID="btnBookingStep3" CssClass="book-deposit booking-fields-form"
-								Text='<%= Strings.CLN_BOOKING_FORM_BOOK_NOW%>' OnClick="btnBookingStep3_Click" runat="server" />
+                            <asp:Button ID="btnBookingStep3" CssClass="book-deposit booking-fields-form" Text='<%= Strings.CLN_BOOKING_FORM_BOOK_NOW%>'
+                                OnClick="btnBookingStep3_Click" runat="server" />
                             <!-- BEGIN .booking-main -->
                         </div>
                         <!-- BEGIN .booking-main-wrapper -->
@@ -108,11 +112,11 @@
                                     <%= Strings.CLN_BOOKING_CHECK_OUT%>: </span>
                                     <asp:Literal runat="server" ID="ltDateTo"></asp:Literal></li>
                                 <li>
-                                    <asp:CheckBox runat="server" ID="chkPickUp" CssClass="ckbAirport"/><span><%= Strings.CLN_BOOKING_PICKUP%>:
+                                    <asp:CheckBox runat="server" ID="chkPickUp" CssClass="ckbAirport" /><span><%= Strings.CLN_BOOKING_PICKUP%>:
                                     </span>
                                     <asp:Literal runat="server" ID="ltPickUp"></asp:Literal>$ </li>
                                 <li>
-                                    <asp:CheckBox runat="server" ID="chkSeeOff" CssClass="ckbAirport"/><span><%= Strings.CLN_BOOKING_SEEOFF%>:
+                                    <asp:CheckBox runat="server" ID="chkSeeOff" CssClass="ckbAirport" /><span><%= Strings.CLN_BOOKING_SEEOFF%>:
                                     </span>
                                     <asp:Literal runat="server" ID="ltSeeOff"></asp:Literal>$</li>
                             </ul>

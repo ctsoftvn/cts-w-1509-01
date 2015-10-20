@@ -18,7 +18,8 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Booking
         /// </summary>
         /// <param name="inputObject">DataModel</param>
         /// <returns>DataModel</returns>
-        public SendDataModel Execute(SendDataModel inputObject) {
+        public SendDataModel Execute(SendDataModel inputObject)
+        {
             // Kiểm tra thông tin
             Check(inputObject);
             // Gửi thông tin
@@ -33,7 +34,8 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Booking
         /// Kiểm tra thông tin.
         /// </summary>
         /// <param name="inputObject">DataModel</param>
-        private void Check(SendDataModel inputObject) {
+        private void Check(SendDataModel inputObject)
+        {
         }
 
         /// <summary>
@@ -41,7 +43,8 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Booking
         /// </summary>
         /// <param name="inputObject">DataModel</param>
         /// <returns>DataModel</returns>
-        private SendDataModel SendInfo(SendDataModel inputObject) {
+        private SendDataModel SendInfo(SendDataModel inputObject)
+        {
             // Khởi tạo biến cục bộ
             var sendResult = new SendDataModel();
             var companyCom = new CompanyCom();
@@ -49,7 +52,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Booking
             // Map dữ liệu
             DataHelper.CopyObject(inputObject, sendResult);
             // Lấy đường dẫn server
-            var serverPath = HttpHelper.MapPath("/stg/tmpl/email/reservation.html");
+            var serverPath = HttpHelper.MapPath("/stg/tmpl/email/" + WebContextHelper.LocaleCd + "/reservation.html");
             // Tiến hành đọc file template
             var tmpl = FileHelper.ToString(serverPath);
             // Lấy thông tin dữ liệu

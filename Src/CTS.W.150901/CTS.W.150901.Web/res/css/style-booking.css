@@ -2038,7 +2038,7 @@ div.wpcf7-response-output {
 }
 
 .calendar-notice,
-.booking-form-notice,
+.booking-form-notice,.booking-form-email-notice,
 .booking-form-terms {
 	display: none;
 }

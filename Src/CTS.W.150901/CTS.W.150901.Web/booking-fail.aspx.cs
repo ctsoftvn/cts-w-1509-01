@@ -12,7 +12,7 @@ namespace CTS.W._150901.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.Title = Resources.Strings.CLN_BOOKING_PAGE;
         }
     }
 }

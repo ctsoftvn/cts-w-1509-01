@@ -41,6 +41,7 @@ namespace CTS.W._150901.Web
                 ClearData();
             }
             btnBookingStep3.Text = Strings.CLN_BOOKING_FORM_BOOK_NOW;
+            Page.Title = Resources.Strings.CLN_BOOKING_PAGE;
         }
         protected void btnBookingStep3_Click(object sender, EventArgs e) {
             SetInputInfo();

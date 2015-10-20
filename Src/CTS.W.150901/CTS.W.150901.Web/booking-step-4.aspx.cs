@@ -42,6 +42,7 @@ namespace CTS.W._150901.Web
             }
             // Clear Info
             Session["CLN.W150901.BookingData"] = null;
+            Page.Title = Resources.Strings.CLN_BOOKING_PAGE;
         }
         private BasicResponse GetInfo(string typeCd) {
             var request = new BasicRequest();

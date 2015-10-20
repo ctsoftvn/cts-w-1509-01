@@ -364,4 +364,24 @@
   <data name="CLN_BOOKING_FAIL_REDIRECT" xml:space="preserve">
 		<value>xin mời quý khách đặt phòng lại</value>
 	</data>
+
+  <data name="CLN_BOOKING_PAGE" xml:space="preserve">
+		<value>Thông tin đặt phòng</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_EMAIL_NOTICE" xml:space="preserve">
+		<value>Email sai định dạng (Vd : xxx@xxx.xxx)</value>
+	</data>
+
+  <data name="CLN_CONTACT_US_NAME" xml:space="preserve">
+		<value>Tên</value>
+	</data>
+  <data name="CLN_CONTACT_US_PHONE" xml:space="preserve">
+		<value>Điện thoại</value>
+	</data>
+  <data name="CLN_CONTACT_US_EMAIL" xml:space="preserve">
+		<value>Email</value>
+	</data>
+  <data name="CLN_CONTACT_US_REQUEST" xml:space="preserve">
+		<value>Yêu cầu</value>
+	</data>
 </root>

@@ -364,4 +364,23 @@
   <data name="CLN_BOOKING_FAIL_REDIRECT" xml:space="preserve">
 		<value>begin your booking here</value>
 	</data>
+  <data name="CLN_BOOKING_PAGE" xml:space="preserve">
+		<value>Room Reservation</value>
+	</data>
+  <data name="CLN_BOOKING_FORM_EMAIL_NOTICE" xml:space="preserve">
+		<value>Email format incorrect (Ex : xxx@xxx.xxx)</value>
+	</data>
+
+  <data name="CLN_CONTACT_US_NAME" xml:space="preserve">
+		<value>Name</value>
+	</data>
+  <data name="CLN_CONTACT_US_PHONE" xml:space="preserve">
+		<value>Phone</value>
+	</data>
+  <data name="CLN_CONTACT_US_EMAIL" xml:space="preserve">
+		<value>Email</value>
+	</data>
+  <data name="CLN_CONTACT_US_REQUEST" xml:space="preserve">
+		<value>Request</value>
+	</data>
 </root>

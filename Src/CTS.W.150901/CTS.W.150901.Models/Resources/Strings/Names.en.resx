@@ -101,6 +101,9 @@
 
   <!-- Client -->
   <data name="CLN_CONTACT_SUBJECT" xml:space="preserve">
-        <value>Contact us</value>
+        <value>Thông tin liên hệ khách hàng</value>
+    </data>
+  <data name="CLN_RESERVE_SUBJECT" xml:space="preserve">
+        <value>Booking information</value>
     </data>
 </root>

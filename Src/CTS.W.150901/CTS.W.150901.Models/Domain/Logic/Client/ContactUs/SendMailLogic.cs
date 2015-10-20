@@ -58,8 +58,8 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.ContactUs
             DataHelper.CopyObject(inputObject, getResult);
             // Lấy thông tin dữ liệu
             var fileTemplate = FileHelper.ToString(HttpHelper.MapPath("/stg/tmpl/email/contact-us.html"));
-            var emailContact = companyCom.GetString("en", W150901Logics.CD_INFO_CD_EMAIL_CONTACT, false);
-            var host = companyCom.GetString("en", W150901Logics.CD_INFO_CD_HOST, false);
+            var emailContact = companyCom.GetString(W150901Logics.CD_LOCALE_CD_EN, W150901Logics.CD_INFO_CD_EMAIL_CONTACT, false);
+            var host = companyCom.GetString(W150901Logics.CD_LOCALE_CD_EN, W150901Logics.CD_INFO_CD_HOST, false);
             var subject = NameHelper.GetNameString("CLN_CONTACT_SUBJECT");
             var body = new StringBuilder(fileTemplate);
             body.Replace("{Name}", inputObject.Name);
@@ -68,8 +68,8 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.ContactUs
             body.Replace("{Description}", inputObject.Description);
 
             // Tiến hành send mail
-            var smtp = new SmtpClient(host);
-            var mail = new MailMessage(inputObject.Email, emailContact, subject, body.ToString());
+            var smtp = MailHelper.CreateSmtpClient(host);
+            var mail = MailHelper.CreateMailMessage(inputObject.Email, emailContact, subject, body.ToString());
             MailHelper.SendMail(smtp, mail);
             // Kết quả trả về
             return getResult;

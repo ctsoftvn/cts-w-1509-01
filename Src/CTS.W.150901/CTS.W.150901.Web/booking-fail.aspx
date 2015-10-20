@@ -25,7 +25,7 @@
                         </div>
                         <div class="step-wrapper">
                             <div class="step-icon-wrapper">
-                                <div class="step-icon step-icon-current">
+                                <div class="step-icon">
                                     2.</div>
                             </div>
                             <div class="step-title">

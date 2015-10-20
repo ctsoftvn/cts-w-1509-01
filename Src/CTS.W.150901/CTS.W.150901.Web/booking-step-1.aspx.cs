@@ -17,6 +17,7 @@ namespace CTS.W._150901.Web
             }
             //
             btnBookingStep1.Text = Resources.Strings.CLN_BOOKING_CHECK_AVAILABILITY;
+            Page.Title = Resources.Strings.CLN_BOOKING_PAGE;
         }
         protected void btnBookingStep1_Click(object sender, EventArgs e) {
             var bookingObj = new BookingObject();

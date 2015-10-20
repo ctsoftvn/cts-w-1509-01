@@ -214,6 +214,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email format incorrect (Ex : xxx@xxx.xxx).
+        /// </summary>
+        internal static string CLN_BOOKING_FORM_EMAIL_NOTICE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_FORM_EMAIL_NOTICE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to First Name *.
         /// </summary>
         internal static string CLN_BOOKING_FORM_FIRST_NAME {
@@ -300,6 +309,15 @@ namespace Resources {
         internal static string CLN_BOOKING_OCCUPANCY {
             get {
                 return ResourceManager.GetString("CLN_BOOKING_OCCUPANCY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Room Reservation.
+        /// </summary>
+        internal static string CLN_BOOKING_PAGE {
+            get {
+                return ResourceManager.GetString("CLN_BOOKING_PAGE", resourceCulture);
             }
         }
         
@@ -473,6 +491,42 @@ namespace Resources {
         internal static string CLN_BTN_SUBMIT {
             get {
                 return ResourceManager.GetString("CLN_BTN_SUBMIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string CLN_CONTACT_US_EMAIL {
+            get {
+                return ResourceManager.GetString("CLN_CONTACT_US_EMAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string CLN_CONTACT_US_NAME {
+            get {
+                return ResourceManager.GetString("CLN_CONTACT_US_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        internal static string CLN_CONTACT_US_PHONE {
+            get {
+                return ResourceManager.GetString("CLN_CONTACT_US_PHONE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request.
+        /// </summary>
+        internal static string CLN_CONTACT_US_REQUEST {
+            get {
+                return ResourceManager.GetString("CLN_CONTACT_US_REQUEST", resourceCulture);
             }
         }
         

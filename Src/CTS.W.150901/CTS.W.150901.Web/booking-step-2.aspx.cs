@@ -40,6 +40,7 @@ namespace CTS.W._150901.Web
             }
             //
             btnBookingStep2.Text = Resources.Strings.CLN_BOOKING_CHECK_AVAILABILITY;
+            Page.Title = Resources.Strings.CLN_BOOKING_PAGE;
         }
         protected void lnkSelectRoomType_Command(object sender, CommandEventArgs e) {
             var bookingObj = Session["CLN.W150901.BookingData"] as BookingObject;

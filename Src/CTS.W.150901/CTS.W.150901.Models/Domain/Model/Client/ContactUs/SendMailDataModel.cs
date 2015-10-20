@@ -16,7 +16,7 @@ namespace CTS.W._150901.Models.Domain.Model.Client.ContactUs
         public string Name { get; set; }
         [InputText]
         public string Phone { get; set; }
-        [InputText(RuleName = "email", MessageParam = "CLN.CONTACTUS.00001")]
+        [InputText(RuleName = "email")]
         public string Email { get; set; }
         [InputText]
         public string Description { get; set; }
