@@ -11,7 +11,7 @@ namespace CTS.W._150901.Models.Domain.Model.Client.Tours
     public class InitDataModel : BasicInfoModel
     {
         [OutputList(IgnoreAttribute = false)]
-        public IList<TourObject> ListTourType { get; set; }
+        public IList<TourObject> ListTours { get; set; }
 
     }
 }

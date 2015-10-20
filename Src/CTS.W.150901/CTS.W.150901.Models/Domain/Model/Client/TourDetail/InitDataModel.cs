@@ -11,7 +11,7 @@ namespace CTS.W._150901.Models.Domain.Model.Client.TourDetail
     public class InitDataModel : BasicInfoModel
     {
         [OutputObject(IgnoreAttribute = false)]
-        public TourDetailObject Tour { get; set; }
+        public TourObject Tour { get; set; }
         [InputText]
         public string Slug { get; set; }
         [OutputText]

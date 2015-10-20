@@ -11,16 +11,16 @@ namespace CTS.W._150901.Models.Domain.Object.Client.Tour
         [OutputText]
         public string LocaleCd { get; set; }
         [OutputText]
-        public string TypeCd { get; set; }
+        public string TourCd { get; set; }
         [OutputText]
-        public string TypeName { get; set; }
+        public string TourName { get; set; }
         [OutputText]
         public string Slug { get; set; }
         [OutputText]
         public string FileCd { get; set; }
         [OutputText]
+        public string Summary { get; set; }
+        [OutputText]
         public string Notes { get; set; }
-        [OutputList(IgnoreAttribute = false)]
-        public IList<TourDetailObject> ListTourByType { get; set; }
     }
 }

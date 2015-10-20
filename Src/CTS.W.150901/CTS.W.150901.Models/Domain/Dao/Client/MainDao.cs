@@ -18,8 +18,7 @@ namespace CTS.W._150901.Models.Domain.Dao.Client
     {
         // Định nghĩa hằng file sql
         public const string MAINDAO_GETLISTBANNERS_SQL = "MainDao_GetListBanners.sql";
-        public const string MAINDAO_GETLISTTOURSTYPE_SQL = "MainDao_GetListToursType.sql";
-        public const string MAINDAO_GETLISTTOURSBYTYPE_SQL = "MainDao_GetListToursByType.sql";
+        public const string MAINDAO_GETLISTTOURS_SQL = "MainDao_GetListTours.sql";
         public const string MAINDAO_GETTOURDETAIL_SQL = "MainDao_GetTourDetail.sql";
         public const string MAINDAO_GETPAGE_SQL = "MainDao_GetPage.sql";
         public const string MAINDAO_GETLISTROOMSTYPE_SQL = "MainDao_GetListRoomsType.sql";
@@ -51,7 +50,7 @@ namespace CTS.W._150901.Models.Domain.Dao.Client
             // Kết quả trả về
             return GetListByFile<PhotoObject>(MAINDAO_GETLISTPHOTOS_SQL, param);
         }
-        public IList<TourObject> GetListToursType(String localeCd)
+        public IList<TourObject> GetListTours(String localeCd)
         {
             // Tạo tham số
             var param = new
@@ -59,20 +58,9 @@ namespace CTS.W._150901.Models.Domain.Dao.Client
                 LocaleCd = localeCd
             };
             // Kết quả trả về
-            return GetListByFile<TourObject>(MAINDAO_GETLISTTOURSTYPE_SQL, param);
+            return GetListByFile<TourObject>(MAINDAO_GETLISTTOURS_SQL, param);
         }
-        public IList<TourDetailObject> GetListToursByType(String localeCd, String tourTypeCd)
-        {
-            // Tạo tham số
-            var param = new
-            {
-                LocaleCd = localeCd,
-                TypeCd = tourTypeCd
-            };
-            // Kết quả trả về
-            return GetListByFile<TourDetailObject>(MAINDAO_GETLISTTOURSBYTYPE_SQL, param);
-        }
-        public TourDetailObject GetTourDetail(String localeCd, String slug)
+        public TourObject GetTourDetail(String localeCd, String slug)
         {
             // Tạo tham số
             var param = new
@@ -81,7 +69,7 @@ namespace CTS.W._150901.Models.Domain.Dao.Client
                 Slug = slug
             };
             // Kết quả trả về
-            return GetObjectByFile<TourDetailObject>(MAINDAO_GETTOURDETAIL_SQL, param);
+            return GetObjectByFile<TourObject>(MAINDAO_GETTOURDETAIL_SQL, param);
         }
         public PageObject GetPage(String localeCd, String slug)
         {

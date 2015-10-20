@@ -54,16 +54,10 @@ namespace CTS.W._150901.Models.Domain.Logic.Client.Tours
             var processDao = new MainDao();
             // Map dữ liệu
             DataHelper.CopyObject(inputObject, getResult);
-            // Lấy danh sách loại tour
-            var listTourType = processDao.GetListToursType(WebContextHelper.LocaleCd);
-            foreach (var tour in listTourType)
-            {
-
-                // lay danh sach tour theo loai
-                tour.ListTourByType = processDao.GetListToursByType(WebContextHelper.LocaleCd, tour.TypeCd);
-            }
+            // Lấy danh sách tour
+            var listTours = processDao.GetListTours(WebContextHelper.LocaleCd);
             // Kết quả trả về
-            getResult.ListTourType = listTourType;
+            getResult.ListTours = listTours;
 
             return getResult;
         }
