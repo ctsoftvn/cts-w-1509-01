@@ -8,7 +8,7 @@ ctrls.controller('MAToursListCtrl', ['$scope', '$state', '$stateParams', '$windo
     $scope.data.HasAuth = false;
     $scope.variable.ShowSearchPane = true;
     $scope.tblResult.Page = 1;
-    $scope.tblResult.Options = $optionHelper.gridBase({ width: 880 });
+    $scope.tblResult.Options = $optionHelper.gridBase({ width: 790 });
     /* Định nghĩa phương thức xử lý */
     // Xử lý init
     $scope.init = function () {
@@ -20,7 +20,6 @@ ctrls.controller('MAToursListCtrl', ['$scope', '$state', '$stateParams', '$windo
                 $scope.$parent.showViewMain(true);
                 // Gán đối tượng dữ liệu 
                 $scope.data = data;
-                $scope.data.TourTypeCd = data.CboTourTypesSeleted;
                 $scope.data.LocaleCd = data.CboLocalesSeleted;
                 $scope.data.DeleteFlag = data.CboDeleteFlagSeleted;
                 // Gán dữ liệu table
@@ -44,7 +43,6 @@ ctrls.controller('MAToursListCtrl', ['$scope', '$state', '$stateParams', '$windo
                 data.LocaleCd = $scope.data.HdnLocaleCd;
                 data.TourName = $scope.data.HdnTourName;
                 data.Slug = $scope.data.HdnSlug;
-                data.TourTypeCd = $scope.data.HdnTourTypeCd;
                 data.DeleteFlag = $scope.data.HdnDeleteFlag;
                 // Kết quả trả về
                 return data;
@@ -69,7 +67,8 @@ ctrls.controller('MAToursListCtrl', ['$scope', '$state', '$stateParams', '$windo
                         TourName: obj.TourName,
                         SearchName: obj.SearchName,
                         Slug: obj.Slug,
-                        TourTypeCd: obj.TourTypeCd,
+                        FileCd: obj.FileCd,
+                        Summary: obj.Summary,
                         Notes: obj.Notes,
                         MetaTitle: obj.MetaTitle,
                         MetaDesc: obj.MetaDesc,
@@ -128,7 +127,6 @@ ctrls.controller('MAToursListCtrl', ['$scope', '$state', '$stateParams', '$windo
                 $scope.data.HdnLocaleCd = $scope.data.LocaleCd;
                 $scope.data.HdnTourName = $scope.data.TourName;
                 $scope.data.HdnSlug = $scope.data.Slug;
-                $scope.data.HdnTourTypeCd = $scope.data.TourTypeCd;
                 $scope.data.HdnDeleteFlag = $scope.data.DeleteFlag;
                 $scope.filter();
             });
@@ -159,6 +157,36 @@ ctrls.controller('MAToursListCtrl', ['$scope', '$state', '$stateParams', '$windo
                 TourCd: obj.TourCd
             };
             $state.go('master-tours-list-entry', params);
+        });
+    };
+    // Hiển thị dialog tải lên
+    $scope.uploadImage = function (obj) {
+        $pc(function () {
+            obj.HasChanged = true;
+            var modalInstance = $dialogHelper.showDialogUpload({
+                LocaleCd: obj.LocaleCd,
+                FileCd: obj.FileCd,
+                HasGen: obj.HasGen,
+                FileGroupCd: 'stg.ma.tours.file-cd'
+            });
+            // Lấy kết quả xử lý
+            modalInstance.result.then(function (result) {
+                obj.FileCd = result.data;
+                obj.HasGen = result.hasGen;
+            });
+        });
+    };
+    // Hiển thị dialog area
+    $scope.editSummary = function (obj) {
+        $pc(function () {
+            obj.HasChanged = true;
+            var modalInstance = $dialogHelper.showDialogArea({
+                Content: obj.Summary
+            });
+            // Lấy kết quả xử lý
+            modalInstance.result.then(function (result) {
+                obj.Summary = result.data;
+            });
         });
     };
     // Hiển thị dialog editor

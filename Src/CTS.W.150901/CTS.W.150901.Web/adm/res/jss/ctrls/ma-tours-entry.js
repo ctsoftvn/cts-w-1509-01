@@ -92,6 +92,22 @@ ctrls.controller('MAToursEntryCtrl', ['$scope', '$state', '$stateParams', '$wind
             }
         });
     };
+    // Xử lý tải lên hình ảnh
+    $scope.uploadImage = function (obj) {
+        $pc(function () {
+            var modalInstance = $dialogHelper.showDialogUpload({
+                LocaleCd: obj.LocaleCd,
+                FileCd: obj.FileCd,
+                HasGen: obj.HasGen,
+                FileGroupCd: 'stg.ma.tours.file-cd'
+            });
+            // Lấy kết quả xử lý
+            modalInstance.result.then(function (result) {
+                obj.FileCd = result.data;
+                obj.HasGen = result.hasGen;
+            });
+        });
+    };
     // Xử lý cố định dòng
     $scope.fixRow = function () {
         $pc(function () {
@@ -123,6 +139,7 @@ ctrls.controller('MAToursEntryCtrl', ['$scope', '$state', '$stateParams', '$wind
             $scope.objLocale.RowNo = '';
             $scope.objLocale.TourName = '';
             $scope.objLocale.SearchName = '';
+            $scope.objLocale.Summary = '';
             $scope.objLocale.Notes = '';
             $scope.objLocale.MetaTitle = '';
             $scope.objLocale.MetaDesc = '';
@@ -154,6 +171,7 @@ ctrls.controller('MAToursEntryCtrl', ['$scope', '$state', '$stateParams', '$wind
             $pc(function () {
                 $scope.objLocale.TourName = $scope.objEntry.DataInfo.TourName;
                 $scope.objLocale.SearchName = $scope.genSearchName($scope.objLocale);
+                $scope.objLocale.Summary = $scope.objEntry.DataInfo.Summary;
                 $scope.objLocale.Notes = $scope.objEntry.DataInfo.Notes;
                 $scope.objLocale.MetaTitle = $scope.objEntry.DataInfo.MetaTitle;
                 $scope.objLocale.MetaDesc = $scope.objEntry.DataInfo.MetaDesc;

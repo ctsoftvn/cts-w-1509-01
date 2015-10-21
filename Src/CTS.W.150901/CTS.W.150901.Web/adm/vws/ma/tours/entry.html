@@ -5,48 +5,52 @@
 </cts-toolbar>
 <tabset class="df-fp cts-tabset-pane">
     <tab heading="{{$nm('ADM.MA.TOURS.ENTRY.TabMain')}}">
-        <cts-form-pane class="p-height-21" cts-tabgroup="true">
+        <cts-form-pane class="p-height-22" cts-tabgroup="true">
             <cts-label class="top-1 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.TourCd')}}"></cts-label>
             <cts-label class="top-1 left-5 width-10" text="{{objEntry.DataInfo.TourCd}}"></cts-label>
             <cts-button class="top-1 left-8 width-8" text="{{$nm('ADM.MA.TOURS.ENTRY.GenCd')}}" onclick="genCd()" ng-hide="variable.BasicInfo.IsEdit" disabled="variable.BasicInfo.IsEdit" style="margin-left:-5px"></cts-button>
             <cts-label class="top-2 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.TourName')}}"></cts-label>
             <cts-text tabindex="10" class="top-2 left-5 width-15" model="objEntry.DataInfo.TourName" onblur="blurTourName(data, objEntry.DataInfo, true)" id="txtTourName"></cts-text>
+            <cts-button tabindex="100" class="top-2 left-12 width-8" text="{{$nm('ADM.MA.TOURS.ENTRY.UploadImage')}}" onclick="uploadImage(objEntry.DataInfo)" style="margin-left:-5px"></cts-button>
+            <cts-label class="top-2 left-15 width-20" text="{{$nm('ADM.MA.TOURS.ENTRY.Dimension')}}" style="margin-left: 10px"></cts-label>
             <cts-label class="top-3 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.Slug')}}"></cts-label>
             <cts-text tabindex="20" class="top-3 left-5 width-15" model="objEntry.DataInfo.Slug" tooltip="{ title: $nm('ADM.MA.TOURS.ENTRY.Tooltip.Slug'), trigger: 'focus', placement: 'right' }"></cts-text>
-            <cts-label class="top-4 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.TourTypeCd')}}"></cts-label>
-            <cts-select tabindex="30" class="top-4 left-5 width-15" model="objEntry.DataInfo.TourTypeCd" options="data.CboTourTypes"></cts-select>
-            <cts-label class="top-5 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.Notes')}}"></cts-label>
-            <cts-editor tabindex="40" class="top-5 left-5 width-65" model="objEntry.DataInfo.Notes" id="edtNotes" options="edtNotes.options"></cts-editor>
-            <cts-label class="top-15 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaTitle')}}"></cts-label>
-            <cts-text tabindex="50" class="top-15 left-5 width-25" model="objEntry.DataInfo.MetaTitle"></cts-text>
-            <cts-label class="top-16 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaDesc')}}"></cts-label>
-            <cts-area tabindex="60" class="top-16 left-5 width-65 height-2" model="objEntry.DataInfo.MetaDesc"></cts-area>
-            <cts-label class="top-18 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaKeys')}}"></cts-label>
-            <cts-area tabindex="70" class="top-18 left-5 width-65 height-2" model="objEntry.DataInfo.MetaKeys"></cts-area>
-            <cts-label class="top-20 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.SortKey')}}"></cts-label>
-            <cts-number tabindex="80" class="top-20 left-5 width-7" option="{ min: 0, max: 9999 }" model="objEntry.DataInfo.SortKey"></cts-number>
-            <cts-label class="top-21 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.DeleteFlag')}}"></cts-label>
-            <cts-select tabindex="90" class="top-21 left-5 width-8" model="objEntry.DataInfo.DeleteFlag" options="data.CboDeleteFlag"></cts-select>
+            <cts-label class="top-4 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.Summary')}}"></cts-label>
+            <cts-area tabindex="30" class="top-4 left-5 width-65 height-2" model="objEntry.DataInfo.Summary"></cts-area>
+            <cts-label class="top-6 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.Notes')}}"></cts-label>
+            <cts-editor tabindex="40" class="top-6 left-5 width-65" model="objEntry.DataInfo.Notes" id="edtNotes" options="edtNotes.options"></cts-editor>
+            <cts-label class="top-16 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaTitle')}}"></cts-label>
+            <cts-text tabindex="50" class="top-16 left-5 width-25" model="objEntry.DataInfo.MetaTitle"></cts-text>
+            <cts-label class="top-17 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaDesc')}}"></cts-label>
+            <cts-area tabindex="60" class="top-17 left-5 width-65 height-2" model="objEntry.DataInfo.MetaDesc"></cts-area>
+            <cts-label class="top-19 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaKeys')}}"></cts-label>
+            <cts-area tabindex="70" class="top-19 left-5 width-65 height-2" model="objEntry.DataInfo.MetaKeys"></cts-area>
+            <cts-label class="top-21 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.SortKey')}}"></cts-label>
+            <cts-number tabindex="80" class="top-21 left-5 width-7" option="{ min: 0, max: 9999 }" model="objEntry.DataInfo.SortKey"></cts-number>
+            <cts-label class="top-22 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.DeleteFlag')}}"></cts-label>
+            <cts-select tabindex="90" class="top-22 left-5 width-8" model="objEntry.DataInfo.DeleteFlag" options="data.CboDeleteFlag"></cts-select>
         </cts-form-pane>
     </tab>
     <tab heading="{{$nm('ADM.MA.TOURS.ENTRY.TabLang')}}">
-        <cts-form-pane class="p-height-18" cts-tabgroup="true">
+        <cts-form-pane class="p-height-20" cts-tabgroup="true">
             <cts-label class="top-1 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.LocaleCd')}}"></cts-label>
             <cts-select tabindex="10" class="top-1 left-5 width-10" model="objLocale.LocaleCd" options="data.CboLocales"></cts-select>
             <cts-label class="top-2 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.TourName')}}"></cts-label>
             <cts-text tabindex="20" class="top-2 left-5 width-15" model="objLocale.TourName" onblur="blurTourName(data, objLocale, false)"></cts-text>
-            <cts-label class="top-3 left-1 width-10 height-7" text="{{$nm('ADM.MA.TOURS.ENTRY.Notes')}}"></cts-label>
-            <cts-editor tabindex="30" class="top-3 left-5 width-65 " model="objLocale.Notes" id="edtNotes1" options="edtNotes.options"></cts-editor>
-            <cts-label class="top-13 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaTitle')}}"></cts-label>
-            <cts-text tabindex="40" class="top-13 left-5 width-25" model="objLocale.MetaTitle"></cts-text>
-            <cts-label class="top-14 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaDesc')}}"></cts-label>
-            <cts-area tabindex="50" class="top-14 left-5 width-65 height-2" model="objLocale.MetaDesc"></cts-area>
-            <cts-label class="top-16 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaKeys')}}"></cts-label>
-            <cts-area tabindex="60" class="top-16 left-5 width-65 height-2" model="objLocale.MetaKeys"></cts-area>
-            <cts-button tabindex="70" class="top-18 left-5 width-8" onclick="fixRow()" text="{{$nm('ADM.MA.TOURS.ENTRY.FixLocaleInfo')}}"></cts-button>
-            <cts-button class="top-18 left-9 width-8" onclick="copyInfo()" text="{{$nm('ADM.MA.TOURS.ENTRY.CopyMainInfo')}}" data-original-title="{{$nm('ADM.MA.TOURS.ENTRY.Tooltip.CopyMainInfo')}}" ui-jq="tooltip"></cts-button>
+            <cts-label class="top-3 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.Summary')}}"></cts-label>
+            <cts-area tabindex="30" class="top-3 left-5 width-65 height-2" model="objLocale.Summary"></cts-area>
+            <cts-label class="top-5 left-1 width-10 height-7" text="{{$nm('ADM.MA.TOURS.ENTRY.Notes')}}"></cts-label>
+            <cts-editor tabindex="40" class="top-5 left-5 width-65 " model="objLocale.Notes" id="edtNotes1" options="edtNotes.options"></cts-editor>
+            <cts-label class="top-15 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaTitle')}}"></cts-label>
+            <cts-text tabindex="50" class="top-15 left-5 width-25" model="objLocale.MetaTitle"></cts-text>
+            <cts-label class="top-16 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaDesc')}}"></cts-label>
+            <cts-area tabindex="60" class="top-16 left-5 width-65 height-2" model="objLocale.MetaDesc"></cts-area>
+            <cts-label class="top-18 left-1 width-10" text="{{$nm('ADM.MA.TOURS.ENTRY.MetaKeys')}}"></cts-label>
+            <cts-area tabindex="70" class="top-18 left-5 width-65 height-2" model="objLocale.MetaKeys"></cts-area>
+            <cts-button tabindex="80" class="top-20 left-5 width-8" onclick="fixRow()" text="{{$nm('ADM.MA.TOURS.ENTRY.FixLocaleInfo')}}"></cts-button>
+            <cts-button class="top-20 left-9 width-8" onclick="copyInfo()" text="{{$nm('ADM.MA.TOURS.ENTRY.CopyMainInfo')}}" data-original-title="{{$nm('ADM.MA.TOURS.ENTRY.Tooltip.CopyMainInfo')}}" ui-jq="tooltip"></cts-button>
         </cts-form-pane>
-        <cts-grid-Pane class="p-top-17 ma-tours-entry-tblResult">
+        <cts-grid-Pane class="p-top-19 ma-tours-entry-tblResult">
             <table id="tblResult" dt-options="objEntry.tblResultOptions" datatable="ng">
                 <thead>
                 <tr>
