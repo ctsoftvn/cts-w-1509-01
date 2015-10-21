@@ -30,7 +30,7 @@ namespace CTS.W._150901.Models.Domain.Object.Admin.Master
         [InputText(RuleName = "fileCd", MessageParam = "ADM_MA_TOURS_00003")]
         public string FileCd { get; set; }
         [OutputText]
-        [InputText(RuleName = "notes1000", MessageParam = "ADM_MA_TOURS_00004")]
+        [InputText(RuleName = "summary", MessageParam = "ADM_MA_TOURS_00004")]
         public string Summary { get; set; }
         [OutputText]
         [InputText(RuleName = "notes", MessageParam = "ADM_MA_TOURS_00005")]
