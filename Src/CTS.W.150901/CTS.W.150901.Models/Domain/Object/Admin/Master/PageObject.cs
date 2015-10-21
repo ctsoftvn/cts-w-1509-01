@@ -12,7 +12,7 @@ namespace CTS.W._150901.Models.Domain.Object.Admin.Master
         [InputText(RuleName = "localeCd", MessageParam = "P_CM_00012")]
         public string LocaleCd { get; set; }
         [OutputText]
-        [InputText(RuleName = "code", MessageParam = "ADM_MA_PAGES_00001")]
+        [InputText]
         public string PageCd { get; set; }
         [OutputText]
         [InputText(RuleName = "name", MessageParam = "ADM_MA_PAGES_00002")]
