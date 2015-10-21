@@ -21,7 +21,7 @@
             <td width="30"></td>
             <td width="30"></td>
             <td width="30"></td>
-            <td width="30"></td>
+            <!-- <td width="30"></td> -->
             <td width="100" text="{{$nm('ADM.MA.PHOTOS.LIST.ColLocale')}}"  cts-grid-header="true"></td>
             <td width="150" text="{{$nm('ADM.MA.PHOTOS.LIST.ColPhotoName')}}"  cts-grid-header="true"></td>
             <td width="80" text="{{$nm('ADM.MA.PHOTOS.LIST.ColSortKey')}}"  cts-grid-header="true"></td>
@@ -42,9 +42,9 @@
             <td ng-class="{'editable': obj.LocaleCd == data.BasicLocale}">
                 <cts-image ng-show="obj.LocaleCd == data.BasicLocale" src="$res.Icons.UploadImage" onclick="uploadImage(obj)" style="width: 16px;" data-original-title="{{$nm('ADM.MA.PHOTOS.LIST.Tooltip.UploadImage')}}" ui-jq="tooltip"></cts-image>
             </td>
-            <td class="editable">
-                <cts-image src="$res.Icons.Editor" onclick="editNotes(obj)" style="width: 16px;" data-original-title="{{$nm('ADM.MA.PHOTOS.LIST.Tooltip.EditorNotes')}}" ui-jq="tooltip"></cts-image>
-            </td>
+            <!-- <td class="editable"> -->
+            <!--     <cts-image src="$res.Icons.Editor" onclick="editNotes(obj)" style="width: 16px;" data-original-title="{{$nm('ADM.MA.PHOTOS.LIST.Tooltip.EditorNotes')}}" ui-jq="tooltip"></cts-image> -->
+            <!-- </td> -->
             <td>{{obj.LocaleName}}</td>
             <td class="editable">
                 <cts-text model="obj.PhotoName" onchange="tblResultChange(data, obj)" onblur="blurPhotoName(obj)"></cts-text>

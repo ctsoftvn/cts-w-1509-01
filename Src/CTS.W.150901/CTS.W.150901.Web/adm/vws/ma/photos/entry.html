@@ -5,34 +5,34 @@
 </cts-toolbar>
 <tabset class="df-fp cts-tabset-pane">
     <tab heading="{{$nm('ADM.MA.PHOTOS.ENTRY.TabMain')}}">
-        <cts-form-pane class="p-height-14" cts-tabgroup="true">
-            <cts-label class="top-1 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.PhotoCd')}}"></cts-label>
-            <cts-label class="top-1 left-5 width-10" text="{{objEntry.DataInfo.PhotoCd}}"></cts-label>
-            <cts-button class="top-1 left-8 width-8" text="{{$nm('ADM.MA.PHOTOS.ENTRY.GenCd')}}" onclick="genCd()" ng-hide="variable.BasicInfo.IsEdit" disabled="variable.BasicInfo.IsEdit" style="margin-left:-5px"></cts-button>
-            <cts-label class="top-2 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.PhotoName')}}"></cts-label>
-            <cts-text tabindex="10" class="top-2 left-5 width-15" model="objEntry.DataInfo.PhotoName" onblur="blurPhotoName(data, objEntry.DataInfo, true)" id="txtPhotoName"></cts-text>
-            <cts-button tabindex="50" class="top-2 left-12 width-8" text="{{$nm('ADM.MA.PHOTOS.ENTRY.UploadImage')}}" onclick="uploadImage(objEntry.DataInfo)" style="margin-left:-5px"></cts-button>
-            <cts-label class="top-2 left-15 width-20" text="{{$nm('ADM.MA.PHOTOS.ENTRY.Dimension')}}" style="margin-left: 10px"></cts-label>
-            <cts-label class="top-3 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.Notes')}}"></cts-label>
-            <cts-editor tabindex="20" class="top-3 left-5 width-65" model="objEntry.DataInfo.Notes" id="edtNotes" options="edtNotes.options"></cts-editor>
-            <cts-label class="top-13 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.SortKey')}}"></cts-label>
-            <cts-number tabindex="30" class="top-13 left-5 width-7" option="{ min: 0, max: 9999 }" model="objEntry.DataInfo.SortKey"></cts-number>
-            <cts-label class="top-14 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.DeleteFlag')}}"></cts-label>
-            <cts-select tabindex="40" class="top-14 left-5 width-8" model="objEntry.DataInfo.DeleteFlag" options="data.CboDeleteFlag"></cts-select>
+        <cts-form-pane class="p-height-3" cts-tabgroup="true">
+            <!-- <cts-label class="top-1 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.PhotoCd')}}"></cts-label> -->
+            <!-- <cts-label class="top-1 left-5 width-10" text="{{objEntry.DataInfo.PhotoCd}}"></cts-label> -->
+            <!-- <cts-button class="top-1 left-8 width-8" text="{{$nm('ADM.MA.PHOTOS.ENTRY.GenCd')}}" onclick="genCd()" ng-hide="variable.BasicInfo.IsEdit" disabled="variable.BasicInfo.IsEdit" style="margin-left:-5px"></cts-button> -->
+            <cts-label class="top-1 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.PhotoName')}}"></cts-label>
+            <cts-text tabindex="10" class="top-1 left-5 width-15" model="objEntry.DataInfo.PhotoName" onblur="blurPhotoName(data, objEntry.DataInfo, true)" id="txtPhotoName"></cts-text>
+            <cts-button tabindex="50" class="top-1 left-12 width-8" text="{{$nm('ADM.MA.PHOTOS.ENTRY.UploadImage')}}" onclick="uploadImage(objEntry.DataInfo)" style="margin-left:-5px"></cts-button>
+            <cts-label class="top-1 left-15 width-20" text="{{$nm('ADM.MA.PHOTOS.ENTRY.Dimension')}}" style="margin-left: 10px"></cts-label>
+            <!-- <cts-label class="top-2 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.Notes')}}"></cts-label> -->
+            <!-- <cts-editor tabindex="20" class="top-2 left-5 width-65" model="objEntry.DataInfo.Notes" id="edtNotes" options="edtNotes.options"></cts-editor> -->
+            <cts-label class="top-2 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.SortKey')}}"></cts-label>
+            <cts-number tabindex="30" class="top-2 left-5 width-7" option="{ min: 0, max: 9999 }" model="objEntry.DataInfo.SortKey"></cts-number>
+            <cts-label class="top-3 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.DeleteFlag')}}"></cts-label>
+            <cts-select tabindex="40" class="top-3 left-5 width-8" model="objEntry.DataInfo.DeleteFlag" options="data.CboDeleteFlag"></cts-select>
         </cts-form-pane>
     </tab>
     <tab heading="{{$nm('ADM.MA.PHOTOS.ENTRY.TabLang')}}">
-        <cts-form-pane class="p-height-13" cts-tabgroup="true">
+        <cts-form-pane class="p-height-3" cts-tabgroup="true">
             <cts-label class="top-1 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.LocaleCd')}}"></cts-label>
             <cts-select tabindex="10" class="top-1 left-5 width-10" model="objLocale.LocaleCd" options="data.CboLocales"></cts-select>
             <cts-label class="top-2 left-1 width-10" text="{{$nm('ADM.MA.PHOTOS.ENTRY.PhotoName')}}"></cts-label>
             <cts-text tabindex="20" class="top-2 left-5 width-15" model="objLocale.PhotoName" onblur="blurPhotoName(data, objLocale, false)"></cts-text>
-            <cts-label class="top-3 left-1 width-10 height-7" text="{{$nm('ADM.MA.PHOTOS.ENTRY.Notes')}}"></cts-label>
-            <cts-editor tabindex="30" class="top-3 left-5 width-65 " model="objLocale.Notes" id="edtNotes1" options="edtNotes.options"></cts-editor>
-            <cts-button tabindex="40" class="top-13 left-5 width-8" onclick="fixRow()" text="{{$nm('ADM.MA.PHOTOS.ENTRY.FixLocaleInfo')}}"></cts-button>
-            <cts-button class="top-13 left-9 width-8" onclick="copyInfo()" text="{{$nm('ADM.MA.PHOTOS.ENTRY.CopyMainInfo')}}" data-original-title="{{$nm('ADM.MA.PHOTOS.ENTRY.Tooltip.CopyMainInfo')}}" ui-jq="tooltip"></cts-button>
+            <!-- <cts-label class="top-3 left-1 width-10 height-7" text="{{$nm('ADM.MA.PHOTOS.ENTRY.Notes')}}"></cts-label> -->
+            <!-- <cts-editor tabindex="30" class="top-3 left-5 width-65 " model="objLocale.Notes" id="edtNotes1" options="edtNotes.options"></cts-editor> -->
+            <cts-button tabindex="40" class="top-3 left-5 width-8" onclick="fixRow()" text="{{$nm('ADM.MA.PHOTOS.ENTRY.FixLocaleInfo')}}"></cts-button>
+            <cts-button class="top-3 left-9 width-8" onclick="copyInfo()" text="{{$nm('ADM.MA.PHOTOS.ENTRY.CopyMainInfo')}}" data-original-title="{{$nm('ADM.MA.PHOTOS.ENTRY.Tooltip.CopyMainInfo')}}" ui-jq="tooltip"></cts-button>
         </cts-form-pane>
-        <cts-grid-Pane class="p-top-12 ma-photos-entry-tblResult">
+        <cts-grid-Pane class="p-top-2 ma-photos-entry-tblResult">
             <table id="tblResult" dt-options="objEntry.tblResultOptions" datatable="ng">
                 <thead>
                 <tr>
