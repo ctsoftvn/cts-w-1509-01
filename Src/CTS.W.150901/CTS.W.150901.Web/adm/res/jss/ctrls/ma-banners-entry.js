@@ -5,13 +5,11 @@ ctrls.controller('MABannersEntryCtrl', ['$scope', '$state', '$stateParams', '$wi
     $scope.variable = {};
     $scope.objEntry = {};
     $scope.objLocale = {};
-    $scope.edtNotes = {};
     // Gán giá trị init
     $scope.data.HasAuth = false;
     $scope.variable.ShowLinkBack = $state.is('master-banners-list-entry');
     $scope.variable.BasicInfo = $dataHelper.toBasicInfo($stateParams);
     $scope.objEntry.tblResultOptions = $optionHelper.gridBase({ width: 300 });
-    $scope.edtNotes.options = $optionHelper.editorBase();
     /* Định nghĩa phương thức xử lý */
     // Xử lý init
     $scope.init = function () {

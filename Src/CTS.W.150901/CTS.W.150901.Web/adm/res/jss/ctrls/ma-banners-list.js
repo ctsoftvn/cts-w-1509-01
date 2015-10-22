@@ -173,7 +173,7 @@ ctrls.controller('MABannersListCtrl', ['$scope', '$state', '$stateParams', '$win
     $scope.editNotes = function (obj) {
         $pc(function () {
             obj.HasChanged = true;
-            var modalInstance = $dialogHelper.showDialogEditor({
+            var modalInstance = $dialogHelper.showDialogArea({
                 Content: obj.Notes
             });
             // Lấy kết quả xử lý

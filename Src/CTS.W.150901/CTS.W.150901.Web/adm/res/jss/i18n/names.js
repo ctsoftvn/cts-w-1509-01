@@ -206,7 +206,7 @@
         "ADM.MA.BANNERS.LIST.Tooltip.Edit": "Cập nhật",
         "ADM.MA.BANNERS.LIST.Tooltip.Copy": "Sao chép",
         "ADM.MA.BANNERS.LIST.Tooltip.UploadImage": "Đăng ảnh",
-        "ADM.MA.BANNERS.LIST.Tooltip.EditorNotes": "Nội dung",
+        "ADM.MA.BANNERS.LIST.Tooltip.EditNotes": "Nội dung",
         // adm/ma/banners/entry.html
         "ADM.MA.BANNERS.ENTRY.Title": "Đăng ký / cập nhật banner",
         "ADM.MA.BANNERS.ENTRY.TabMain": "Thông tin chính",
