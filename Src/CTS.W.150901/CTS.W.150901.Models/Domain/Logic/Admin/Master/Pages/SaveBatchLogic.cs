@@ -180,7 +180,7 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Pages
                     // Gán dữ liệu cập nhật
                     listUpdate[idxObj].PageName = info.PageName;
                     listUpdate[idxObj].SearchName = info.SearchName;
-                    listUpdate[idxObj].Notes = info.Notes;
+                    listUpdate[idxObj].Content = info.Content;
                 } else {
                     // Thêm vào danh sách cập nhật
                     listUpdate.Add(info);
