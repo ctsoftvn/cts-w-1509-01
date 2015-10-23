@@ -384,4 +384,17 @@
   <data name="CLN_CONTACT_US_REQUEST" xml:space="preserve">
 		<value>Yêu cầu</value>
 	</data>
+  <data name="CLN_CONTACT_US_SEND" xml:space="preserve">
+		<value>Gởi thông tin</value>
+	</data>
+  <data name="CLN_CONTACT_US_RESET" xml:space="preserve">
+		<value>Nhập lại</value>
+	</data>
+  <data name="CLN_CONTACT_US_TITLE_FORM" xml:space="preserve">
+		<value>Thông tin liên hệ</value>
+	</data>
+
+  <data name="CLN_TOUR_READMORE" xml:space="preserve">
+		<value>Chi tiết</value>
+	</data>
 </root>

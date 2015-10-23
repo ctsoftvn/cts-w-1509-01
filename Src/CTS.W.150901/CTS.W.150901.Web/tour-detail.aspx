@@ -5,6 +5,15 @@
 <asp:Content ID="ContentHead" ContentPlaceHolderID="ContentHead" runat="server">
 </asp:Content>
 <asp:Content ID="ContentMain" ContentPlaceHolderID="ContentMain" runat="server">
-    <asp:Literal ID="ltTourTitle" runat="server"></asp:Literal>
-    <asp:Literal ID="ltTourDes" runat="server"></asp:Literal>
+    <div class="row title-page">
+        <div class="col-xs-12">
+            <h1>
+                <asp:Literal ID="ltTourTitle" runat="server"></asp:Literal></h1>
+        </div>
+    </div>
+    <div class="row description-page pagetourdetail">
+        <div class="col-xs-12 col-sm-12">
+            <asp:Literal ID="ltTourDes" runat="server"></asp:Literal>
+        </div>
+    </div>
 </asp:Content>

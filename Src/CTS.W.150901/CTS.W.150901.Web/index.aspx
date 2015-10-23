@@ -5,9 +5,14 @@
 <asp:Content ID="ContentHead" ContentPlaceHolderID="ContentHead" runat="server">
 </asp:Content>
 <asp:Content ID="ContentMain" ContentPlaceHolderID="ContentMain" runat="server">
-    <div class="row des">
+    <div class="row title-page">
         <div class="col-xs-12">
-            <asp:Literal runat="server" ID="ltPageName"></asp:Literal>
+            <h1><asp:Literal runat="server" ID="ltPageName"></asp:Literal></h1>
+        </div>
+    </div>
+    <div class="row des">
+        <div class="col-xs-12 col-sm-12">
+            <h2><asp:Literal runat="server" ID="ltPageContent"></asp:Literal></h2>
         </div>
     </div>
     <div class="row hotel-feature">
@@ -24,7 +29,7 @@
                                 <%= Strings.CLN_INDEX_LOCATION%></p>
                         </a>
                         <div class="overflow-hidden">
-                            <img width="269" height="179" src="/res/img/location.jpg" alt="" class="img-responsive">
+                            <img width="269" height="179" src="/res/img/location.png" alt="" class="img-responsive">
                         </div>
                     </div>
                 </div>
@@ -45,7 +50,7 @@
                                 <%= Strings.CLN_INDEX_SPECIAL_DEAL%></p>
                         </a>
                         <div class="overflow-hidden">
-                            <img width="269" height="179" src="/res/img/promotion.jpg" alt="" class="img-responsive">
+                            <img width="269" height="179" src="/res/img/promotion.png" alt="" class="img-responsive">
                         </div>
                     </div>
                 </div>
@@ -66,7 +71,7 @@
                                 <%= Strings.CLN_INDEX_TOUR %></p>
                         </a>
                         <div class="overflow-hidden">
-                            <img width="269" height="179" src="/res/img/News.jpg" alt="" class="img-responsive">
+                            <img width="269" height="179" src="/res/img/News.png" alt="" class="img-responsive">
                         </div>
                     </div>
                 </div>
@@ -75,9 +80,5 @@
             </div>
         </div>
     </div>
-    <div class="row home-description">
-        <div class="col-xs-12 col-sm-12">
-            <asp:Literal runat="server" ID="ltPageContent"></asp:Literal>
-        </div>
-    </div>
+    
 </asp:Content>

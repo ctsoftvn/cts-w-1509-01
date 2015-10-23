@@ -15,7 +15,7 @@
     <meta name="description" content="" />
     <!--Css-->
     
-    <link rel='stylesheet' href='/res/css/fonts.css' type='text/css' media='all' />
+    <%--<link rel='stylesheet' href='/res/css/fonts.css' type='text/css' media='all' />--%>
     <link rel='stylesheet' href='/res/css/style-01.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/bootstrap-social.css' type='text/css' media='all' />
     <link rel='stylesheet' href='/res/css/bootstrap.min-preview.css' type='text/css'
@@ -192,13 +192,13 @@
                     </div>
                     <div class="logo">
                         <a href="<%= Strings.CLN_MASTER_HOMEPAGE_LINK %>">
-                            <img width="189" height="59" src="/res/img/logo.png" alt="" /></a>
+                            <asp:Image ID="imgLogo" alt="" runat="server" width="189" height="59"/></a>
                         <div class="logo-line">
                             <div class="diamond">
                             </div>
                         </div>
-                        <p class="slocan">
-                            <asp:Literal ID="ltSlogan" runat="server" /></p>
+                        <div class="slocan">
+                            <asp:Literal ID="ltSlogan" runat="server" /></div>
                         <div class='button'>
                             <a href='<%= Strings.CLN_MASTER_BOOKING_LINK %>'>
                                 <%= Strings.CLN_MASTER_RESERVATION_MOBI_BUTTON%></a>
@@ -214,16 +214,16 @@
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <div class="ms-slide" data-delay="1" data-fill-mode="fill">
-                                    <img alt='<%# ((HashMap)Container.DataItem)["BannerName"] %>' title='<%# ((HashMap)Container.DataItem)["BannerName"] %>'
-                                        src='<%# "/file-manager?fcd=" + ((HashMap)Container.DataItem)["FileCd"] + "&lang=en&s=normal" %>' />
+                                    <img alt='<%# PageCom.GetValue(Container.DataItem as HashMap, "BannerName") %>' title='<%# PageCom.GetValue(Container.DataItem as HashMap, "BannerName") %>'
+                                        src='<%# "/file-manager?fcd=" + PageCom.GetValue(Container.DataItem as HashMap, "FileCd") + "&lang=en&s=normal" %>' />
                                     <div class="ms-layer" style="" data-ease="easeOutQuint" data-action="next" data-offset-x="-6"
                                         data-offset-y="80" data-origin="mc" data-position="normal">
                                         <div class="txt-sample">
                                             <p class="v1">
                                                 <span style="color: red;">
-                                                    <%# ((HashMap)Container.DataItem)["BannerName"] %></span><br />
+                                                    <%# PageCom.GetValue(Container.DataItem as HashMap, "BannerName")%></span><br />
                                                 <span style="color: #fff;">
-                                                    <%# ((HashMap)Container.DataItem)["Notes"]%></span>
+                                                    <%# PageCom.GetValue(Container.DataItem as HashMap, "Notes")%></span>
                                             </p>
                                         </div>
                                     </div>
@@ -313,30 +313,19 @@
             <!-- #content -->
             <div class="container">
                 <div class="row hotel-chain">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-md-4">
-                        <div class="main-chain">
-                            <a href="<%= Strings.CLN_MASTER_HOMEPAGE_LINK %>">
-                                <%--<img width="189" height="47" src="/res/img/logo.png" alt="" />--%>
-                                <asp:Image ID="imgLogo" alt="" runat="server" />
-                                <%--<img alt='' title='' src='<%# "/file-manager?fcd=" + ((Image)Container.DataItem)["InfoValue"] + "&lang=en&s=normal" %>' />--%>
-                            </a>
-                            <div class="diamond">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-md-8 mini-chain">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-md-12 mini-chain">
                         <div class="chain-item">
                             <asp:HyperLink ID="lkHotel1" runat="server" class="hotel1" Target="_blank">
-                                <img width="189" height="47" src="/res/img/ruby1.png" class="img-responsive" alt=""/></asp:HyperLink></div>
+                                <img width="180px" src="/res/img/ruby1.png" class="img-responsive" alt=""/></asp:HyperLink></div>
                         <div class="chain-item">
                             <asp:HyperLink ID="lkHotel2" runat="server" class="hotel2" Target="_blank">
-                                <img width="189" height="47" src="/res/img/ruby3.png" class="img-responsive" alt=""/></asp:HyperLink></div>
+                                <img width="180px" src="/res/img/ruby3.png" class="img-responsive" alt=""/></asp:HyperLink></div>
                         <div class="chain-item">
                             <asp:HyperLink ID="lkHotel3" runat="server" class="hotel3" Target="_blank">
-                                <img width="189" height="47" src="/res/img/ruby4.jpg" class="img-responsive" alt=""/></asp:HyperLink></div>
+                                <img width="180px" src="/res/img/ruby4.jpg" class="img-responsive" alt=""/></asp:HyperLink></div>
                         <div class="chain-item">
                             <asp:HyperLink ID="lkHotel4" runat="server" class="hotel4" Target="_blank">
-                                <img width="189" height="47" src="/res/img/mayhotel.png" class="img-responsive" alt=""/></asp:HyperLink></div>
+                                <img width="180px" src="/res/img/mayhotel.png" class="img-responsive" alt=""/></asp:HyperLink></div>
                     </div>
                 </div>
             </div>

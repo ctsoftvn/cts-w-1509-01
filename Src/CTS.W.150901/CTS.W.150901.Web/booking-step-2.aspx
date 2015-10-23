@@ -66,11 +66,11 @@
                                 <ItemTemplate>
                                     <li class="room-item clearfix">
                                         <h5>
-                                            <%# ((HashMap)Container.DataItem)["TypeName"]%></h5>
+                                            <%# PageCom.GetValue(Container.DataItem as HashMap, "TypeName")%></h5>
                                         <!-- BEGIN .room-list-left -->
                                         <div class="room-list-left">
-                                            <img alt='<%# ((HashMap)Container.DataItem)["TypeName"] %>' title='<%# ((HashMap)Container.DataItem)["TypeName"] %>'
-                                                src='<%# "/file-manager?fcd=" + ((HashMap)Container.DataItem)["FileCd"] + "&lang=en&s=normal" %>' />
+                                            <img alt='<%# PageCom.GetValue(Container.DataItem as HashMap, "TypeName") %>' title='<%# PageCom.GetValue(Container.DataItem as HashMap, "TypeName") %>'
+                                                src='<%# "/file-manager?fcd=" + PageCom.GetValue(Container.DataItem as HashMap, "FileCd") + "&lang=en&s=normal&w=300&h=190&bgcolor=fff&noimg=/res/img/noimg300x190.jpg" %>' />
                                             <!-- END .room-list-left -->
                                         </div>
                                         <!-- BEGIN .room-list-right -->

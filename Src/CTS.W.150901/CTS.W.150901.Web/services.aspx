@@ -5,18 +5,38 @@
 <asp:Content ID="ContentHead" ContentPlaceHolderID="ContentHead" runat="server">
 </asp:Content>
 <asp:Content ID="ContentMain" ContentPlaceHolderID="ContentMain" runat="server">
-    <asp:Literal runat="server" ID="ltPageName"></asp:Literal>
-    <asp:Literal runat="server" ID="ltPageContent"></asp:Literal>
+    <div class="row title-page">
+        <div class="col-xs-12">
+            <h1>
+                <asp:Literal runat="server" ID="ltPageName"></asp:Literal></h1>
+        </div>
+    </div>
+    <div class="row description-page">
+        <div class="col-xs-12 col-sm-12">
+            <asp:Literal runat="server" ID="ltPageContent"></asp:Literal>
+        </div>
+    </div>
     <asp:Repeater ID="rptServices" runat="server">
         <HeaderTemplate>
+            <div class="row">
         </HeaderTemplate>
         <ItemTemplate>
-            <%# ((HashMap)Container.DataItem)["ServiceName"]%>
-            <%# ((HashMap)Container.DataItem)["Notes"]%>
-            <img alt='<%# ((HashMap)Container.DataItem)["ServiceName"] %>' title='<%# ((HashMap)Container.DataItem)["ServiceName"] %>'
-                src='<%# "/file-manager?fcd=" + ((HashMap)Container.DataItem)["FileCd"] + "&lang=en&s=normal" %>' />
+            <div class=" col-md-4 col-xs-12 mTop-40">
+                <img class="img-responsive bo-img-fac" alt='<%# PageCom.GetValue(Container.DataItem as HashMap, "ServiceName") %>'
+                    title='<%# PageCom.GetValue(Container.DataItem as HashMap, "ServiceName") %>'
+                    src='<%# "/file-manager?fcd=" + PageCom.GetValue(Container.DataItem as HashMap, "FileCd") + "&lang=en&s=normal&w=360&h=220&bgcolor=fff&noimg=/res/img/noimg360x220.jpg" %>' />
+            </div>
+            <div class=" col-md-8 col-xs-12 mTop-40">
+                <h6 class="title">
+                    <%# PageCom.GetValue(Container.DataItem as HashMap, "ServiceName")%></h6>
+                <div class="clearfix">
+                </div>
+                <%# PageCom.GetValue(Container.DataItem as HashMap, "Notes")%>
+            </div>
+            <hr class="right">
         </ItemTemplate>
         <FooterTemplate>
+            </div>
         </FooterTemplate>
     </asp:Repeater>
 </asp:Content>

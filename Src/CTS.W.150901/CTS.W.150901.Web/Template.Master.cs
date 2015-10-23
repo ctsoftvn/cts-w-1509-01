@@ -10,7 +10,8 @@ namespace CTS.W._150901.Web
 {
     public partial class Template : MasterPageBase
     {
-        protected void Page_Load(object sender, EventArgs e) {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
             var logic = new InitOperateLogic();
             var response = PageCom.Invoke(logic, null);
@@ -23,8 +24,9 @@ namespace CTS.W._150901.Web
             rptBanners.DataSource = listBanners;
             rptBanners.DataBind();
 
-            //var logoUrl = "/file-manager?fcd=" + PageCom.GetValue<string>(response, "Logo") + "&lang=en&s=normal";
-            //imgLogo.ImageUrl = logoUrl;
+            var logoUrl = "/file-manager?fcd=" + PageCom.GetValue<string>(response, "Logo") + "&lang=en&s=normal";
+            imgLogo.ImageUrl = logoUrl;
+
             ltSlogan.Text = PageCom.GetValue<string>(response, "Slogan");
             ltCopyright.Text = PageCom.GetValue<string>(response, "Copyright");
             ltAdderess.Text = PageCom.GetValue<string>(response, "Address");
@@ -54,7 +56,8 @@ namespace CTS.W._150901.Web
             lkYoutube.NavigateUrl = PageCom.GetValue<string>(response, "YoutubeUrl");
         }
 
-        protected void lbtnLanguage_Command(object sender, CommandEventArgs e) {
+        protected void lbtnLanguage_Command(object sender, CommandEventArgs e)
+        {
             var lang = Convert.ToString(e.CommandArgument);
             var rawUrl = HttpHelper.GetRawUrl(lang, "index");
             Response.Redirect(rawUrl, true);

@@ -31,6 +31,42 @@ namespace CTS.W._150901.Web {
         protected global::System.Web.UI.WebControls.Literal ltPageContent;
         
         /// <summary>
+        /// ltCompanyName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltCompanyName;
+        
+        /// <summary>
+        /// ltAdderess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltAdderess;
+        
+        /// <summary>
+        /// ltPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltPhone;
+        
+        /// <summary>
+        /// ltEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltEmail;
+        
+        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>

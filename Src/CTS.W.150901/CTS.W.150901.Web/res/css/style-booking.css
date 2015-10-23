@@ -99,7 +99,7 @@ time, mark, audio, video {
 @font-face {
     font-family: Merriweather;
     src: url(../fonts/Merriweather-webfont.eot);
-    src: url(../fonts/Merriweather-webfont.eot?#iefix)format('embedded-opentype'),url(../fonts/Merriweather-webfont.woff2)format('woff2'),url(../fonts/Merriweather-webfont.woff)format('woff'),url(../fonts/Merriweather-webfont.ttf)format('truetype');
+    src: url(../fonts/Merriweather-webfont.eot?#iefix)format('embedded-opentype'),url(../fonts/Merriweather-webfont.woff)format('woff'),url(../fonts/Merriweather-webfont.ttf)format('truetype');
     font-weight: 400;
     font-style: normal
 }
@@ -994,8 +994,8 @@ blockquote p {
 .datepicker-key,
 .wpcf7-form p {
 	color: #1c1c1c;
-	font-size: 12px;
-	font-weight: 600;
+	font-size: 14px;
+	/*font-weight: 600;*/
 	/*display: block;*/
 	margin: 0 0 10px 0;
 }

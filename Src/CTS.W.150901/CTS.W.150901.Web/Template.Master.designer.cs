@@ -76,6 +76,15 @@ namespace CTS.W._150901.Web {
         protected global::System.Web.UI.WebControls.HyperLink lkMenuHotel4;
         
         /// <summary>
+        /// imgLogo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgLogo;
+        
+        /// <summary>
         /// ltSlogan control.
         /// </summary>
         /// <remarks>
@@ -101,15 +110,6 @@ namespace CTS.W._150901.Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentMain;
-        
-        /// <summary>
-        /// imgLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgLogo;
         
         /// <summary>
         /// lkHotel1 control.

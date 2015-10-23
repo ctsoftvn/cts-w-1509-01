@@ -385,4 +385,17 @@
   <data name="CLN_CONTACT_US_REQUEST" xml:space="preserve">
 		<value>Request</value>
 	</data>
+  <data name="CLN_CONTACT_US_SEND" xml:space="preserve">
+		<value>Send</value>
+	</data>
+  <data name="CLN_CONTACT_US_RESET" xml:space="preserve">
+		<value>Reset</value>
+	</data>
+  <data name="CLN_CONTACT_US_TITLE_FORM" xml:space="preserve">
+		<value>Send us a message</value>
+	</data>
+
+  <data name="CLN_TOUR_READMORE" xml:space="preserve">
+		<value>Read More</value>
+	</data>
 </root>

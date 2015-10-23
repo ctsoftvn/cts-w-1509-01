@@ -10,6 +10,9 @@ using CTS.W._150901.Models.Domain.Logic.Client.Page;
 using CTS.Core.Domain.Model;
 using CTS.W._150901.Models.Domain.Logic.Client.ContactUs;
 using Resources;
+using CTS.Data.Com.Domain.Utils;
+using CTS.W._150901.Models.Domain.Common.Constants;
+using CTS.Web.Core.Domain.Helper;
 
 namespace CTS.W._150901.Web
 {
@@ -30,6 +33,10 @@ namespace CTS.W._150901.Web
             Page.Title = PageCom.GetValue<string>(response, "MetaTitle");
             Page.MetaKeywords = PageCom.GetValue<string>(response, "MetaKey");
             Page.MetaDescription = PageCom.GetValue<string>(response, "MetaDescription");
+            getInfoCompany();
+            btnSubmit.Text = Strings.CLN_CONTACT_US_SEND;
+            
+ 
         }
         protected void btnSubmit_Command(object sender, CommandEventArgs e)
         {
@@ -58,6 +65,20 @@ namespace CTS.W._150901.Web
             txtPhone.Text = "";
             txtEmail.Text = "";
             txtDescription.Text = "";
+        }
+        public void getInfoCompany()
+        {
+            var companyCom = new CompanyCom();
+            var address = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_ADDRESS, false);
+            var companyname = companyCom.GetString(WebContextHelper.LocaleCd, W150901Logics.CD_INFO_CD_COMPANY_NAME, false);
+            var phone = companyCom.GetString(W150901Logics.CD_LOCALE_CD_EN, W150901Logics.CD_INFO_CD_PHONE, false);
+            var email = companyCom.GetString(W150901Logics.CD_LOCALE_CD_EN, W150901Logics.CD_INFO_CD_EMAIL_CONTACT, false);
+            
+            ltAdderess.Text = address;
+            ltEmail.Text = email;
+            ltPhone.Text = phone;
+            ltCompanyName.Text = companyname;
+
         }
     }
 }
