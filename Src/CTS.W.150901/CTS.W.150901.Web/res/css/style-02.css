@@ -11365,6 +11365,53 @@ padding:20px 0px 20px 0px;
 
 /*tour*/
 .pagetourdetail {text-align:center}
+@media 
+only screen and (max-width: 500px){
+
+	/* Force table to not be like tables anymore */
+	.pagetourdetail table,.pagetourdetail thead,.pagetourdetail tbody,.pagetourdetail th,.pagetourdetail td,.pagetourdetail tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.pagetourdetail thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	.pagetourdetail tr { border: 1px solid #ccc; }
+	
+	.pagetourdetail td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	.pagetourdetail td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	
+	.pagetourdetail td:nth-of-type(1):before { content: "Group size"; }
+	.pagetourdetail td:nth-of-type(2):before { content: "2 pax"; }
+	.pagetourdetail td:nth-of-type(3):before { content: "3-4 pax"; }
+	.pagetourdetail td:nth-of-type(4):before { content: "5-6 pax"; }
+	.pagetourdetail td:nth-of-type(5):before { content: "7-8 pax"; }
+	.pagetourdetail td:nth-of-type(6):before { content: "9-10 pax"; }
+}
 /*contact*/
 .contact-block ul li p{display:inline;}
 .contact-block ul li i{padding-left:10px;}
@@ -11395,3 +11442,4 @@ padding:20px 0px 20px 0px;
     .contact_form label{width:100%}
 }
 .description-page .clearfix{line-height:0;}
+
