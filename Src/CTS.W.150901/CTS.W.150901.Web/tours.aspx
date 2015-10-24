@@ -56,4 +56,5 @@
             </asp:Repeater>
         </div>
     </div>
+     <script type='text/javascript' src='/res/jss/equalheight.js'></script>
 </asp:Content>
