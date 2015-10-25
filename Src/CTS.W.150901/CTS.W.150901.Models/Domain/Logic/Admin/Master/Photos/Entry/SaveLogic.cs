@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using CTS.Core.Domain.Exceptions;
 using CTS.Core.Domain.Helper;
 using CTS.Core.Domain.Model;
@@ -108,11 +108,11 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Photos.Entry
                     msgs.Add(MessageHelper.GetMessageForList(
                         "P_CM_00020", i, "E_MSG_00001", "P_CM_00012"));
                 }
-                if (DataCheckHelper.IsNull(info.PhotoName)) {
-                    flagError = true;
-                    msgs.Add(MessageHelper.GetMessageForList(
-                        "P_CM_00020", i, "E_MSG_00001", "ADM_MA_PHOTOS_00002"));
-                }
+                //if (DataCheckHelper.IsNull(info.PhotoName)) {
+                //    flagError = true;
+                //    msgs.Add(MessageHelper.GetMessageForList(
+                //        "P_CM_00020", i, "E_MSG_00001", "ADM_MA_PHOTOS_00002"));
+                //}
                 // Trường hợp lỗi thì đi đến record tiếp theo
                 if (flagError) {
                     // Tăng giá trị i
