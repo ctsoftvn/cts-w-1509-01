@@ -12,12 +12,7 @@ namespace CTS.W._150901.Web
     {
         void Application_Start(object sender, EventArgs e) {
             // Code that runs on application startup
-            WebUsers.ApplyResources();
-            WebFileManager.ApplyResources();
-            WebUploadFile.ApplyResources();
-            WebCompanyInfos.ApplyResources();
-            WebParameters.ApplyResources();
-            W150901.ApplyResources();
+           
         }
 
         void Application_End(object sender, EventArgs e) {
@@ -30,6 +25,12 @@ namespace CTS.W._150901.Web
 
         void Session_Start(object sender, EventArgs e) {
             // Code that runs when a new session is started
+            WebUsers.ApplyResources();
+            WebFileManager.ApplyResources();
+            WebUploadFile.ApplyResources();
+            WebCompanyInfos.ApplyResources();
+            WebParameters.ApplyResources();
+            W150901.ApplyResources();
         }
 
         void Session_End(object sender, EventArgs e) {
