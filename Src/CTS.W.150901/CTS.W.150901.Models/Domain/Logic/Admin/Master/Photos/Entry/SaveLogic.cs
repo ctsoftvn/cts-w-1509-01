@@ -55,9 +55,9 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Photos.Entry
             if (DataCheckHelper.IsNull(dataInfo.PhotoCd)) {
                 msgs.Add(MessageHelper.GetMessage("E_MSG_00001", "ADM_MA_PHOTOS_00001"));
             }
-            if (DataCheckHelper.IsNull(dataInfo.PhotoName)) {
-                msgs.Add(MessageHelper.GetMessage("E_MSG_00001", "ADM_MA_PHOTOS_00002"));
-            }
+            //if (DataCheckHelper.IsNull(dataInfo.PhotoName)) {
+            //    msgs.Add(MessageHelper.GetMessage("E_MSG_00001", "ADM_MA_PHOTOS_00002"));
+            //}
             // Kiểm tra danh sách lỗi
             if (!DataCheckHelper.IsNull(msgs)) {
                 throw new ExecuteException(msgs);

@@ -70,11 +70,11 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Banners.List
                     msgs.Add(MessageHelper.GetMessageForList(
                         "P_CM_00015", i, "E_MSG_00001", "ADM_MA_BANNERS_00001"));
                 }
-                if (DataCheckHelper.IsNull(info.BannerName)) {
-                    flagError = true;
-                    msgs.Add(MessageHelper.GetMessageForList(
-                        "P_CM_00015", i, "E_MSG_00001", "ADM_MA_BANNERS_00002"));
-                }
+                //if (DataCheckHelper.IsNull(info.BannerName)) {
+                //    flagError = true;
+                //    msgs.Add(MessageHelper.GetMessageForList(
+                //        "P_CM_00015", i, "E_MSG_00001", "ADM_MA_BANNERS_00002"));
+                //}
                 // Trường hợp lỗi thì đi đến record tiếp theo
                 if (flagError) {
                     // Tăng giá trị i

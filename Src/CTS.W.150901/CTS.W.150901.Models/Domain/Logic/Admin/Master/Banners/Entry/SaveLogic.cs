@@ -55,9 +55,9 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Banners.Entry
             if (DataCheckHelper.IsNull(dataInfo.BannerCd)) {
                 msgs.Add(MessageHelper.GetMessage("E_MSG_00001", "ADM_MA_BANNERS_00001"));
             }
-            if (DataCheckHelper.IsNull(dataInfo.BannerName)) {
-                msgs.Add(MessageHelper.GetMessage("E_MSG_00001", "ADM_MA_BANNERS_00002"));
-            }
+            //if (DataCheckHelper.IsNull(dataInfo.BannerName)) {
+            //    msgs.Add(MessageHelper.GetMessage("E_MSG_00001", "ADM_MA_BANNERS_00002"));
+            //}
             // Kiểm tra danh sách lỗi
             if (!DataCheckHelper.IsNull(msgs)) {
                 throw new ExecuteException(msgs);
@@ -108,11 +108,11 @@ namespace CTS.W._150901.Models.Domain.Logic.Admin.Master.Banners.Entry
                     msgs.Add(MessageHelper.GetMessageForList(
                         "P_CM_00020", i, "E_MSG_00001", "P_CM_00012"));
                 }
-                if (DataCheckHelper.IsNull(info.BannerName)) {
-                    flagError = true;
-                    msgs.Add(MessageHelper.GetMessageForList(
-                        "P_CM_00020", i, "E_MSG_00001", "ADM_MA_BANNERS_00002"));
-                }
+                //if (DataCheckHelper.IsNull(info.BannerName)) {
+                //    flagError = true;
+                //    msgs.Add(MessageHelper.GetMessageForList(
+                //        "P_CM_00020", i, "E_MSG_00001", "ADM_MA_BANNERS_00002"));
+                //}
                 // Trường hợp lỗi thì đi đến record tiếp theo
                 if (flagError) {
                     // Tăng giá trị i
