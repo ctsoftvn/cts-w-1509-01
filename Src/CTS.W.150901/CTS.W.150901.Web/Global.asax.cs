@@ -5,6 +5,7 @@ using CTS.Web.FileManager;
 using CTS.Web.Parameters;
 using CTS.Web.UploadFile;
 using CTS.Web.Users;
+using CTS.Core.Domain.Helper;
 
 namespace CTS.W._150901.Web
 {
@@ -25,6 +26,7 @@ namespace CTS.W._150901.Web
 
         void Session_Start(object sender, EventArgs e) {
             // Code that runs when a new session is started
+            AppHelper.ClearAllResources();
             WebUsers.ApplyResources();
             WebFileManager.ApplyResources();
             WebUploadFile.ApplyResources();
